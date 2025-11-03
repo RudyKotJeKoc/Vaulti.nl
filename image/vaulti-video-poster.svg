@@ -1,0 +1,5 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#1c1f26"/>
+  <text x="960" y="500" font-family="Arial" font-size="64" font-weight="bold" text-anchor="middle" fill="#00d9ff">Vaulti Demo Video</text>
+  <polygon points="960,540 960,640 1040,590" fill="#00d9ff"/>
+</svg>
