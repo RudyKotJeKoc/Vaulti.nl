@@ -1467,50 +1467,328 @@
     // === I18N System ===
     const TRANSLATIONS = {
       pl: {
+        // Navigation
         'nav.how': 'Jak to działa',
         'nav.configurator': 'Konfigurator',
         'nav.models': 'Modele',
         'nav.reviews': 'Opinie',
         'nav.faq': 'FAQ',
+
+        // Hero Section
         'hero.badge': 'Dla dzieci: magia i design • Dla rodziców: spokój i bezpieczeństwo',
         'hero.title1': 'Personalizowana skarbonka 3D,',
         'hero.title2': 'która zawsze się odnajdzie',
         'hero.subtitle': 'Vaulti to więcej niż skarbonka. To bezpieczne miejsce na skarby Twojego dziecka, z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i podaruj prezent, który zostanie na lata.',
+
+        // CTA Buttons
         'cta.create': 'Stwórz swoją Vaulti teraz',
         'cta.learn': 'Zobacz jak to działa',
+        'cta.order': 'Zamów z tą personalizacją',
+        'cta.sticky': '🚀 Stwórz swoją Vaulti',
+
+        // Trust Section
         'trust.rating': 'Średnia ocen od 87 klientów',
         'trust.sold': 'Sprzedanych skarbonek',
         'trust.returns': 'Gwarancja zwrotu pieniędzy',
         'trust.safe': 'Bezpieczne materiały',
-        // Add more translations...
+
+        // How It Works
+        'how.title': 'Spokój ducha w 3 prostych krokach',
+        'how.step1.title': 'Zaprojektuj swoją Vaulti',
+        'how.step1.desc': 'Wybierz model (Color lub Wood), ulubiony kolor i dodaj grawer z imieniem dziecka. Zobacz podgląd w czasie rzeczywistym.',
+        'how.step2.title': 'Umieść lokalizator',
+        'how.step2.desc': 'Włóż Apple AirTag lub Samsung SmartTag do dyskretnego, ukrytego schowka. Zabezpieczenie niewidoczne dla dziecka.',
+        'how.step3.title': 'Zyskaj spokój ducha',
+        'how.step3.desc': 'Śledzenie lokalizacji skarbonki w aplikacji Find My (iPhone) lub SmartThings (Samsung). Zawsze wiesz, gdzie są skarby dziecka.',
+
+        // Configurator
+        'config.title': 'Stwórz wymarzoną skarbonkę',
+        'config.subtitle': 'Zobacz swój projekt na żywo w interaktywnym podglądzie',
+        'config.variant': '1. Wybierz wariant:',
+        'config.variant.color': 'Vaulti Color (39,95 €)',
+        'config.variant.wood': 'Vaulti Wood (49,95 €)',
+        'config.color': '2. Wybierz kolor:',
+        'config.engrave': '3. Wpisz tekst graweru (opcjonalnie):',
+        'config.engrave.placeholder': 'Np. \'Skarby Zosi\'',
+        'config.engrave.hint': 'Maksymalnie 20 znaków',
+        'config.price': 'Cena:',
+        'config.share': '📤 Udostępnij konfigurację',
+
+        // Models Comparison
+        'models.title': 'Porównaj modele Vaulti',
+        'models.feature': 'Funkcja',
+        'models.color': 'Vaulti Color',
+        'models.wood': 'Vaulti Wood',
+        'models.material': 'Materiał korpusu',
+        'models.colors': 'Dostępne kolory',
+        'models.tracker': 'Slot na lokalizator',
+        'models.engrave': 'Personalizowany grawer',
+        'models.preview': 'Podgląd 3D',
+        'models.shipping': 'Czas wysyłki',
+        'models.price': 'Cena',
+
+        // Reviews
+        'reviews.title': 'Co mówią rodzice i dzieci?',
+
+        // Guarantee
+        'guarantee.title': 'Gwarancja satysfakcji',
+        'guarantee.returns.title': '30 dni zwrotu',
+        'guarantee.returns.desc': 'Zwrot bez pytań, jeśli Vaulti Ci się nie podoba. Koszt zwrotu pokrywamy my.',
+        'guarantee.warranty.title': '12 miesięcy gwarancji',
+        'guarantee.warranty.desc': 'Pełna gwarancja producenta Vaulti B.V. na wszystkie wady materiałowe.',
+        'guarantee.shipping.title': 'Szybka wysyłka',
+        'guarantee.shipping.desc': 'Standardowo 2-4 dni robocze w całej UE. Express dostępny za +2 €.',
+
+        // FAQ
+        'faq.title': 'Najczęściej zadawane pytania',
+        'faq.q1': 'Jaki lokalizator pasuje do Vaulti?',
+        'faq.a1': 'Do Vaulti pasują lokalizatory Apple AirTag oraz Samsung SmartTag. Skarbonka posiada specjalny, dyskretny slot serwisowy, który umożliwia łatwą wymianę baterii w lokalizatorze bez potrzeby rozbierania całej szkatułki.',
+        'faq.q2': 'Czy dziecko musi wiedzieć o lokalizatorze?',
+        'faq.a2': 'Nie, nie musi. Zabezpieczenie jest całkowicie niewidoczne z zewnątrz. Zostało zaprojektowane tak, aby działało dyskretnie w tle, dając rodzicom spokój ducha, a dziecku radość z posiadania pięknej skarbonki.',
+        'faq.q3': 'Jak długo trwa dostawa Vaulti?',
+        'faq.a3': 'Standardowo 2-4 dni robocze w całej UE. Możliwa przesyłka ekspresowa (1-2 dni) za dodatkowe 2 €. Wysyłka w ciągu 24h od zamówienia.',
+        'faq.q4': 'Czy mogę zwrócić Vaulti?',
+        'faq.a4': 'Tak! Masz 30 dni na bezwarunkowy zwrot. Koszt zwrotu pokrywamy my. Wystarczy skontaktować się z naszym zespołem obsługi klienta.',
+        'faq.q5': 'Czy skarbonka ma gwarancję?',
+        'faq.a5': 'Tak, 12 miesięcy gwarancji producenta Vaulti B.V. na wszystkie wady materiałowe i produkcyjne. W razie problemów wymieniamy bezpłatnie.',
+        'faq.q6': 'Z jakich materiałów jest wykonana Vaulti?',
+        'faq.a6': 'Vaulti Color: Korpus z PETG/ASA (trwałe, kolorowe), narożniki TPU (amortyzacja upadków). Vaulti Wood: Naturalna sklejka + elementy TPU. Wszystkie materiały zgodne z normą EN 71-3 (bezpieczne dla dzieci).',
+        'faq.q7': 'Czy mogę personalizować grawer?',
+        'faq.a7': 'Oczywiście! Grawer laserowy imienia (do 20 znaków) jest darmowy i wliczony w cenę. Możesz dodać imię dziecka, inicjały lub krótki napis w naszym konfiguratorze.',
+        'faq.q8': 'Jakie są wymiary Vaulti?',
+        'faq.a8': '18 × 12 × 12 cm (wysokość × szerokość × głębokość). Idealna do schowania na półce, w szufladzie lub pod łóżkiem. Kompaktowa, ale pojemna.',
+
+        // Newsletter
+        'newsletter.title': 'Bądź na bieżąco',
+        'newsletter.subtitle': 'Zapisz się do newslettera i otrzymaj -10% rabatu na pierwsze zamówienie',
+        'newsletter.placeholder': 'twoj@email.com',
+        'newsletter.submit': 'Zapisz się',
+        'newsletter.privacy': 'Szanujemy Twoją prywatność. Brak spamu, tylko najlepsze oferty.',
+
+        // Footer
+        'footer.about': 'Personalizowana skarbonka 3D z ukrytym lokalizatorem. Spokój ducha dla rodziców, magia dla dzieci. Produkowane lokalnie w Boxtel, Holandia.',
+        'footer.links': 'Szybkie linki',
+        'footer.legal': 'Informacje',
+        'footer.contact': 'Kontakt',
+        'footer.privacy': 'Polityka prywatności',
+        'footer.terms': 'Regulamin',
+        'footer.shipping': 'Dostawa i zwroty'
       },
       nl: {
+        // Navigation
         'nav.how': 'Hoe het werkt',
         'nav.configurator': 'Configurator',
         'nav.models': 'Modellen',
         'nav.reviews': 'Reviews',
         'nav.faq': 'FAQ',
+
+        // Hero Section
         'hero.badge': 'Voor kinderen: magie en design • Voor ouders: rust en veiligheid',
-        'hero.title1': 'Gepersonaliseerd 3D spaarpot,',
-        'hero.title2': 'die altijd terugkomt',
+        'hero.title1': 'Gepersonaliseerde 3D spaarpot,',
+        'hero.title2': 'die altijd terug te vinden is',
         'hero.subtitle': 'Vaulti is meer dan een spaarpot. Het is een veilige plek voor de schatten van je kind, met een verborgen slot voor AirTag/SmartTag. Ontwerp een unieke gravure en geef een cadeau dat jaren meegaat.',
+
+        // CTA Buttons
         'cta.create': 'Creëer je Vaulti nu',
         'cta.learn': 'Zie hoe het werkt',
-        // Add more translations...
+        'cta.order': 'Bestel met deze personalisatie',
+        'cta.sticky': '🚀 Creëer je Vaulti',
+
+        // Trust Section
+        'trust.rating': 'Gemiddelde beoordeling van 87 klanten',
+        'trust.sold': 'Verkochte spaarpotten',
+        'trust.returns': 'Geld-terug-garantie',
+        'trust.safe': 'Veilige materialen',
+
+        // How It Works
+        'how.title': 'Gemoedsrust in 3 eenvoudige stappen',
+        'how.step1.title': 'Ontwerp je Vaulti',
+        'how.step1.desc': 'Kies een model (Color of Wood), je favoriete kleur en voeg een gravure met de naam van je kind toe. Bekijk een live preview in realtime.',
+        'how.step2.title': 'Plaats de tracker',
+        'how.step2.desc': 'Stop een Apple AirTag of Samsung SmartTag in het discrete, verborgen compartiment. Beveiliging die onzichtbaar is voor je kind.',
+        'how.step3.title': 'Geniet van gemoedsrust',
+        'how.step3.desc': 'Volg de locatie van de spaarpot in de Find My app (iPhone) of SmartThings (Samsung). Je weet altijd waar de schatten van je kind zijn.',
+
+        // Configurator
+        'config.title': 'Creëer je dromspaarpot',
+        'config.subtitle': 'Bekijk je ontwerp live in de interactieve preview',
+        'config.variant': '1. Kies variant:',
+        'config.variant.color': 'Vaulti Color (39,95 €)',
+        'config.variant.wood': 'Vaulti Wood (49,95 €)',
+        'config.color': '2. Kies kleur:',
+        'config.engrave': '3. Voer graveringstekst in (optioneel):',
+        'config.engrave.placeholder': 'bijv. \'Schatten van Sophie\'',
+        'config.engrave.hint': 'Maximaal 20 tekens',
+        'config.price': 'Prijs:',
+        'config.share': '📤 Deel configuratie',
+
+        // Models Comparison
+        'models.title': 'Vergelijk Vaulti modellen',
+        'models.feature': 'Functie',
+        'models.color': 'Vaulti Color',
+        'models.wood': 'Vaulti Wood',
+        'models.material': 'Materiaal behuizing',
+        'models.colors': 'Beschikbare kleuren',
+        'models.tracker': 'Tracker slot',
+        'models.engrave': 'Gepersonaliseerde gravure',
+        'models.preview': '3D preview',
+        'models.shipping': 'Verzendtijd',
+        'models.price': 'Prijs',
+
+        // Reviews
+        'reviews.title': 'Wat zeggen ouders en kinderen?',
+
+        // Guarantee
+        'guarantee.title': 'Tevredenheidsgarantie',
+        'guarantee.returns.title': '30 dagen retour',
+        'guarantee.returns.desc': 'Retourneer zonder vragen als Vaulti je niet bevalt. Retourkosten dekken wij.',
+        'guarantee.warranty.title': '12 maanden garantie',
+        'guarantee.warranty.desc': 'Volledige fabrieksgarantie van Vaulti B.V. op alle materiaaldefecten.',
+        'guarantee.shipping.title': 'Snelle verzending',
+        'guarantee.shipping.desc': 'Standaard 2-4 werkdagen in heel Europa. Express beschikbaar voor +2 €.',
+
+        // FAQ
+        'faq.title': 'Veelgestelde vragen',
+        'faq.q1': 'Welke tracker past in Vaulti?',
+        'faq.a1': 'Vaulti is geschikt voor Apple AirTag en Samsung SmartTag. De spaarpot heeft een speciaal, discreet servicecompartiment dat eenvoudige batterijvervanging mogelijk maakt zonder de hele spaarpot uit elkaar te hoeven halen.',
+        'faq.q2': 'Moet mijn kind weten van de tracker?',
+        'faq.a2': 'Nee, dat hoeft niet. De beveiliging is volledig onzichtbaar van buitenaf. Het is zo ontworpen dat het discreet op de achtergrond werkt, waardoor ouders gemoedsrust hebben en kinderen kunnen genieten van een mooie spaarpot.',
+        'faq.q3': 'Hoe lang duurt levering van Vaulti?',
+        'faq.a3': 'Standaard 2-4 werkdagen in heel Europa. Expresverzending mogelijk (1-2 dagen) voor €2 extra. Verzonden binnen 24 uur na bestelling.',
+        'faq.q4': 'Kan ik Vaulti retourneren?',
+        'faq.a4': 'Ja! Je hebt 30 dagen onvoorwaardelijk retourrecht. Retourkosten dekken wij. Neem gewoon contact op met ons klantenserviceteam.',
+        'faq.q5': 'Heeft de spaarpot garantie?',
+        'faq.a5': 'Ja, 12 maanden fabrieksgarantie van Vaulti B.V. op alle materiaal- en productiefouten. Bij problemen vervangen we deze gratis.',
+        'faq.q6': 'Van welke materialen is Vaulti gemaakt?',
+        'faq.a6': 'Vaulti Color: Behuizing van PETG/ASA (duurzaam, kleurrijk), hoeken van TPU (schokabsorptie). Vaulti Wood: Natuurlijk multiplex + TPU elementen. Alle materialen voldoen aan EN 71-3 norm (kindveilig).',
+        'faq.q7': 'Kan ik de gravure personaliseren?',
+        'faq.a7': 'Natuurlijk! Lasergravure van de naam (tot 20 tekens) is gratis en inbegrepen in de prijs. Je kunt de naam van je kind, initialen of een korte tekst toevoegen in onze configurator.',
+        'faq.q8': 'Wat zijn de afmetingen van Vaulti?',
+        'faq.a8': '18 × 12 × 12 cm (hoogte × breedte × diepte). Perfect om op een plank, in een lade of onder het bed te bewaren. Compact maar ruim.',
+
+        // Newsletter
+        'newsletter.title': 'Blijf op de hoogte',
+        'newsletter.subtitle': 'Meld je aan voor onze nieuwsbrief en ontvang -10% korting op je eerste bestelling',
+        'newsletter.placeholder': 'jouw@email.com',
+        'newsletter.submit': 'Aanmelden',
+        'newsletter.privacy': 'We respecteren je privacy. Geen spam, alleen de beste aanbiedingen.',
+
+        // Footer
+        'footer.about': 'Gepersonaliseerde 3D spaarpot met verborgen tracker. Gemoedsrust voor ouders, magie voor kinderen. Lokaal geproduceerd in Boxtel, Nederland.',
+        'footer.links': 'Snelle links',
+        'footer.legal': 'Informatie',
+        'footer.contact': 'Contact',
+        'footer.privacy': 'Privacybeleid',
+        'footer.terms': 'Algemene voorwaarden',
+        'footer.shipping': 'Verzending en retour'
       },
       en: {
+        // Navigation
         'nav.how': 'How it works',
         'nav.configurator': 'Configurator',
         'nav.models': 'Models',
         'nav.reviews': 'Reviews',
         'nav.faq': 'FAQ',
+
+        // Hero Section
         'hero.badge': 'For children: magic and design • For parents: peace and security',
         'hero.title1': 'Personalized 3D piggy bank,',
-        'hero.title2': 'that always finds its way',
+        'hero.title2': 'that always gets found',
         'hero.subtitle': 'Vaulti is more than a piggy bank. It\'s a safe place for your child\'s treasures, with a hidden slot for AirTag/SmartTag. Design unique engraving and give a gift that lasts for years.',
+
+        // CTA Buttons
         'cta.create': 'Create your Vaulti now',
         'cta.learn': 'See how it works',
-        // Add more translations...
+        'cta.order': 'Order with this personalization',
+        'cta.sticky': '🚀 Create your Vaulti',
+
+        // Trust Section
+        'trust.rating': 'Average rating from 87 customers',
+        'trust.sold': 'Piggy banks sold',
+        'trust.returns': 'Money-back guarantee',
+        'trust.safe': 'Safe materials',
+
+        // How It Works
+        'how.title': 'Peace of mind in 3 simple steps',
+        'how.step1.title': 'Design your Vaulti',
+        'how.step1.desc': 'Choose a model (Color or Wood), your favorite color, and add an engraving with your child\'s name. See a live preview in real-time.',
+        'how.step2.title': 'Place the tracker',
+        'how.step2.desc': 'Insert an Apple AirTag or Samsung SmartTag into the discreet, hidden compartment. Security that\'s invisible to your child.',
+        'how.step3.title': 'Enjoy peace of mind',
+        'how.step3.desc': 'Track the piggy bank\'s location in the Find My app (iPhone) or SmartThings (Samsung). You always know where your child\'s treasures are.',
+
+        // Configurator
+        'config.title': 'Create your dream piggy bank',
+        'config.subtitle': 'See your design live in the interactive preview',
+        'config.variant': '1. Choose variant:',
+        'config.variant.color': 'Vaulti Color (€39.95)',
+        'config.variant.wood': 'Vaulti Wood (€49.95)',
+        'config.color': '2. Choose color:',
+        'config.engrave': '3. Enter engraving text (optional):',
+        'config.engrave.placeholder': 'e.g. \'Sophie\'s Treasures\'',
+        'config.engrave.hint': 'Maximum 20 characters',
+        'config.price': 'Price:',
+        'config.share': '📤 Share configuration',
+
+        // Models Comparison
+        'models.title': 'Compare Vaulti models',
+        'models.feature': 'Feature',
+        'models.color': 'Vaulti Color',
+        'models.wood': 'Vaulti Wood',
+        'models.material': 'Body material',
+        'models.colors': 'Available colors',
+        'models.tracker': 'Tracker slot',
+        'models.engrave': 'Personalized engraving',
+        'models.preview': '3D preview',
+        'models.shipping': 'Shipping time',
+        'models.price': 'Price',
+
+        // Reviews
+        'reviews.title': 'What parents and children say?',
+
+        // Guarantee
+        'guarantee.title': 'Satisfaction guarantee',
+        'guarantee.returns.title': '30-day returns',
+        'guarantee.returns.desc': 'Return with no questions asked if you don\'t like Vaulti. We cover return costs.',
+        'guarantee.warranty.title': '12-month warranty',
+        'guarantee.warranty.desc': 'Full manufacturer warranty from Vaulti B.V. on all material defects.',
+        'guarantee.shipping.title': 'Fast shipping',
+        'guarantee.shipping.desc': 'Standard 2-4 business days throughout EU. Express available for +€2.',
+
+        // FAQ
+        'faq.title': 'Frequently asked questions',
+        'faq.q1': 'Which tracker fits in Vaulti?',
+        'faq.a1': 'Vaulti is compatible with Apple AirTag and Samsung SmartTag. The piggy bank has a special, discreet service compartment that enables easy battery replacement without having to disassemble the entire piggy bank.',
+        'faq.q2': 'Does my child need to know about the tracker?',
+        'faq.a2': 'No, they don\'t have to. The security feature is completely invisible from the outside. It\'s designed to work discreetly in the background, giving parents peace of mind while children enjoy a beautiful piggy bank.',
+        'faq.q3': 'How long does Vaulti delivery take?',
+        'faq.a3': 'Standard 2-4 business days throughout EU. Express shipping available (1-2 days) for an additional €2. Shipped within 24 hours of ordering.',
+        'faq.q4': 'Can I return Vaulti?',
+        'faq.a4': 'Yes! You have 30 days for unconditional return. We cover return costs. Just contact our customer service team.',
+        'faq.q5': 'Does the piggy bank have a warranty?',
+        'faq.a5': 'Yes, 12 months manufacturer warranty from Vaulti B.V. on all material and production defects. In case of problems, we replace it free of charge.',
+        'faq.q6': 'What materials is Vaulti made of?',
+        'faq.a6': 'Vaulti Color: Body of PETG/ASA (durable, colorful), corners of TPU (shock absorption). Vaulti Wood: Natural plywood + TPU elements. All materials comply with EN 71-3 standard (child-safe).',
+        'faq.q7': 'Can I personalize the engraving?',
+        'faq.a7': 'Of course! Laser engraving of the name (up to 20 characters) is free and included in the price. You can add your child\'s name, initials, or a short text in our configurator.',
+        'faq.q8': 'What are the dimensions of Vaulti?',
+        'faq.a8': '18 × 12 × 12 cm (height × width × depth). Perfect for storing on a shelf, in a drawer, or under the bed. Compact but spacious.',
+
+        // Newsletter
+        'newsletter.title': 'Stay up to date',
+        'newsletter.subtitle': 'Subscribe to our newsletter and receive -10% discount on your first order',
+        'newsletter.placeholder': 'your@email.com',
+        'newsletter.submit': 'Subscribe',
+        'newsletter.privacy': 'We respect your privacy. No spam, only the best offers.',
+
+        // Footer
+        'footer.about': 'Personalized 3D piggy bank with hidden tracker. Peace of mind for parents, magic for children. Locally produced in Boxtel, Netherlands.',
+        'footer.links': 'Quick links',
+        'footer.legal': 'Information',
+        'footer.contact': 'Contact',
+        'footer.privacy': 'Privacy policy',
+        'footer.terms': 'Terms and conditions',
+        'footer.shipping': 'Shipping and returns'
       }
     };
 
