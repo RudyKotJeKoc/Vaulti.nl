@@ -1,0 +1,7 @@
+<svg width="600" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="500" fill="#00d9ff"/>
+  <text x="300" y="220" font-family="Arial" font-size="48" font-weight="bold" text-anchor="middle" fill="#0d1117">Vaulti</text>
+  <text x="300" y="280" font-family="Arial" font-size="24" text-anchor="middle" fill="#0d1117">Personalizowana Skarbonka 3D</text>
+  <ellipse cx="300" cy="350" rx="80" ry="60" fill="#ffc0cb" stroke="#0d1117" stroke-width="3"/>
+  <rect x="270" y="300" width="60" height="8" fill="#0d1117"/>
+</svg>
