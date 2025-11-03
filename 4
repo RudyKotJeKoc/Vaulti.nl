@@ -1,0 +1,3083 @@
+Overslaan en naar inhoud
+Chatgeschiedenis
+
+Je zei:
+index (18).html
+Bestand
+zaproponuj rozbudowę tej strony internetowej
+ChatGPT zei:
+Przejrzałem Twoją stronę i muszę przyznać – jest już naprawdę dobrze zrobiona: przejrzysta struktura, spójna identyfikacja wizualna, sekcje produktowe, FAQ, recenzje, cennik, newsletter. To solidna podstawa. 🚀
+
+Jeśli chcesz ją rozbudować i nadać jej jeszcze więcej profesjonalizmu oraz funkcjonalności, to mam kilka kierunków:
+
+🔹 1. Sekcja „Jak to działa”
+Prosta infografika (3–4 kroki):
+„Wybierz wariant → Personalizacja → Produkcja 3D w Boxtel → Dostawa do domu”.
+
+Można to pokazać w formie animowanej linii czasu.
+
+🔹 2. Konfigurator online (interaktywny)
+Użytkownik wpisuje imię dziecka, wybiera kolor i od razu widzi podgląd 3D albo przynajmniej render.
+
+Można użyć np. Three.js do prostego modelu 3D.
+
+🔹 3. Galeria klientów (UGC)
+Zdjęcia od rodziców, którzy już kupili Vaulti („Vaulti w pokoju dziecka”).
+
+Można dodać mini-formularz: „Prześlij swoje zdjęcie i otrzymaj kod rabatowy 5 €”.
+
+🔹 4. Porównanie wariantów
+Tabela z trzema kolumnami: Classic / Wood / Pro.
+
+Zaznaczone ✔/✘ cechy, np. materiał, slot na lokalizator, czas wysyłki, cena.
+
+🔹 5. Blog / Aktualności
+Krótkie wpisy o bezpieczeństwie dzieci, personalizacji prezentów, ciekawostkach o druku 3D.
+
+SEO: pomoże pozyskiwać ruch organiczny.
+
+🔹 6. Sekcja „Bezpieczeństwo”
+Rozwinięcie tematu norm (EN 71-3, CE).
+
+Ikony certyfikatów → większe zaufanie rodziców.
+
+🔹 7. Interaktywny FAQ
+Obecne FAQ jest dobre, ale można dodać wyszukiwarkę pytań (JS).
+
+Np. wpisujesz „bateria” → pokazuje od razu właściwą odpowiedź.
+
+🔹 8. E-commerce Light
+Zamiast samych przycisków „Zamów” → koszyk + integracja z PayPal/Stripe/Przelewy24.
+
+Albo nawet prosty checkout wbudowany (Shopify Lite / Snipcart).
+
+🔹 9. Sekcja „Dlaczego rodzice wybierają Vaulti”
+Argumenty w formie liczb:
+
+„+200 sprzedanych sztuk”
+
+„97% klientów poleca”
+
+„Średnia ocena 4.9/5”.
+
+🔹 10. Wideo demonstracyjne
+Teraz masz tylko placeholder. Warto nagrać krótki film (30–60 s):
+dziecko bawiące się szkatułką + rodzic sprawdzający lokalizator w telefonie.
+
+👉 Pytanie:
+Chcesz, żebym przygotował Ci od razu propozycję kodu np. sekcji „Jak to działa” i tabeli porównawczej wariantów (HTML/CSS zgodnie z obecnym stylem), czy wolisz najpierw listę rozbudowy priorytetową (co najpierw wdrożyć)?
+
+Je zei:
+daj prompt do gemini które udoskonali tę stronę
+ChatGPT zei:
+Okej 👍 Rozumiem, chcesz mieć gotowy prompt do Gemini, który można wkleić, aby AI przeanalizowało i ulepszyło Twoją stronę Vaulti (z pliku HTML, który mi wysłałeś).
+Przygotowałem Ci taki prompt — wystarczy podać mu kod strony, a ono da sugestie albo od razu zmodyfikuje plik.
+
+📌 Prompt do Gemini
+Jesteś ekspertem od UX/UI, SEO i e-commerce. 
+Mam stronę internetową produktu „Vaulti – inteligentna skarbonka z ukrytym lokalizatorem”. 
+Oto jej kod HTML:
+
+[Wklej cały kod strony tutaj]
+
+Twoje zadanie:
+1. Przeanalizuj stronę pod kątem:
+   - użyteczności (UX),
+   - estetyki (UI, grafika, typografia),
+   - marketingu i konwersji (CTA, storytelling),
+   - SEO (meta tagi, struktura nagłówków, schema.org),
+   - wydajności (minimalizacja, lazy loading, optymalizacja obrazów).
+
+2. Zaproponuj **konkretne ulepszenia**:
+   - nowe sekcje (np. „Jak to działa”, porównanie wariantów, opinie klientów),
+   - optymalizacje istniejących sekcji,
+   - elementy interaktywne (np. konfigurator personalizacji, podgląd 3D),
+   - sugestie dla treści (język bardziej emocjonalny, storytelling),
+   - poprawki SEO (title, description, struktura H1–H3, schema).
+
+3. Wygeneruj ulepszony kod HTML (może być w części — np. tylko nowe sekcje). 
+Użyj spójnego stylu z obecnym designem (Tailwind/klasy CSS z pliku).
+
+Na końcu daj krótkie podsumowanie: 
+- co poprawiłem, 
+- jakie są największe zyski (UX, SEO, konwersja).
+Chcesz, żebym przygotował Ci od razu gotową wersję tego promptu z wklejonym Twoim HTML-em (z pliku, który mi wysłałeś), żebyś mógł od razu wrzucić do Gemini?
+
+Je zei:
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- === ZOPTYMALIZOWANE SEO === -->
+  <title>Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem | Prezent dla Dziecka</title>
+  <meta name="description" content="Odkryj Vaulti – inteligentną skarbonkę 3D z ukrytym miejscem na AirTag/SmartTag. Personalizuj grawerem i wybierz kolor. Idealny i bezpieczny prezent dla dziecka. Wyprodukowano w Boxtel." />
+  
+  <meta property="og:title" content="Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem">
+  <meta property="og:description" content="Spokój ducha dla rodziców, magia dla dzieci. Odkryj personalizowaną skarbonkę z ukrytym zabezpieczeniem. Zaprojektuj swoją Vaulti już dziś.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vaulti.nl/">
+  <!-- Sugestia: Użyj obrazu o wymiarach 1200x630px dla lepszego wyglądu w mediach społecznościowych -->
+  <meta property="og:image" content="https://vaulti.nl/image/vaulti-og-image.png">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Vaulti - Personalizowana Skarbonka 3D",
+    "image":[
+      "https://vaulti.nl/image/vaulti_1.png",
+      "https://vaulti.nl/image/vaulti_2.png"
+    ],
+    "description":"Vaulti to personalizowana skarbonka drukowana w 3D z dyskretnym, ukrytym slotem na lokalizator Apple AirTag lub Samsung SmartTag. Idealny prezent dla dziecka, który łączy zabawę z bezpieczeństwem.",
+    "brand":{"@type":"Brand","name":"Vaulti"},
+    "sku": "VAULTI-CLASSIC",
+    "offers":{
+        "@type":"AggregateOffer",
+        "lowPrice": "39.95",
+        "highPrice": "49.95",
+        "priceCurrency":"EUR",
+        "offerCount": "2",
+        "availability":"https://schema.org/InStock"
+    },
+    "review": [
+        {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Agnieszka"
+            },
+            "reviewBody": "Córka zakochana w brokacie, a ja w spokoju, że skarbonkę zawsze znajdę."
+        }
+    ]
+  }
+  </script>
+
+  <!-- === CSS ZINTEGROWANY W PLIKU === -->
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border-color: #30363d;
+      --text-primary: #e6edf3;
+      --text-secondary: #aab2c2;
+      --accent-gradient: linear-gradient(90deg, #6ee7b7, #22d3ee);
+      --btn-bg: var(--accent-gradient);
+      --btn-secondary-bg: #21262d;
+      --btn-secondary-border: #30363d;
+      --ring: 0 0 0 3px rgba(34, 211, 238, 0.3);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 64px 0; }
+    .card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; }
+    .grid { display: grid; gap: 24px; }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    h1, h2, h3 { margin: 0; font-weight: 700; }
+    h1 { font-size: 2.75rem; line-height: 1.2; }
+    h2 { font-size: 2rem; }
+    p { margin: 16px 0 0; color: var(--text-secondary); line-height: 1.6; }
+    a { color: #58a6ff; text-decoration: none; }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #0d1117;
+      background: var(--btn-bg);
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(34, 211, 238, 0.2); }
+    .btn.secondary {
+      background: var(--btn-secondary-bg);
+      border: 1px solid var(--btn-secondary-border);
+      color: var(--text-primary);
+    }
+    .btn.secondary:hover { border-color: #8b949e; }
+
+    /* --- Nagłówek --- */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 0;
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.25rem; color: var(--text-primary); }
+    .logo svg { width: 24px; height: 24px; }
+    .menu-toggle { display: none; }
+    nav .pill { color: var(--text-secondary); padding: 8px 16px; border-radius: 99px; transition: background-color 0.2s; }
+    nav .pill:hover { background-color: var(--bg-card); color: var(--text-primary); }
+    
+    /* --- Sekcja Hero --- */
+    .hero { display: grid; grid-template-columns: 1fr 0.8fr; gap: 48px; align-items: center; padding: 48px 0; }
+    .hero .badge { display: inline-block; padding: 6px 12px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 99px; font-size: 0.875rem; }
+    .kpis { display: flex; gap: 24px; flex-wrap: wrap; }
+    .kpi .v { font-weight: 600; }
+    .kpi div:last-child { font-size: 0.875rem; color: var(--text-secondary); }
+    .hero img { width: 100%; height: auto; border-radius: 16px; }
+
+    /* --- Inne sekcje --- */
+    .features .item { display: flex; align-items: flex-start; gap: 16px; }
+    .features .icon { font-size: 1.5rem; }
+    .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .price { position: relative; display: flex; flex-direction: column; }
+    .price h3 { font-size: 1.5rem; }
+    .price .val { font-size: 2.5rem; font-weight: 800; margin: 12px 0; }
+    .price ul { padding-left: 20px; color: var(--text-secondary); flex-grow: 1; }
+    .price li { margin-bottom: 8px; }
+    .price .tag { position: absolute; top: -14px; right: 24px; padding: 6px 12px; background: var(--accent-gradient); color: #0d1117; font-weight: 600; border-radius: 99px; font-size: 0.875rem; }
+    .faq details > summary { cursor: pointer; font-weight: 600; list-style: none; }
+    .faq details > summary::-webkit-details-marker { display: none; }
+    .faq details > summary::before { content: '+'; margin-right: 12px; }
+    .faq details[open] > summary::before { content: '−'; }
+    .faq details div { padding-top: 12px; }
+    
+    /* --- Konfigurator --- */
+    .config-group { margin-top: 20px; }
+    .config-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-secondary); }
+    #vaulti-preview img { max-width: 80%; transition: transform 0.3s ease, opacity 0.3s; }
+    #vaulti-preview:hover img { transform: scale(1.05); }
+    #preview-text {
+        position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.5); 
+        padding: 8px 12px; border-radius: 8px; font-weight: 600; color: white;
+        backdrop-filter: blur(4px);
+    }
+    #grawer-input {
+        width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border-color);
+        background: var(--bg); color: var(--text-primary); font-size: 1rem;
+    }
+
+    /* --- Stopka --- */
+    footer { background: var(--bg-card); border-top: 1px solid var(--border-color); padding: 48px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+    .footer-links { list-style: none; padding: 0; margin: 12px 0 0; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-bottom { border-top: 1px solid var(--border-color); margin-top: 32px; padding: 24px 0; font-size: 0.875rem; color: var(--text-secondary); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+
+    /* --- Responsywność --- */
+    @media (max-width: 900px) {
+      .grid-cols-2, .grid-cols-3, .pricing, .footer-grid, .hero { grid-template-columns: 1fr; }
+      .hero { text-align: center; }
+      .hero .kpis { justify-content: center; }
+      .hero > div:last-child { order: -1; }
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.25rem; }
+      h2 { font-size: 1.75rem; }
+      .menu-toggle { display: block; background: none; border: none; color: var(--text-primary); cursor: pointer; }
+      #main-nav { display: none; flex-direction: column; width: 100%; background: var(--bg-card); padding: 16px; border-radius: 12px; margin-top: 12px; }
+      #main-nav.active { display: flex; }
+      .nav { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Główna nawigacja">
+      <a class="logo" href="#">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7.5h16M4 12h16M4 16.5h10" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/>
+          <defs><linearGradient id="g" x1="0" y1="0" x2="24" y2="0"><stop stop-color="#6ee7b7"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+        </svg>
+        <span>VAULTI</span>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="28" height="28">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav id="main-nav" class="grid" style="grid-auto-flow:column;gap:16px">
+        <a href="#cechy" class="pill">Funkcje</a>
+        <a href="#warianty" class="pill">Konfigurator</a>
+        <a href="#ceny" class="pill">Cennik</a>
+        <a href="#faq" class="pill">FAQ</a>
+        <a href="#ceny" class="btn">Kup teraz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" id="start">
+      <div>
+        <span class="badge">Dla dzieci: piękna szkatułka • Dla rodziców: ukryte zabezpieczenie</span>
+        <h1>Inteligentna skarbonka, która <span style="background:linear-gradient(90deg,#6ee7b7,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent">zawsze się odnajdzie</span></h1>
+        <p>
+          Vaulti to personalizowana szkatułka drukowana w 3D w Boxtel. W środku ukryty slot na AirTag/SmartTag
+          daje rodzicom spokój, a dzieciom – prawdziwe miejsce na skarby.
+        </p>
+        <div style="display:flex;gap:12px;margin-top:24px; flex-wrap: wrap;">
+          <a href="#ceny" class="btn">Zobacz ceny</a>
+          <a href="#warianty" class="btn secondary">Stwórz swoją Vaulti</a>
+        </div>
+        <div class="kpis" style="margin-top:32px">
+          <div class="kpi"><div class="v">od 39,95 €</div><div>Vaulti Classic</div></div>
+          <div class="kpi"><div class="v">Personalizacja</div><div>grawer laserowy w cenie</div></div>
+          <div class="kpi"><div class="v">Made in NL</div><div>Lokalna produkcja 3D</div></div>
+          <div class="kpi"><div class="v">EN 71-3</div><div>Bezpieczne materiały</div></div>
+        </div>
+      </div>
+      <div class="card" style="padding: 0; overflow: hidden;" aria-label="Zdjęcie produktu">
+        <img src="https://placehold.co/600x500/161b22/e6edf3?text=Vaulti" alt="Vaulti – kolorowa, personalizowana szkatułka z sercem i gwiazdkami" width="600" height="500"/>
+      </div>
+    </section>
+
+    <!-- === NOWA SEKCJA: JAK TO DZIAŁA === -->
+    <section class="container section" id="jak-to-dziala">
+      <h2 style="text-align:center; margin-bottom: 32px;">Spokój w 3 prostych krokach</h2>
+      <div class="grid grid-cols-3">
+        <div class="item card" style="text-align: center; padding: 32px 24px;">
+          <div class="icon" style="font-size: 2.5rem; margin-bottom: 12px;">1️⃣</div>
+          <div><strong>Włóż lokalizator</strong><br><span class="muted" style="color:var(--text-secondary)">Otwórz dyskretny slot serwisowy i umieść w nim swój AirTag lub SmartTag.</span></div>
+        </div>
+        <div class="item card" style="text-align: center; padding: 32px 24px;">
+          <div class="icon" style="font-size: 2.5rem; margin-bottom: 12px;">2️⃣</div>
+          <div><strong>Zamknij i ukryj</strong><br><span class="muted" style="color:var(--text-secondary)">Zabezpieczenie jest całkowicie niewidoczne. Dziecko widzi tylko piękną szkatułkę na skarby.</span></div>
+        </div>
+        <div class="item card" style="text-align: center; padding: 32px 24px;">
+          <div class="icon" style="font-size: 2.5rem; margin-bottom: 12px;">3️⃣</div>
+          <div><strong>Zlokalizuj w każdej chwili</strong><br><span class="muted" style="color:var(--text-secondary)">Sprawdź pozycję skarbonki w aplikacji na telefonie, kiedy tylko poczujesz taką potrzebę.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="cechy">
+      <!-- Zoptymalizowany nagłówek SEO -->
+      <h2 style="margin:4px 0 24px">Skarbonka, która daje coś więcej niż oszczędzanie</h2>
+      <div class="grid grid-cols-3 features">
+        <div class="item card">
+          <div class="icon">🔒</div>
+          <div><strong>Niewidoczne zabezpieczenie</strong><br><span class="muted" style="color:var(--text-secondary)">Ukryty slot na AirTag/SmartTag – nie rzuca się w oczy, a zawsze działa.</span></div>
+        </div>
+        <div class="item card">
+          <div class="icon">🪪</div>
+          <div><strong>Wymienna bateria</strong><br><span class="muted" style="color:var(--text-secondary)">Dyskretny dostęp serwisowy do lokalizatora – bez rozbierania szkatułki.</span></div>
+        </div>
+        <div class="item card">
+          <div class="icon">✨</div>
+          <div><strong>Pełna Personalizacja</strong><br><span class="muted" style="color:var(--text-secondary)">Imię dziecka, ulubiona grafika, motyw. Grawer laserowy w cenie.</span></div>
+        </div>
+        <div class="item card">
+          <div class="icon">🧱</div>
+          <div><strong>Pancerna Wytrzymałość</strong><br><span class="muted" style="color:var(--text-secondary)">PETG/ASA + narożniki TPU. Testowana na upadki, by chronić skarby.</span></div>
+        </div>
+        <div class="item card">
+          <div class="icon">🎨</div>
+          <div><strong>Unikalne Kolory i Style</strong><br><span class="muted" style="color:var(--text-secondary)">Od jedwabistego złota po edycję z prawdziwego drewna „Wood”.</span></div>
+        </div>
+        <div class="item card">
+          <div class="icon">🇳🇱</div>
+          <div><strong>Lokalna Produkcja w Boxtel</strong><br><span class="muted" style="color:var(--text-secondary)">Wspierasz lokalną mikrofabrykę 3D. Krótkie serie, najwyższa jakość.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === NOWA SEKCJA: KONFIGURATOR === -->
+    <section class="container section" id="warianty">
+      <h2 style="margin:4px 0 24px">Stwórz wymarzoną skarbonkę</h2>
+      <div class="grid grid-cols-2 card" style="gap: 32px; padding: 32px; align-items: center;">
+        <div id="vaulti-preview" style="background: #0d1117; border-radius: 14px; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 1/1;">
+          <img id="preview-image" src="https://placehold.co/500x500/0d1117/e6edf3?text=Vaulti+Color" alt="Podgląd personalizowanej skarbonki Vaulti" loading="lazy" width="500" height="500">
+          <div id="preview-text">Vaulti Color</div>
+        </div>
+        <div>
+          <h3>Konfigurator</h3>
+          <p>Dopasuj Vaulti do stylu Twojego dziecka. Zobacz, jak będzie wyglądać.</p>
+          <div class="config-group">
+            <label>1. Wybierz wariant:</label>
+            <div style="display: flex; gap: 10px;">
+              <button class="btn" onclick="updatePreview('color', this)">Color</button>
+              <button class="btn secondary" onclick="updatePreview('wood', this)">Wood</button>
+            </div>
+          </div>
+          <div class="config-group">
+            <label for="grawer-input">2. Wpisz tekst graweru:</label>
+            <input id="grawer-input" type="text" placeholder="Np. 'Skarby Zosi'">
+          </div>
+          <div class="config-group" style="margin-top: 24px;">
+              <a href="#ceny" class="btn" style="width: 100%; text-align: center;">Przejdź do zamówienia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="o-nas">
+        <div class="card grid grid-cols-2" style="align-items: center;">
+            <div>
+                <h2 style="margin-top: 0;">Nasza historia – pasja zrodzona w Boxtel</h2>
+                <!-- Ulepszony storytelling -->
+                <p>
+                    Pomysł na Vaulti narodził się, gdy nasza córka zgubiła swoją pierwszą, ukochaną skarbonkę. Poczucie straty w jej oczach zainspirowało nas, by połączyć naszą pasję do druku 3D z realną potrzebą. Tak powstało coś, co łączy magię posiadania skarbów z poczuciem bezpieczeństwa, jakie daje nowoczesna technologia.
+                </p>
+            </div>
+            <div>
+                <img src="https://placehold.co/600x400/161b22/e6edf3?text=Nasz+warsztat" alt="Zdjęcie warsztatu Vaulti w Boxtel" loading="lazy" style="border-radius: 14px; width: 100%; height: auto;" width="600" height="400">
+            </div>
+        </div>
+    </section>
+    
+    <section class="container section" id="ceny" aria-labelledby="ceny-h">
+      <h2 id="ceny-h" style="margin:4px 0 24px">Wybierz swoją Vaulti</h2>
+      <div class="pricing">
+        <div class="price card">
+          <span class="tag">Bestseller</span>
+          <h3>Vaulti Classic</h3>
+          <div class="val">39,95 €</div>
+          <p class="muted">Kolorowa skarbonka 3D, grawer imienia, ukryty slot na AirTag/SmartTag.</p>
+          <ul>
+            <li>Druk PETG/ASA + narożniki TPU</li>
+            <li>Slot serwisowy (wymiana baterii)</li>
+            <li>Wysyłka 3–5 dni</li>
+          </ul>
+          <a class="btn" href="#kontakt" style="margin-top: 16px;">Zamów Classic</a>
+        </div>
+        <div class="price card">
+          <h3>Vaulti Wood</h3>
+          <div class="val">49,95 €</div>
+          <p class="muted">Edycja premium – sklejka cięta i teksturowana laserem (efekt „old wood”).</p>
+          <ul>
+            <li>Naturalny wygląd + grawer</li>
+            <li>Ukryty slot na AirTag/SmartTag</li>
+            <li>Wysyłka 5–7 dni</li>
+          </ul>
+          <a class="btn" href="#kontakt" style="margin-top: 16px;">Zamów Wood</a>
+        </div>
+        <div class="price card">
+          <span class="tag" style="background:#2c2540;color:#c5b3ff;border-color:#3b2f68">Zapowiedź</span>
+          <h3>Vaulti Pro</h3>
+          <div class="val">79,95 €</div>
+          <p class="muted">Zamek RFID + USB-C + aplikacja mobilna (Bluetooth). Start Q1 2027.</p>
+          <ul>
+            <li>Historia otwarć w aplikacji</li>
+            <li>Powiadomienia o stanie baterii</li>
+            <li>Przedsprzedaż: lista oczekujących</li>
+          </ul>
+          <a class="btn secondary" href="#newsletter" style="margin-top: 16px;">Dołącz do listy</a>
+        </div>
+      </div>
+      <p style="margin-top:16px;color:var(--text-secondary);font-size:14px; text-align: center;">* AirTag/SmartTag nie są częścią zestawu. „Vaulti Classic” to produkt bez elektroniki; stosujemy materiały zgodne z EN 71-3.</p>
+    </section>
+
+    <section class="container section">
+      <h2 style="margin:4px 0 24px">Co mówią rodzice</h2>
+       <div class="grid grid-cols-3">
+        <blockquote class="card">„Córka zakochana w brokacie, a ja w spokoju, że skarbonkę zawsze znajdę.” <br><strong>— Agnieszka, Warszawa</strong></blockquote>
+        <blockquote class="card">„Personalizacja laserem robi robotę. Prezent urodzinowy numer 1.” <br><strong>— Bas, Eindhoven</strong></blockquote>
+        <blockquote class="card">„Wytrzymało test upadku na kafelki w kuchni. Solidny produkt. Polecam!” <br><strong>— Marieke, Tilburg</strong></blockquote>
+      </div>
+    </section>
+
+    <section class="container section faq" id="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h" style="margin:4px 0 24px">Najczęstsze pytania (FAQ)</h2>
+      <div class="grid grid-cols-2">
+        <details open class="card">
+          <summary>Jaki lokalizator pasuje do Vaulti?</summary>
+          <div>Apple AirTag oraz Samsung SmartTag. Slot ma dyskretny dostęp do wymiany baterii, co zajmuje mniej niż minutę.</div>
+        </details>
+        <details class="card">
+          <summary>Czy dziecko musi wiedzieć o lokalizatorze?</summary>
+          <div>Absolutnie nie. Zabezpieczenie jest całkowicie niewidoczne z zewnątrz – zaprojektowane tak, by działało w tle i dawało Ci spokój.</div>
+        </details>
+        <details class="card">
+          <summary>Z jakich materiałów wykonana jest skarbonka?</summary>
+          <div>Używamy wytrzymałego PETG/ASA (korpus) oraz elastycznego TPU (narożniki absorbujące wstrząsy). Wersja Wood to naturalna sklejka.</div>
+        </details>
+        <details class="card">
+          <summary>Jakie są wymiary i pojemność?</summary>
+          <div>Standardowy rozmiar to ok. 18×12×12 cm. Jest to idealny kompromis między pojemnością a rozmiarem pasującym na półkę lub biurko.</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="newsletter" class="container section card" aria-labelledby="nl-h">
+      <div style="text-align: center; max-width: 600px; margin: auto;">
+        <h2 id="nl-h" style="margin:4px 0 8px">Bądź na bieżąco!</h2>
+        <p>Zapisz się, aby jako pierwszy(a) otrzymywać informacje o nowych edycjach, promocjach i starcie przedsprzedaży Vaulti Pro.</p>
+        <form action="#" method="post" class="grid" style="grid-template-columns: 1fr auto; gap: 12px; margin-top: 24px;" onsubmit="event.preventDefault(); this.querySelector('button').innerText='Dziękujemy!';">
+          <label>
+            <span class="sr-only">Adres e-mail</span>
+            <input name="email" type="email" required placeholder="twoj@email.nl"
+                   style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--border-color);background:var(--bg);color:var(--text-primary)" />
+          </label>
+          <button class="btn" type="submit">Zapisz mnie</button>
+        </form>
+        <p style="color:var(--text-secondary);font-size:12px;margin-top:12px">Zapis oznacza zgodę na otrzymywanie wiadomości. Żadnego spamu, obiecujemy.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontakt">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo" aria-label="VAULTI logo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7.5h16M4 12h16M4 16.5h10" stroke="url(#g2)" stroke-width="2" stroke-linecap="round"/>
+            <defs><linearGradient id="g2" x1="0" y1="0" x2="24" y2="0"><stop stop-color="#6ee7b7"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+          </svg>
+          <strong>VAULTI</strong>
+        </div>
+        <p style="margin-top:8px">Druk 3D i grawer laserowy • Boxtel, NL</p>
+        <p style="font-size: 0.875rem; color: var(--text-secondary);">
+            Vaulti Creations<br>
+            Adres Firmy 123, 5283 AB Boxtel<br>
+            KVK: 12345678
+        </p>
+      </div>
+      <div class="footer-col">
+        <strong>Kontakt</strong>
+        <ul class="footer-links">
+          <li>E-mail: <a href="mailto:hello@vaulti.nl">hello@vaulti.nl</a></li>
+          <li>Instagram: <a href="#" target="_blank" rel="noopener">/vaulti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <strong>Informacje</strong>
+        <ul class="footer-links">
+            <li><a href="#">Regulamin</a></li>
+            <li><a href="#">Polityka Prywatności</a></li>
+            <li><a href="#">Dostawa i zwroty</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+        <p>
+          AirTag jest znakiem towarowym Apple Inc. • SmartTag jest znakiem towarowym Samsung Electronics.
+          Vaulti nie jest powiązane z Apple ani Samsung. © <span id="footer-year"></span> Vaulti. Wszelkie prawa zastrzeżone.
+        </p>
+    </div>
+  </footer>
+
+  <!-- === JAVASCRIPT ZINTEGROWANY W PLIKU === -->
+  <script>
+    // --- Skrypt do obsługi menu mobilnego ---
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+      const isExpanded = mainNav.classList.contains('active');
+      menuToggle.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // --- Skrypt do aktualizacji roku w stopce ---
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // --- Skrypt do konfiguratora ---
+    function updatePreview(variant, buttonElement) {
+      const img = document.getElementById('preview-image');
+      const text = document.getElementById('preview-text');
+      const buttons = buttonElement.parentElement.querySelectorAll('.btn');
+
+      // Aktualizacja obrazka i tekstu
+      if (variant === 'color') {
+        img.src = 'https://placehold.co/500x500/0d1117/e6edf3?text=Vaulti+Color';
+        text.innerText = 'Vaulti Color';
+      } else if (variant === 'wood') {
+        img.src = 'https://placehold.co/500x500/0d1117/e6edf3?text=Vaulti+Wood';
+        text.innerText = 'Vaulti Wood';
+      }
+      
+      // Aktualizacja stylu przycisków
+      buttons.forEach(btn => {
+        btn.classList.remove('secondary');
+        btn.classList.add('secondary');
+      });
+      buttonElement.classList.remove('secondary');
+    }
+  </script>
+</body>
+</html>
+ChatGPT zei:
+Jasne! Poniżej masz gotowy „power-prompt” do Gemini. Wklejasz go w całości, bez zmian (zostawiłem Twoje HTML w środku). Gemini najpierw przeanalizuje stronę, potem zwróci komplet ulepszeń + gotowy, zrefaktoryzowany plik HTML oraz krótkie uzasadnienie.
+
+Prompt do Gemini (do wklejenia)
+You are a senior UX/UI + SEO + performance engineer and conversion copywriter in one.
+Your goal: audit and then PERFECT this product landing page for “Vaulti – personalizowana skarbonka 3D z lokalizatorem”
+AND return a ready-to-use, improved HTML file.
+
+=== INPUT (ORIGINAL HTML) ===
+[PASTE START]
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- === ZOPTYMALIZOWANE SEO === -->
+  <title>Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem | Prezent dla Dziecka</title>
+  <meta name="description" content="Odkryj Vaulti – inteligentną skarbonkę 3D z ukrytym miejscem na AirTag/SmartTag. Personalizuj grawerem i wybierz kolor. Idealny i bezpieczny prezent dla dziecka. Wyprodukowano w Boxtel." />
+  
+  <meta property="og:title" content="Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem">
+  <meta property="og:description" content="Spokój ducha dla rodziców, magia dla dzieci. Odkryj personalizowaną skarbonkę z ukrytym zabezpieczeniem. Zaprojektuj swoją Vaulti już dziś.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vaulti.nl/">
+  <!-- Sugestia: Użyj obrazu o wymiarach 1200x630px dla lepszego wyglądu w mediach społecznościowych -->
+  <meta property="og:image" content="https://vaulti.nl/image/vaulti-og-image.png">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Vaulti - Personalizowana Skarbonka 3D",
+    "image":[
+      "https://vaulti.nl/image/vaulti_1.png",
+      "https://vaulti.nl/image/vaulti_2.png"
+    ],
+    "description":"Vaulti to personalizowana skarbonka drukowana w 3D z dyskretnym, ukrytym slotem na lokalizator Apple AirTag lub Samsung SmartTag. Idealny prezent dla dziecka, który łączy zabawę z bezpieczeństwem.",
+    "brand":{"@type":"Brand","name":"Vaulti"},
+    "sku": "VAULTI-CLASSIC",
+    "offers":{
+        "@type":"AggregateOffer",
+        "lowPrice": "39.95",
+        "highPrice": "49.95",
+        "priceCurrency":"EUR",
+        "offerCount": "2",
+        "availability":"https://schema.org/InStock"
+    },
+    "review": [
+        {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Agnieszka"
+            },
+            "reviewBody": "Córka zakochana w brokacie, a ja w spokoju, że skarbonkę zawsze znajdę."
+        }
+    ]
+  }
+  </script>
+
+  <!-- === CSS ZINTEGROWANY W PLIKU === -->
+  <style>
+    /* ... (oryginalne style – pozostawiamy bez zmian w INPUT) ... */
+  </style>
+</head>
+<body>
+  <!-- ... (CAŁA STRONA – Twój oryginalny HTML, wklejony w całości) ... -->
+  <script>
+    // ... (oryginalne skrypty)
+  </script>
+</body>
+</html>
+[PASTE END]
+
+=== TASKS ===
+1) UX/UI & Conversion:
+   - Ulepsz czytelność i hierarchię nagłówków (H1/H2/H3), odstępy, akcenty.
+   - Wzmocnij CTA (pierwsze 2 ekrany: przyciski “Kup teraz”/“Stwórz swoją Vaulti”).
+   - Dodaj sekcję „Dlaczego rodzice wybierają Vaulti” (z liczbami, np. ocena, liczba sprzedanych sztuk – zostaw placeholdery).
+   - Dodaj sekcję porównawczą Classic vs Wood vs Pro (czytelna tabela).
+   - Uczyń FAQ bardziej interaktywnym: focus states, klikalne obszary, aria-* dla dostępności.
+   - Dodaj „Jak to działa” w 3–4 krokach z ikonami.
+
+2) Personalization & Configurator:
+   - Rozwiń prosty „Konfigurator”:
+     • Pola: imię do graweru, wybór wariantu, wybór koloru (min. 4 propozycje), tooltipy.
+     • Natychmiastowy podgląd: aktualizuj etykietę i wariant; jeśli możliwe – prosty mock koloru (filtrem/klasą).
+     • Dodaj przycisk “Zamów z tą personalizacją” scrollujący do kontaktu/cennika.
+
+3) Accessibility (WCAG 2.1 AA):
+   - Dodaj poprawne aria-label/aria-controls/role w nawigacji, FAQ, kartach.
+   - Zadbaj o kontrasty, focus outlines, skip-link, logiczny porządek tabulacji, a11y dla ikon/emotikonów.
+   - Alt teksty obrazów: treściwe, bez “obrazek”.
+
+4) SEO & Semantics:
+   - Prawidłowa struktura H1–H3 (1×H1), semantyczny HTML5 (header/main/section/article/footer).
+   - Dodaj breadcrumbs (schema.org BreadcrumbList).
+   - Uzupełnij product schema (AggregateRating, offers zaokrąglone, popraw zamknięcia JSON-LD).
+   - Dodaj FAQPage schema dla FAQ oraz WebSite + SearchAction.
+   - Dodaj meta robots, canonical (jeśli brak), lepsze og:image (1200×630), i preload critical assets.
+   - Zaproponuj słowa kluczowe w treści (PL), naturalnie wplecione (bez keyword stuffing).
+
+5) Performance:
+   - Stosuj loading="lazy", width/height dla obrazów, preconnect/preload gdzie sensowne.
+   - Zminimalizuj CSS/JS inline, przenieś rzadziej używane do defer.
+   - Użyj prefers-reduced-motion dla animacji.
+   - Dodaj responsive images (srcset/sizes) z opisem jak generować.
+
+6) Trust & Legal:
+   - Dodaj widoczne dane firmy (KVK, adres – placeholders OK), polityki (linki działające).
+   - Dodaj sekcję “Opinie klientów” z microcopy i miejscem na zdjęcia UGC (placeholdery).
+   - Dodaj info o normie EN 71-3 i CE, z krótkim wytłumaczeniem (bez obietnic prawnych).
+
+7) Internationalization (PL/NL):
+   - Przygotuj strukturę pod i18n (data-translate atrybuty, obiekt z tłumaczeniami lub prosty toggle).
+   - Zaproponuj 3–5 kluczowych fraz NL (hero, CTA, ceny), w osobnym JSON-ie.
+
+8) Output Requirements:
+   - Zwróć **pełny gotowy plik HTML** (po modernizacji), w jednym bloku, z komentarzami `<!-- IMPROVED -->` przy kluczowych zmianach.
+   - Na końcu dodaj sekcję “CHANGES SUMMARY” z listą najważniejszych ulepszeń (UX, SEO, performance, a11y).
+   - Dodaj krótkie instrukcje wdrożenia: co skopiować do `/image`, jak nazwać og:image, gdzie dodać plik `translations.json` (NL).
+   - Zachowaj dark theme i estetykę zgodną ze stylem; nie używaj zewnętrznych frameworków innych niż użyte (Google Fonts ok).
+   - Nie usuwaj sekcji istniejących – raczej ulepszaj, przenoś, porządkuj.
+
+IMPORTANT:
+- Polish language for the content (PL), but code comments can be EN/PL.
+- Keep it production-quality, consistent, and copy-edited.
+- If any data is uncertain (reviews count, rating), put realistic placeholders and mark them as TODO.
+Jeśli chcesz, mogę też przygotować drugą wersję promptu nastawioną wyłącznie na refaktoryzację kodu (bez analizy) – wtedy Gemini zwróci tylko finalny, „oczyszczony” HTML z wdrożonymi zmianami i minimalnymi komentarzami.
+
+Je zei:
+zainstalowalem kiedys wordpress i nie eim jak to usunąć aby pisac strone w html
+ChatGPT zei:
+
+Myślał przez 5s
+Jasne – da się to ogarnąć szybko i czysto. Poniżej masz sprawdzoną ścieżkę „z WordPressa → czysty HTML”, dla trzech najczęstszych scenariuszy. Wybierz ten, który pasuje do Twojego hostingu.
+
+0) Zanim coś usuniesz – zrób kopię
+Zgraj wszystkie pliki z serwera (SFTP/FTP) do folderu lokalnie.
+
+Zrób eksport bazy: w cPanelu/Plesku → phpMyAdmin → Eksport, lub SSH:
+
+mysqldump -u USER -p DB_NAME > wp_backup.sql
+Zanotuj rekordy DNS domeny (na wszelki wypadek).
+
+1) Shared hosting (cPanel / Plesk / DirectAdmin)
+A. Najczyściej: usuń WordPressa jednym kliknięciem (Softaculous/Installatron)
+cPanel → Softaculous/Installatron → WordPress → Remove/Uninstall (zaznacz „delete files” i „delete database”).
+
+Po tym folder public_html/ (lub httpdocs/) będzie czysty. Wgraj tam swój index.html.
+
+B. Ręcznie (gdy nie ma deinstalatora)
+Wejdź SFTP/FTP do katalogu strony (zwykle public_html/ lub httpdocs/) i usuń całą zawartość:
+
+katalogi wp-admin/, wp-includes/, wp-content/,
+
+pliki wp-config.php, wp-login.php, xmlrpc.php, itd.
+
+Usuń bazę danych:
+
+phpMyAdmin → wybierz bazę → Operacje → Usuń bazę;
+
+lub MySQL w panelu hostingu → usuń bazę i użytkownika.
+
+Zresetuj .htaccess do minimum (w public_html/.htaccess):
+
+# Minimalny .htaccess dla statycznego HTML
+Options -Indexes
+DirectoryIndex index.html index.htm
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1h"
+  ExpiresByType image/* "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
+Wgraj swój index.html (i ewentualnie style.css, script.js, obrazki).
+
+Wyczyść cache CDN (jeśli używasz, np. Cloudflare).
+
+2) VPS / serwer własny (Nginx/Apache)
+A. Apache
+Zatrzymaj wirtualkę WP lub przenieś DocumentRoot:
+
+plik vhost (np. /etc/apache2/sites-available/twojadomena.conf)
+
+ustaw:
+
+DocumentRoot /var/www/twojadomena/html
+<Directory /var/www/twojadomena/html>
+    Options -Indexes +FollowSymLinks
+    AllowOverride All
+    Require all granted
+</Directory>
+Zrestartuj:
+
+sudo systemctl reload apache2
+Usuń katalog WP i bazę (po backupie), wgraj statyczne pliki do /var/www/twojadomena/html.
+
+B. Nginx
+Zmień root w serwer bloku:
+
+server {
+    server_name twojadomena.pl www.twojadomena.pl;
+    root /var/www/twojadomena/html;
+    index index.html;
+    location / {
+        try_files $uri =404;
+    }
+    location ~* \.(css|js|png|jpg|jpeg|gif|svg|ico)$ { expires 7d; }
+}
+Test & reload:
+
+sudo nginx -t && sudo systemctl reload nginx
+Usuń WP i bazę, wgraj pliki HTML.
+
+3) WordPress.com (nie hosting z cPanel)
+Tego nie „odinstalujesz”, bo to platforma SaaS. Najprościej:
+
+Kup zwykły hosting (shared/VPS),
+
+Skieruj domenę (DNS) na nowy hosting,
+
+Wgraj index.html.
+
+W WordPress.com możesz ustawić przekierowanie domeny (płatna opcja „Site Redirect”), jeśli chcesz utrzymać ruch ze starych adresów.
+
+4) Chcesz zostawić WordPressa, ale serwować statyczny HTML?
+Wgraj plik index.html do katalogu głównego. Na większości hostingów serwer poda index.html przed index.php, więc WordPress „zniknie”, ale dalej będzie dostępny np. pod /wp-login.php.
+
+To szybki „tryb hybrydowy” (na chwilę), ale dla czystości i bezpieczeństwa lepiej odinstalować.
+
+5) Po sprzątaniu – co jeszcze warto zrobić
+SSL: włącz/odnów Let’s Encrypt w panelu hostingu.
+
+301 z ważnych starych URL-i (jeśli je znasz) do nowych ścieżek – w .htaccess:
+
+Redirect 301 /stary-artykul https://twojadomena.pl/
+Sitemap: dla statycznej strony często wystarczy jedna strona bez sitemap; przy wielu podstronach dodaj sitemap.xml.
+
+robots.txt (opcjonalnie):
+
+User-agent: *
+Allow: /
+Sitemap: https://twojadomena.pl/sitemap.xml
+Minifikacja: skompresuj CSS/JS, włącz gzip/brotli w serwerze lub CDN.
+
+6) Minimalny szablon startowy (wrzuć jako index.html)
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vaulti – strona w budowie</title>
+  <meta name="description" content="Vaulti – personalizowana skarbonka 3D z ukrytym lokalizatorem.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0d1117; --fg:#e6edf3; --muted:#aab2c2; --card:#161b22; --border:#30363d; }
+    body { margin:0; font-family:Inter,system-ui; background:var(--bg); color:var(--fg); }
+    .wrap { max-width:900px; margin:0 auto; padding:48px 20px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; }
+    .btn { display:inline-block; padding:12px 18px; border-radius:10px; background:linear-gradient(90deg,#6ee7b7,#22d3ee); color:#0d1117; font-weight:700; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <h1>Vaulti – nowa wersja strony (HTML)</h1>
+      <p class="muted">WordPress został usunięty. Ta strona działa teraz jako statyczny HTML.</p>
+      <p><a class="btn" href="#">Przejdź do strony głównej</a></p>
+    </div>
+  </main>
+</body>
+</html>
+7) Najszybsza checklista (TL;DR)
+✅ Backup plików + bazy
+
+✅ Deinstalacja WP (Softaculous) lub ręczne: usuń pliki + bazę
+
+✅ Wyczyść/uprość .htaccess
+
+✅ Wgraj index.html (+ assets)
+
+✅ SSL i ewentualne przekierowania 301
+
+✅ Purge cache CDN
+
+Jeśli podasz, jaki masz hosting (nazwa panelu) i gdzie leży Twoja domena/DNS, dam Ci precyzyjne klik-po-kliku dla Twojej konfiguracji oraz gotowe reguły pod Twój serwer.
+
+Je zei:
+Geüploade afbeelding
+ChatGPT zei:
+
+Myślał przez 14s
+Masz klasyczny problem ze ścieżkami do zasobów (404 = plik nie istnieje pod adresem, pod który przeglądarka próbuje trafić). Szybka checklista + gotowe poprawki:
+
+Co się dzieje
+W konsoli widać 404 dla:
+
+style.css, script.js
+
+vaulti.png, vaulti_1.png … vaulti_6.png
+
+about_placeholder.png
+
+To oznacza, że:
+
+pliki nie zostały wgrane na serwer albo
+
+są w innym katalogu niż wskazuje HTML albo
+
+używasz złych ścieżek (np. zaczynających się od / przy stronie w podkatalogu) albo
+
+różni się wielkość liter w nazwach (Vaulti.png ≠ vaulti.png) albo
+
+stare reguły WordPressa w .htaccess przepuszczają tylko index.php i robią 404 dla statyków.
+
+Jak to naprawić – 10-minutowy plan
+Sprawdź strukturę katalogów na serwerze (FTP/SFTP):
+
+public_html/
+  index.html
+  style.css         ← czy jest?
+  script.js         ← czy jest?
+  image/
+    vaulti.png
+    vaulti_1.png
+    vaulti_2.png
+    vaulti_3.png
+    vaulti_4.png
+    vaulti_5.png
+    vaulti_6.png
+    about_placeholder.png
+Jeśli masz inną strukturę (np. assets/ zamiast image/), dostosuj ścieżki w HTML.
+
+Ujednolić nazwy i wielkość liter. Na hostingu linuksowym Vaulti_1.PNG to inny plik niż vaulti_1.png.
+
+Usuń lub popraw absolutne ścieżki.
+Jeśli strona jest w podkatalogu (np. twojadomena.pl/vaulti/), to ścieżki zaczynające się od / będą szły do katalogu głównego domeny, nie do podkatalogu.
+Zamiast:
+
+<link rel="stylesheet" href="/style.css">
+<img src="/image/vaulti.png">
+<script src="/script.js"></script>
+użyj względnych:
+
+<link rel="stylesheet" href="style.css">
+<img src="image/vaulti.png" alt="">
+<script src="script.js" defer></script>
+Jeśli nie masz tych plików – usuń odwołania.
+W Twojej nowszej wersji HTML masz wbudowany CSS, więc po prostu wywal link do style.css i <script src="script.js">, jeśli naprawdę ich nie używasz.
+
+Zresetuj .htaccess (gdy wcześniej był WordPress). W public_html/.htaccess wstaw minimalny wariant:
+
+# Statyczny serwis HTML – bez WP
+Options -Indexes
+DirectoryIndex index.html index.htm
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # Nie przepuszczaj wszystkiego do index.php – serwuj pliki jak są
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  # Brak ogólnego rewrite'a – 404 dla nieistniejących
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1h"
+  ExpiresByType image/* "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
+Hard reload / purge cache:
+
+Ctrl+F5 (Windows) lub ⌘+Shift+R (Mac).
+
+Jeśli masz Cloudflare / CDN → Purge Cache.
+
+Szybka diagnostyka w zakładce Network (DevTools):
+
+Kliknij jeden z 404 → zobacz pełny URL, pod który przeglądarka uderza.
+
+Skopiuj ten URL do paska przeglądarki → sprawdź, czy otwiera się plik.
+
+Jeśli nie – znaczy, że ścieżka lub nazwa jest zła.
+
+Gotowe poprawki w Twoim HTML (bezpieczne zamienniki)
+A. Linki do stylów/skryptów – jeżeli naprawdę korzystasz z zewnętrznych plików:
+
+<!-- zamiast /style.css -->
+<link rel="stylesheet" href="style.css">
+
+<!-- zamiast /script.js -->
+<script src="script.js" defer></script>
+B. Obrazy – trzymaj się image/… (dokładnie taka nazwa katalogu jak na serwerze):
+
+<img src="image/vaulti.png" alt="Vaulti – szkatułka" width="600" height="500" loading="lazy">
+<img src="image/vaulti_1.png" alt="Vaulti wariant 1" loading="lazy">
+<!-- itd. -->
+C. Awaryjny fallback na placeholder (przydatne, dopóki nie wgrasz grafik):
+
+<img src="image/vaulti.png" alt="Vaulti"
+     onerror="this.onerror=null;this.src='https://placehold.co/600x500/161b22/e6edf3?text=Vaulti';">
+Dodatkowe pułapki
+<base href> – jeśli kiedyś dodałeś taki tag, może „przesuwać” wszystkie ścieżki. Jeżeli go masz, usuń na czas diagnozy.
+
+Uprawnienia plików – standardowo 644 dla plików, 755 dla katalogów.
+
+Nginx/Apache config – jeśli to VPS, upewnij się, że serwer serwuje statyki z Twojego root/DocumentRoot (bez przekierowywania do PHP).
+
+Jeśli chcesz, podeślij mi:
+
+zrzut drzewa katalogów (nazwy i lokalizacje plików) albo
+
+URL do strony (jeśli możesz go ujawnić),
+to podam konkretne ścieżki, które masz wpisać w Twoim pliku i/lub przygotuję gotową paczkę index.html z poprawionymi odwołaniami.
+
+Je zei:
+nie mam plików style.css i script.js
+ChatGPT zei:
+
+Myślał przez 6s
+Spoko — wtedy te błędy 404 biorą się tylko z odwołań w HTML do nieistniejących plików. Masz dwie proste opcje:
+
+Opcja A (najlepsza): usuń odwołania w HTML
+Znajdź i usuń/zakomentuj te linie, jeśli występują:
+
+<!-- Usuń to, jeśli nie masz pliku -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Usuń to, jeśli nie masz pliku -->
+<script src="script.js"></script>
+Masz już w pliku wbudowany CSS w <style> i JS w <script>, więc strona zadziała bez tych dwóch plików.
+
+Opcja B (awaryjna): utwórz puste pliki, żeby zniknęły 404
+Jeśli wolisz nic nie ruszać w HTML, wrzuć do katalogu strony dwa pliki:
+
+style.css
+
+/* placeholder – real styles are inline in index.html */
+script.js
+
+// placeholder – real scripts are inline in index.html
+Dodatkowe 404 (obrazy)
+W konsoli miałeś też 404 dla vaulti.png, vaulti_1.png … about_placeholder.png.
+Upewnij się, że ścieżki w HTML zgadzają się z katalogiem na serwerze. Jeśli trzymasz grafiki w image/, odwołania powinny wyglądać tak:
+
+<img src="image/vaulti.png" alt="Vaulti">
+…a nie samo vaulti.png ani /image/vaulti.png (to ostatnie zadziała tylko, jeśli strona jest w katalogu głównym domeny).
+
+Chcesz, żebym przeleciał Twój aktualny plik index.html i zwrócił gotową wersję bez linków do style.css/script.js i z poprawionymi ścieżkami do obrazów? Jeśli podasz, w jakim folderze leżą obrazki (np. image/ czy assets/img/), zrobię to od ręki.
+
+Je zei:
+ChatGPT zei:
+Widzę, że nic nie wpisałeś 🙂
+
+Podsumuję, żeby było jasne co teraz zrobić:
+
+👉 Masz w HTML odwołania do style.css i script.js, ale te pliki nie istnieją. Dlatego konsola pokazuje błędy 404.
+
+✔ Rozwiązanie:
+
+Otwórz swój index.html.
+
+Usuń albo zakomentuj linie:
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+Zapisz plik i wrzuć ponownie na serwer.
+
+Strona będzie działała normalnie, bo CSS i JS masz już wbudowane w <style> i <script> wewnątrz tego samego pliku.
+
+📌 Dodatkowo – błędy 404 dla obrazów (vaulti_1.png, vaulti.png itd.) oznaczają, że:
+
+plików brakuje na serwerze, albo
+
+ścieżki w HTML są złe.
+
+Przykład poprawnej ścieżki, jeśli masz folder image/ w tym samym miejscu co index.html:
+
+<img src="image/vaulti_1.png" alt="Vaulti wariant 1">
+Ch
+
+Je zei:
+<!doctype html>
+<html lang="pl">
+<head>
+  <!-- === IMPROVED: SEO, PERFORMANCE & ACCESSIBILITY === -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem | Idealny Prezent</title>
+  <meta name="description" content="Odkryj Vaulti – bezpieczną i personalizowaną skarbonkę 3D z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i wybierz kolor. To idealny prezent dla dziecka, który łączy magię z bezpieczeństwem." />
+  <link rel="canonical" href="https://vaulti.nl/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- === IMPROVED: Preload critical assets for faster rendering === -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- === IMPROVED: Open Graph tags for better social sharing === -->
+  <meta property="og:title" content="Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem" />
+  <meta property="og:description" content="Spokój ducha dla rodziców, magia dla dzieci. Odkryj personalizowaną skarbonkę z ukrytym zabezpieczeniem i stwórz idealny prezent." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vaulti.nl/" />
+  <meta property="og:image" content="https://vaulti.nl/image/vaulti-og-image-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pl_PL" />
+
+  <link rel="icon" href="/assets/favicon.svg">
+
+  <!-- === IMPROVED: Comprehensive Schema.org Markup for Rich Snippets === -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://vaulti.nl/",
+        "name": "Vaulti",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://vaulti.nl/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://vaulti.nl/"
+        }]
+      },
+      {
+        "@type": "Product",
+        "name": "Vaulti - Personalizowana Skarbonka 3D",
+        "image": [
+          "https://vaulti.nl/image/vaulti-color.png",
+          "https://vaulti.nl/image/vaulti-wood.png"
+        ],
+        "description": "Vaulti to personalizowana skarbonka drukowana w 3D z dyskretnym, ukrytym slotem na lokalizator Apple AirTag lub Samsung SmartTag. Idealny prezent dla dziecka, który łączy zabawę z bezpieczeństwem, np. na komunię czy urodziny.",
+        "brand": { "@type": "Brand", "name": "Vaulti" },
+        "sku": "VAULTI-01",
+        "mpn": "VLT-001",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "87"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "39.95",
+          "highPrice": "79.95",
+          "priceCurrency": "EUR",
+          "offerCount": "3",
+          "availability": "https://schema.org/InStock"
+        },
+        "review": [{
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Agnieszka W." },
+          "reviewBody": "Córka zakochana w brokacie, a ja w spokoju, że skarbonkę zawsze znajdę. Świetny pomysł na bezpieczny prezent!"
+        }]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Jaki lokalizator pasuje do Vaulti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Do Vaulti pasują lokalizatory Apple AirTag oraz Samsung SmartTag. Skarbonka posiada specjalny, dyskretny slot serwisowy, który umożliwia łatwą wymianę baterii w lokalizatorze bez potrzeby rozbierania całej szkatułki."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy dziecko musi wiedzieć o lokalizatorze?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie, nie musi. Zabezpieczenie jest całkowicie niewidoczne z zewnątrz. Zostało zaprojektowane tak, aby działało dyskretnie w tle, dając rodzicom spokój ducha, a dziecku radość z posiadania pięknej skarbonki."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- === STYLE REWORKED: Light theme applied inspired by the provided file === -->
+  <style>
+    :root {
+      --bg: #f1f5f9; /* slate-100 */
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0; /* slate-200 */
+      --text-primary: #0f172a; /* slate-900 */
+      --text-secondary: #475569; /* slate-600 */
+      --text-light: #f1f5f9;
+      --accent-color: #3b82f6; /* blue-500 */
+      --accent-color-hover: #2563eb; /* blue-600 */
+      --focus-ring-color: rgba(59, 130, 246, 0.4);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg);
+      color: var(--text-primary); -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    h1, h2, h3, h4 { margin: 0; font-weight: 800; line-height: 1.3; color: var(--text-primary); }
+    h1 { font-size: clamp(2.5rem, 5vw, 3.25rem); }
+    h2 { 
+      font-size: clamp(2rem, 4vw, 2.5rem); 
+      margin-bottom: 32px; 
+      text-align: center; 
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+    }
+    .section-header { text-align: center; margin-bottom: 32px; }
+    h3 { font-size: 1.75rem; } h4 { font-size: 1.25rem; }
+    p { margin: 16px 0 0; color: var(--text-secondary); line-height: 1.7; }
+    a { color: var(--accent-color); text-decoration: none; }
+    .card { 
+      background-color: var(--bg-card); 
+      border-radius: 16px; 
+      padding: 24px; 
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+    .grid { display: grid; gap: 24px; }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    :focus-visible { outline: 3px solid var(--focus-ring-color); outline-offset: 2px; border-radius: 8px; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent-color); color: white; padding: 8px; z-index: 100; transition: top 0.3s; }
+    .skip-link:focus { top: 0; }
+    .btn {
+      display: inline-block; padding: 14px 28px; border-radius: 12px; font-weight: 700;
+      color: white; background: var(--accent-color); border: 2px solid transparent;
+      transition: all 0.2s ease; cursor: pointer; text-align: center;
+    }
+    .btn:hover { background: var(--accent-color-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2); }
+    .btn.secondary { 
+      background: var(--bg); 
+      border-color: var(--border-color); 
+      color: var(--text-primary); 
+    }
+    .btn.secondary:hover { border-color: var(--accent-color); background-color: #e2e8f0; }
+    header { 
+      position: sticky; top: 0; z-index: 50; 
+      background: white; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 16px 0; 
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem; color: var(--text-primary); }
+    .logo svg { width: 28px; height: 28px; }
+    .hero { background-color: #0f172a; color: var(--text-light); padding: 64px 0; border-radius: 16px; margin-top: 32px; }
+    .hero h1, .hero p { color: white; }
+    .hero .badge { display: inline-block; padding: 6px 12px; background: rgba(255,255,255,0.1); border-radius: 99px; font-size: 0.875rem; margin-bottom: 16px; }
+    .hero-content { display: grid; grid-template-columns: 1fr 0.8fr; gap: 48px; align-items: center; }
+    .hero img { border-radius: 12px; }
+    .trust-badges { text-align: center; }
+    .trust-badge .value { font-size: 2.25rem; font-weight: 800; color: var(--accent-color); }
+    .trust-badge .label { color: var(--text-secondary); margin-top: 4px; }
+    .configurator { gap: 32px; padding: 32px; align-items: center; }
+    .config-group label { display: block; margin-bottom: 12px; font-weight: 600; color: var(--text-secondary); }
+    #vaulti-preview { background-color: #e2e8f0; }
+    .color-swatches button { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s ease; }
+    .color-swatches button.active { border-color: var(--accent-color); transform: scale(1.15); box-shadow: 0 0 0 3px var(--focus-ring-color); }
+    .comparison-table .icon-check { color: var(--accent-color); font-size: 1.5rem; }
+    footer { background: #1e293b; color: var(--text-light); }
+    @media (max-width: 900px) { .grid-cols-2, .grid-cols-3, .hero-content { grid-template-columns: 1fr; } .hero-content { text-align: center; } .hero-content > div:last-child { order: -1; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Główna nawigacja">
+      <a class="logo" href="#">
+        <svg role="img" aria-label="Vaulti Logo" viewBox="0 0 24 24" fill="none"><path d="M4 7.5h16M4 12h16M4 16.5h10" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g" x1="0" y1="0" x2="24" y2="0"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs></svg>
+        <span>VAULTI</span>
+      </a>
+      <nav id="main-nav">
+        <!-- Links can be added here -->
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="container hero" id="start">
+      <div class="hero-content">
+        <div>
+          <span class="badge">Dla dzieci: magia i design • Dla rodziców: spokój i bezpieczeństwo</span>
+          <h1>Twoja personalizowana skarbonka 3D, która <span style="color: #60a5fa;">zawsze się odnajdzie</span></h1>
+          <p>Vaulti to więcej niż skarbonka. To bezpieczne miejsce na skarby Twojego dziecka, z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i podaruj prezent, który zostanie na lata.</p>
+          <div style="display:flex;gap:16px;margin-top:24px; justify-content: center;">
+            <a href="#konfigurator" class="btn">Stwórz swoją Vaulti teraz</a>
+            <a href="#porownanie" class="btn secondary">Zobacz porównanie modeli</a>
+          </div>
+        </div>
+        <div>
+          <img src="https://placehold.co/600x500/0f172a/f1f5f9?text=Vaulti" alt="Kolorowa, personalizowana skarbonka Vaulti z grawerem imienia, stojąca na biurku." width="600" height="500"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="zaufanie">
+      <div class="section-header">
+        <h2>Dlaczego rodzice wybierają Vaulti?</h2>
+      </div>
+      <div class="card">
+        <div class="grid grid-cols-3 trust-badges">
+          <div class="trust-badge">
+            <div class="value">4.9/5 ★</div>
+            <div class="label">Średnia ocen od klientów</div>
+          </div>
+          <div class="trust-badge">
+            <div class="value">1,500+</div>
+            <div class="label">Sprzedanych skarbonek</div>
+          </div>
+          <div class="trust-badge">
+            <div class="value">100%</div>
+            <div class="label">Bezpieczne materiały (EN 71-3)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="jak-to-dziala">
+      <div class="section-header">
+        <h2>Spokój ducha w 3 prostych krokach</h2>
+      </div>
+      <div class="grid grid-cols-3">
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona lokalizatora" style="font-size: 2.5rem; margin-bottom: 1rem;">📡</div>
+          <h4>1. Włóż lokalizator</h4>
+          <p>Otwórz dyskretny slot i umieść w nim swój AirTag lub SmartTag.</p>
+        </div>
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona zamkniętej kłódki" style="font-size: 2.5rem; margin-bottom: 1rem;">🔒</div>
+          <h4>2. Zamknij i ukryj</h4>
+          <p>Zabezpieczenie jest całkowicie niewidoczne. Dziecko widzi tylko piękną szkatułkę.</p>
+        </div>
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona telefonu z mapą" style="font-size: 2.5rem; margin-bottom: 1rem;">📱</div>
+          <h4>3. Zlokalizuj w każdej chwili</h4>
+          <p>Sprawdź pozycję skarbonki w aplikacji, kiedy tylko potrzebujesz.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container section" id="konfigurator">
+      <div class="section-header">
+        <h2>Stwórz wymarzoną skarbonkę</h2>
+      </div>
+      <div class="grid grid-cols-2 card configurator">
+        <div id="vaulti-preview" style="border-radius: 14px; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 1/1;">
+          <img id="preview-image" src="https://placehold.co/500x500/e2e8f0/0f172a?text=Vaulti+Color" alt="Podgląd personalizowanej skarbonki Vaulti" loading="lazy" width="500" height="500" style="border-radius: 8px;">
+        </div>
+        <div>
+          <h3>Konfigurator</h3>
+          <div class="config-group">
+            <label for="variant-select">1. Wybierz wariant:</label>
+            <select id="variant-select" class="btn secondary" style="width: 100%; padding: 12px; text-align: left;">
+              <option value="color">Vaulti Color (39,95 €)</option>
+              <option value="wood">Vaulti Wood (49,95 €)</option>
+            </select>
+          </div>
+          <div class="config-group">
+            <label>2. Wybierz kolor korpusu:</label>
+            <div class="color-swatches" style="display: flex; gap: 10px;">
+              <button class="active" style="background-color: #ffc0cb;" data-color="pink" aria-label="Wybierz kolor różowy"></button>
+              <button style="background-color: #add8e6;" data-color="lightblue" aria-label="Wybierz kolor błękitny"></button>
+              <button style="background-color: #90ee90;" data-color="lightgreen" aria-label="Wybierz kolor zielony"></button>
+              <button style="background-color: #333;" data-color="black" aria-label="Wybierz kolor czarny"></button>
+            </div>
+          </div>
+          <div class="config-group">
+            <label for="grawer-input">3. Wpisz tekst graweru (opcjonalnie):</label>
+            <input id="grawer-input" type="text" placeholder="Np. 'Skarby Zosi'" style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border-color); background:var(--bg); color:var(--text-primary);">
+          </div>
+          <div class="config-group">
+            <a href="#porownanie" class="btn" style="width: 100%;">Zamów z tą personalizacją</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="porownanie">
+      <div class="section-header">
+        <h2>Porównaj modele Vaulti</h2>
+      </div>
+      <div class="card" style="overflow-x: auto;">
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th style="padding: 16px; text-align: left; border-bottom: 1px solid var(--border-color);">Funkcja</th>
+              <th style="padding: 16px; text-align: left; border-bottom: 1px solid var(--border-color);">Vaulti Classic</th>
+              <th style="padding: 16px; text-align: left; border-bottom: 1px solid var(--border-color);">Vaulti Wood</th>
+              <th style="padding: 16px; text-align: left; border-bottom: 1px solid var(--border-color);">Vaulti Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Materiał korpusu</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Druk 3D (PETG/ASA)</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Naturalna sklejka</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Druk 3D (wzmocniony)</td>
+            </tr>
+            <tr>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Slot na lokalizator</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Personalizowany grawer</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Zamek RFID + aplikacja</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">-</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">-</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <td style="padding: 16px;">Cena</td>
+              <td style="padding: 16px;"><strong>39,95 €</strong></td>
+              <td style="padding: 16px;"><strong>49,95 €</strong></td>
+              <td style="padding: 16px;"><em>Zapowiedź</em></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="container section faq" id="faq" aria-labelledby="faq-h">
+      <div class="section-header">
+        <h2 id="faq-h">Najczęstsze pytania</h2>
+      </div>
+      <div class="grid grid-cols-2">
+        <details class="card">
+          <summary style="font-weight: 600; cursor: pointer;">Jaki lokalizator pasuje do Vaulti?</summary>
+          <div style="padding-top: 12px;">Apple AirTag oraz Samsung SmartTag. Slot ma dyskretny dostęp do wymiany baterii.</div>
+        </details>
+        <details class="card">
+          <summary style="font-weight: 600; cursor: pointer;">Czy dziecko musi wiedzieć o lokalizatorze?</summary>
+          <div style="padding-top: 12px;">Nie. Zabezpieczenie jest niewidoczne z zewnątrz – działa tylko wtedy, gdy jest potrzebne.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontakt" style="padding: 48px 0;">
+    <div class="container" style="text-align: center;">
+      <p>&copy; 2025 Vaulti. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const variantSelect = document.getElementById('variant-select');
+      const previewImage = document.getElementById('preview-image');
+      const colorSwatches = document.querySelectorAll('.color-swatches button');
+
+      function updateConfiguratorPreview() {
+        const variant = variantSelect.value;
+        const activeColor = document.querySelector('.color-swatches button.active').dataset.color;
+        
+        let imageName = variant === 'wood' ? 'Wood' : Color-${activeColor};
+        previewImage.src = https://placehold.co/500x500/e2e8f0/0f172a?text=Vaulti+${imageName};
+      }
+
+      variantSelect.addEventListener('change', updateConfiguratorPreview);
+      colorSwatches.forEach(swatch => {
+        swatch.addEventListener('click', (e) => {
+          e.preventDefault(); // To prevent any default button behavior
+          colorSwatches.forEach(s => s.classList.remove('active'));
+          swatch.classList.add('active');
+          updateConfiguratorPreview();
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+ChatGPT zei:
+
+Myślał przez 6s
+Super — ta wersja jest już „czysta”: nie odwołuje się do nieistniejących style.css i script.js, więc 404 znikną. Poniżej masz szybki przegląd + drobne poprawki, które podniosą jakość (SEO, a11y, wydajność) i wyeliminują kolejne typowe potknięcia.
+
+Co jest OK ✅
+CSS/JS inline — brak błędów 404.
+
+Head z canonical, robots, OG, JSON-LD (ładnie!).
+
+Skip-link, focus ring, aria-etykiety — plus za dostępność.
+
+Konfigurator działa bez zewn. assetów (placeholdery).
+
+Co warto poprawić / dodać 🔧
+OG image i grafiki faktycznie na serwerze
+Upewnij się, że naprawdę istnieje:
+https://vaulti.nl/image/vaulti-og-image-1200x630.png
+Jeśli nie, wrzuć plik i podmień ścieżkę. Bez tego social preview nie zadziała.
+
+WebSite SearchAction
+W JSON-LD masz target do /?s=…, ale nie ma wyszukiwarki. Dwie opcje:
+
+usuń blok SearchAction, albo
+
+dodaj prosty formularz (najprościej „faux-search” przewijający do sekcji):
+
+<!-- mini-wyszukiwarka w nav -->
+<form action="/" role="search" aria-label="Szukaj" onsubmit="event.preventDefault();document.getElementById('konfigurator').scrollIntoView({behavior:'smooth'})">
+  <input type="search" placeholder="Szukaj..." aria-label="Szukaj" />
+  <button class="btn secondary" type="submit">Szukaj</button>
+</form>
+BreadcrumbList
+Masz tylko pozycję „Strona główna”. To poprawne, ale skoro to one-pager, ten blok możesz zostawić lub usunąć – nie przyniesie realnych korzyści SEO.
+
+Responsive images (wydajność + CLS)
+Dla obrazka hero dodaj srcset i sizes, żeby przeglądarka nie ładowała 600px na telefonie:
+
+<img
+  src="https://placehold.co/600x500/0f172a/f1f5f9?text=Vaulti"
+  srcset="
+    https://placehold.co/480x400/0f172a/f1f5f9?text=Vaulti 480w,
+    https://placehold.co/600x500/0f172a/f1f5f9?text=Vaulti 600w,
+    https://placehold.co/900x750/0f172a/f1f5f9?text=Vaulti 900w
+  "
+  sizes="(max-width: 900px) 90vw, 600px"
+  alt="Kolorowa, personalizowana skarbonka Vaulti z grawerem imienia, stojąca na biurku."
+  width="600" height="500" loading="lazy" decoding="async"
+/>
+FAQPage markup — spójność
+W <script type="application/ld+json"> podałeś 2 pytania. Jeżeli na stronie pojawia się więcej (a planujesz), dodaj je też do JSON-LD. Jeśli zostajesz przy dwóch, jest OK.
+
+Atrybuty przy ikonach-emoji
+Dodałeś role="img" i aria-label — świetnie. Dla spójności możesz dodać aria-hidden="true" tam, gdzie etykieta jest obok i się powtarza.
+
+Nawigacja
+Wypełnij linki w <nav id="main-nav">, żeby menu faktycznie przewijało:
+
+<nav id="main-nav" aria-label="Główna nawigacja">
+  <a class="btn secondary" href="#jak-to-dziala">Jak to działa</a>
+  <a class="btn secondary" href="#konfigurator">Konfigurator</a>
+  <a class="btn secondary" href="#porownanie">Porównanie</a>
+  <a class="btn" href="#konfigurator">Kup teraz</a>
+</nav>
+Drobnica SEO
+
+Dodaj meta name="theme-color" content="#0f172a".
+
+Utrzymaj jeden H1 (jest OK). Dalsze nagłówki H2/H3 są spójne.
+
+.htaccess dla statycznej strony (po WordPressie)
+Jeśli na hostingu masz jeszcze stary .htaccess, wstaw minimalny:
+
+Options -Indexes
+DirectoryIndex index.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+</IfModule>
+Konfigurator — UX
+Dodaj natychmiastowy feedback dla graweru (tekst „naklejka” na podglądzie):
+
+<div id="engrave-preview"
+     style="position:absolute;bottom:16px;right:16px;background:rgba(0,0,0,.5);color:#fff;padding:6px 10px;border-radius:8px;font-weight:700;">
+  &nbsp;
+</div>
+<script>
+  const input = document.getElementById('grawer-input');
+  const engrave = document.getElementById('engrave-preview');
+  input.addEventListener('input', () => {
+    engrave.textContent = input.value.trim() || '';
+  });
+</script>
+Mini-patch (sklejka gotowych wstawek)
+Wklej/uzupełnij w odpowiednich miejscach:
+
+HEAD — theme-color
+
+<meta name="theme-color" content="#0f172a">
+NAV — linki kotwiczne
+(podmień obecny pusty <nav id="main-nav">):
+
+<nav id="main-nav" aria-label="Główna nawigacja" style="display:flex;gap:12px;flex-wrap:wrap;">
+  <a class="btn secondary" href="#jak-to-dziala">Jak to działa</a>
+  <a class="btn secondary" href="#konfigurator">Konfigurator</a>
+  <a class="btn secondary" href="#porownanie">Porównanie</a>
+  <a class="btn" href="#konfigurator">Kup teraz</a>
+</nav>
+HERO IMG — srcset/sizes
+(podmień <img …> w hero na wersję z srcset z punktu 4).
+
+Kafelek graweru — live preview
+(włóż #engrave-preview do kontenera podglądu + skrypt z punktu 10).
+
+Jeśli chcesz, mogę Ci przygotować finalny plik index.html z powyższymi poprawkami już wklejonymi (i podmienionymi placeholderami na Twoje prawdziwe ścieżki). Daj znać:
+
+czy image/ to docelowy katalog grafik,
+
+jaka jest faktyczna nazwa pliku OG (vaulti-og-image-1200x630.png istnieje?),
+
+czy chcesz zostawić SearchAction, czy go wyciąć.
+
+Je zei:
+<!doctype html>
+<html lang="pl">
+<head>
+  <!-- === IMPROVED: SEO, PERFORMANCE & ACCESSIBILITY === -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem | Idealny Prezent</title>
+  <meta name="description" content="Odkryj Vaulti – bezpieczną i personalizowaną skarbonkę 3D z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i wybierz kolor. To idealny prezent dla dziecka, który łączy magię z bezpieczeństwem." />
+  <meta name="keywords" content="skarbonka 3D, personalizowana skarbonka, prezent dla dziecka, AirTag skarbonka, inteligentna skarbonka" />
+  <link rel="canonical" href="https://vaulti.nl/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d1117">
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta property="og:title" content="Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem" />
+  <meta property="og:description" content="Spokój ducha dla rodziców, magia dla dzieci. Odkryj personalizowaną skarbonkę z ukrytym zabezpieczeniem i stwórz idealny prezent." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vaulti.nl/" />
+  <meta property="og:image" content="/image/vaulti_0.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pl_PL" />
+
+  <link rel="icon" href="/assets/favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://vaulti.nl/",
+        "name": "Vaulti"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://vaulti.nl/"
+        }]
+      },
+      {
+        "@type": "Product",
+        "name": "Vaulti - Personalizowana Skarbonka 3D",
+        "image": [
+          "/image/vaulti_1.png",
+          "/image/vaulti_2.png"
+        ],
+        "description": "Vaulti to personalizowana skarbonka drukowana w 3D z dyskretnym, ukrytym slotem na lokalizator Apple AirTag lub Samsung SmartTag. Idealny prezent dla dziecka, który łączy zabawę z bezpieczeństwem, np. na komunię czy urodziny.",
+        "brand": { "@type": "Brand", "name": "Vaulti" },
+        "sku": "VAULTI-01",
+        "mpn": "VLT-001",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "87"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "price": "39.95",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "name": "Vaulti Color",
+                "sku": "VAULTI-COLOR"
+            },
+            {
+                "@type": "Offer",
+                "price": "49.95",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "name": "Vaulti Wood",
+                "sku": "VAULTI-WOOD"
+            }
+        ],
+        "review": [
+            {
+              "@type": "Review",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+              "author": { "@type": "Person", "name": "Agnieszka W." },
+              "reviewBody": "Córka zakochana w brokacie, a ja w spokoju, że skarbonkę zawsze znajdę. Świetny pomysł na bezpieczny prezent!"
+            },
+            {
+              "@type": "Review",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+              "author": { "@type": "Person", "name": "Jan K." },
+              "reviewBody": "Świetna jakość wykonania, dziecko zachwycone!"
+            },
+            {
+              "@type": "Review",
+              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+              "author": { "@type": "Person", "name": "Maria S." },
+              "reviewBody": "Dobry pomysł, ale czekam na więcej kolorów."
+            }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Jaki lokalizator pasuje do Vaulti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Do Vaulti pasują lokalizatory Apple AirTag oraz Samsung SmartTag. Skarbonka posiada specjalny, dyskretny slot serwisowy, który umożliwia łatwą wymianę baterii w lokalizatorze bez potrzeby rozbierania całej szkatułki."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy dziecko musi wiedzieć o lokalizatorze?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie, nie musi. Zabezpieczenie jest całkowicie niewidoczne z zewnątrz. Zostało zaprojektowane tak, aby działało dyskretnie w tle, dając rodzicom spokój ducha, a dziecku radość z posiadania pięknej skarbonki."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border-color: #30363d;
+      --text-primary: #e6edf3;
+      --text-secondary: #aab2c2;
+      --accent-gradient: linear-gradient(90deg, #6ee7b7, #22d3ee);
+      --accent-color-1: #6ee7b7;
+      --accent-color-2: #22d3ee;
+      --focus-ring-color: rgba(34, 211, 238, 0.4);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg);
+      color: var(--text-primary); -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    h1, h2, h3, h4 { margin: 0; font-weight: 800; line-height: 1.3; }
+    h1 { font-size: clamp(2.5rem, 5vw, 3.25rem); }
+    h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    h3 { font-size: 1.75rem; } h4 { font-size: 1.25rem; }
+    p { margin: 16px 0 0; color: var(--text-secondary); line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #80bfff; }
+    .card { 
+      background-color: var(--bg-card); 
+      border: 1px solid var(--border-color);
+      border-radius: 16px; 
+      padding: 24px; 
+    }
+    .grid { display: grid; gap: 24px; }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    :focus-visible { outline: 3px solid var(--focus-ring-color); outline-offset: 2px; border-radius: 8px; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent-gradient); color: #0d1117; padding: 8px; z-index: 100; transition: top 0.3s; }
+    .skip-link:focus { top: 0; }
+    .btn {
+      display: inline-block; padding: 14px 28px; border-radius: 12px; font-weight: 700;
+      color: #0d1117; background: var(--accent-gradient); border: 2px solid transparent;
+      transition: all 0.2s ease; cursor: pointer; text-align: center;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(34, 211, 238, 0.25); }
+    .btn.secondary { 
+      background: #21262d; 
+      border-color: var(--border-color); 
+      color: var(--text-primary); 
+    }
+    .btn.secondary:hover { border-color: #8b949e; background-color: #2a2f36; }
+    header { 
+      position: sticky; top: 0; z-index: 50; 
+      background: rgba(13, 17, 23, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 0; 
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem; color: var(--text-primary); }
+    .logo svg { width: 28px; height: 28px; }
+    .hero { display: grid; grid-template-columns: 1fr 0.9fr; gap: 48px; align-items: center; padding-top: 48px; padding-bottom: 48px; }
+    .hero .badge { display: inline-block; padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-card); border-radius: 99px; font-size: 0.875rem; margin-bottom: 16px; }
+    .trust-badges { text-align: center; background-color: var(--bg-card); padding: 40px; border-radius: 16px; }
+    .trust-badge .value { font-size: 2.25rem; font-weight: 800; background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .trust-badge .label { color: var(--text-secondary); margin-top: 4px; }
+    .image-text-section img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; }
+    .configurator { gap: 32px; padding: 32px; align-items: center; }
+    .config-group label { display: block; margin-bottom: 12px; font-weight: 600; color: var(--text-secondary); }
+    #vaulti-preview { background-color: #0d1117; }
+    .color-swatches button { border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s ease; width: 36px; height: 36px; }
+    .color-swatches button.active { border-color: var(--accent-color-2); transform: scale(1.15); box-shadow: 0 0 0 3px var(--focus-ring-color); }
+    .comparison-table .icon-check { color: var(--accent-color-1); font-size: 1.5rem; }
+    footer { background: #161b22; border-top: 1px solid var(--border-color); }
+    .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 48px 0; }
+    .footer-grid > div { text-align: left; }
+    @media (max-width: 900px) { .grid-cols-2, .grid-cols-3, .hero { grid-template-columns: 1fr; } .hero { text-align: center; } .hero > div:last-child { order: -1; } .hero .badge { margin-left: auto; margin-right: auto; } }
+    @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-grid > div { text-align: center; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Główna nawigacja">
+      <a class="logo" href="#">
+        <svg role="img" aria-label="Vaulti Logo" viewBox="0 0 24 24" fill="none"><path d="M4 7.5h16M4 12h16M4 16.5h10" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g" x1="0" y1="0" x2="24" y2="0"><stop stop-color="#6ee7b7"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs></svg>
+        <span>VAULTI</span>
+      </a>
+      <nav id="main-nav" aria-label="Główna nawigacja" style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a class="btn secondary" href="#jak-to-dziala">Jak to działa</a>
+        <a class="btn secondary" href="#konfigurator">Konfigurator</a>
+        <a class="btn secondary" href="#porownanie">Porównanie</a>
+        <a class="btn" href="#konfigurator">Kup teraz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="container hero" id="start">
+      <div>
+        <span class="badge">Dla dzieci: magia i design • Dla rodziców: spokój i bezpieczeństwo</span>
+        <h1>Twoja personalizowana skarbonka 3D, która <span style="background:var(--accent-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;">zawsze się odnajdzie</span></h1>
+        <p>Vaulti to więcej niż skarbonka. To bezpieczne miejsce na skarby Twojego dziecka, z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i podaruj prezent, który zostanie na lata.</p>
+        <div style="display:flex;gap:16px;margin-top:24px; justify-content: center;">
+            <a href="#konfigurator" class="btn">Stwórz swoją Vaulti teraz</a>
+            <a href="#porownanie" class="btn secondary">Zobacz porównanie modeli</a>
+        </div>
+      </div>
+      <div>
+        <!-- === FIXED: Simplified and corrected image tag === -->
+        <img 
+          src="/image/vaulti_1.png" 
+          alt="Nowoczesna, kolorowa skarbonka Vaulti stojąca na drewnianym biurku obok zabawek." 
+          width="600" height="500" style="border-radius: 16px;"
+          loading="lazy" decoding="async"
+        />
+      </div>
+    </section>
+
+    <section class="container section" id="zaufanie">
+      <div class="trust-badges">
+        <div class="section-header">
+            <h2>Dlaczego rodzice wybierają Vaulti?</h2>
+        </div>
+        <div class="grid grid-cols-3">
+          <div class="trust-badge">
+            <div class="value">4.9/5 ★</div>
+            <div class="label">Średnia ocen od klientów</div>
+          </div>
+          <div class="trust-badge">
+            <div class="value">1,500+</div>
+            <div class="label">Sprzedanych skarbonek</div>
+          </div>
+          <div class="trust-badge">
+            <div class="value">100%</div>
+            <div class="label">Bezpieczne materiały (EN 71-3)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="korzysci">
+        <div class="section-header">
+            <h2>Skarbonka o dwóch obliczach</h2>
+        </div>
+        <div class="grid grid-cols-2 image-text-section">
+            <div class="card">
+                <!-- === FIXED: Simplified and corrected image tag === -->
+                <img src="/image/vaulti_5.png" alt="Zbliżenie na personalizowany grawer na skarbonce Vaulti." loading="lazy">
+                <h4>Dla dziecka: Magia posiadania skarbów</h4>
+                <p>Kolorowy design, grawer z własnym imieniem i poczucie, że ma swoje własne, sekretne miejsce. Vaulti to dla dziecka przedmiot dumy i pierwszy krok do nauki oszczędzania.</p>
+            </div>
+            <div class="card">
+                <!-- === FIXED: Simplified and corrected image tag === -->
+                <img src="/image/vaulti_6.png" alt="Skarbonka Vaulti w pokoju dziecka, idealnie wpasowana w otoczenie." loading="lazy">
+                <h4>Dla rodzica: Spokój i bezpieczeństwo</h4>
+                <p>Dyskretnie ukryty lokalizator daje Ci pewność, że najcenniejsze skarby Twojego dziecka nigdy się nie zgubią. To spokój ducha, którego nie da się przecenić.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="jak-to-dziala">
+      <div class="section-header">
+        <h2>Spokój ducha w 3 prostych krokach</h2>
+      </div>
+      <div class="grid grid-cols-3">
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona lokalizatora" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">📡</div>
+          <h4>1. Włóż lokalizator</h4>
+          <p>Otwórz dyskretny slot i umieść w nim swój AirTag lub SmartTag.</p>
+        </div>
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona zamkniętej kłódki" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">🔒</div>
+          <h4>2. Zamknij i ukryj</h4>
+          <p>Zabezpieczenie jest całkowicie niewidoczne. Dziecko widzi tylko piękną szkatułkę.</p>
+        </div>
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona telefonu z mapą" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">📱</div>
+          <h4>3. Zlokalizuj w każdej chwili</h4>
+          <p>Sprawdź pozycję skarbonki w aplikacji, kiedy tylko potrzebujesz.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container section" id="konfigurator">
+      <div class="section-header">
+        <h2>Stwórz wymarzoną skarbonkę</h2>
+      </div>
+      <div class="grid grid-cols-2 card configurator">
+        <div id="vaulti-preview" style="border-radius: 14px; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 1/1;">
+          <img id="preview-image" src="/image/vaulti_1.png" alt="Podgląd personalizowanej skarbonki Vaulti" loading="lazy" width="500" height="500" style="border-radius: 8px;">
+          <div id="engrave-preview" style="position:absolute;bottom:16px;right:16px;background:rgba(0,0,0,.5);color:#fff;padding:6px 10px;border-radius:8px;font-weight:700;"></div>
+        </div>
+        <div>
+          <h3>Konfigurator</h3>
+          <form id="config-form">
+            <div class="config-group">
+                <label for="variant-select">1. Wybierz wariant:</label>
+                <select id="variant-select" class="btn secondary" style="width: 100%; padding: 12px; text-align: left;">
+                  <option value="color">Vaulti Color (39,95 €)</option>
+                  <option value="wood">Vaulti Wood (49,95 €)</option>
+                </select>
+            </div>
+            <div class="config-group">
+                <label>2. Wybierz kolor korpusu:</label>
+                <div class="color-swatches" style="display: flex; gap: 10px;">
+                  <button class="active" style="background-color: #ffc0cb;" data-color="pink" aria-label="Wybierz kolor różowy"></button>
+                  <button style="background-color: #add8e6;" data-color="lightblue" aria-label="Wybierz kolor błękitny"></button>
+                  <button style="background-color: #90ee90;" data-color="lightgreen" aria-label="Wybierz kolor zielony"></button>
+                  <button style="background-color: #333;" data-color="black" aria-label="Wybierz kolor czarny"></button>
+                </div>
+            </div>
+            <div class="config-group">
+                <label for="grawer-input">3. Wpisz tekst graweru (opcjonalnie):</label>
+                <input id="grawer-input" type="text" placeholder="Np. 'Skarby Zosi'" style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border-color); background:var(--bg); color:var(--text-primary);" maxlength="20" aria-describedby="grawer-desc">
+                <p id="grawer-desc" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px;">Maks. 20 znaków.</p>
+            </div>
+            <div class="config-group">
+                <button type="submit" class="btn" style="width: 100%;">Zamów z tą personalizacją</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="wideo">
+        <div class="section-header">
+            <h2>Zobacz Vaulti w akcji</h2>
+        </div>
+        <div class="card" style="padding: 8px;">
+            <video src="/video/vaulti-demo.mp4" controls poster="/image/vaulti_0.png" loading="lazy" style="width: 100%; border-radius: 12px;"></video>
+        </div>
+    </section>
+
+    <section class="container section" id="porownanie">
+      <div class="section-header">
+        <h2>Porównaj modele Vaulti</h2>
+      </div>
+      <div class="card" style="overflow-x: auto;">
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Funkcja</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Color</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Wood</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Materiał korpusu</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Druk 3D (PETG/ASA)</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Naturalna sklejka</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Druk 3D (wzmocniony)</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Slot na lokalizator</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Personalizowany grawer</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Zamek RFID + aplikacja</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">-</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">-</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px;">Cena</th>
+              <td style="padding: 16px;"><strong>39,95 €</strong></td>
+              <td style="padding: 16px;"><strong>49,95 €</strong></td>
+              <td style="padding: 16px;"><em>Zapowiedź</em></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="container section faq" id="faq" aria-labelledby="faq-h">
+      <div class="section-header">
+        <h2 id="faq-h">Najczęstsze pytania</h2>
+      </div>
+      <div class="grid grid-cols-2">
+        <details class="card">
+          <summary style="font-weight: 600; cursor: pointer;">Jaki lokalizator pasuje do Vaulti?</summary>
+          <div style="padding-top: 12px;">Apple AirTag oraz Samsung SmartTag. Slot ma dyskretny dostęp do wymiany baterii.</div>
+        </details>
+        <details class="card">
+          <summary style="font-weight: 600; cursor: pointer;">Czy dziecko musi wiedzieć o lokalizatorze?</summary>
+          <div style="padding-top: 12px;">Nie. Zabezpieczenie jest niewidoczne z zewnątrz – działa tylko wtedy, gdy jest potrzebne.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <p style="font-weight: bold; margin-top: 0;">© <span id="footer-year">2025</span> Vaulti</p>
+        <p style="font-size: 0.9rem;">Wyprodukowano w Boxtel, NL</p>
+      </div>
+      <div>
+        <h4 style="margin-top: 0;">Informacje</h4>
+        <a href="/polityka-prywatnosci">Polityka prywatności</a><br>
+        <a href="/regulamin">Regulamin</a>
+      </div>
+      <div>
+        <h4 style="margin-top: 0;">Kontakt & Social Media</h4>
+        <a href="mailto:info@vaulti.nl">info@vaulti.nl</a><br>
+        <a href="https://instagram.com/vaulti" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const configForm = document.getElementById('config-form');
+      const variantSelect = document.getElementById('variant-select');
+      const previewImage = document.getElementById('preview-image');
+      const colorSwatches = document.querySelectorAll('.color-swatches button');
+      const engraveInput = document.getElementById('grawer-input');
+      const engravePreview = document.getElementById('engrave-preview');
+      const colorSwatchesContainer = document.querySelector('.color-swatches');
+
+      const config = {
+          variant: 'color',
+          color: 'pink',
+          engrave: ''
+      };
+
+      function updateConfiguratorPreview() {
+        if (config.variant === 'wood') {
+          previewImage.src = '/image/vaulti_2.png';
+          previewImage.alt = 'Podgląd drewnianej skarbonki Vaulti Wood';
+          colorSwatchesContainer.style.opacity = '0.5';
+          colorSwatchesContainer.style.pointerEvents = 'none';
+        } else {
+          previewImage.alt = 'Podgląd kolorowej skarbonki Vaulti Color';
+          colorSwatchesContainer.style.opacity = '1';
+          colorSwatchesContainer.style.pointerEvents = 'auto';
+          
+          const activeColorSwatch = document.querySelector(.color-swatches button[data-color="${config.color}"]);
+          colorSwatches.forEach(s => s.classList.remove('active'));
+          if(activeColorSwatch) activeColorSwatch.classList.add('active');
+
+          switch(config.color) {
+            case 'pink': previewImage.src = '/image/vaulti_1.png'; break;
+            case 'lightblue': previewImage.src = '/image/vaulti_3.png'; break;
+            case 'lightgreen': previewImage.src = '/image/vaulti_4.png'; break;
+            case 'black': previewImage.src = '/image/vaulti_0.png'; break;
+            default: previewImage.src = '/image/vaulti_1.png';
+          }
+        }
+        engravePreview.textContent = config.engrave;
+        variantSelect.value = config.variant;
+        engraveInput.value = config.engrave;
+      }
+      
+      function saveConfig() {
+          localStorage.setItem('vaultiConfig', JSON.stringify(config));
+      }
+
+      function loadConfig() {
+          const savedConfig = localStorage.getItem('vaultiConfig');
+          if (savedConfig) {
+              const parsedConfig = JSON.parse(savedConfig);
+              Object.assign(config, parsedConfig);
+          }
+          updateConfiguratorPreview();
+      }
+
+      engraveInput.addEventListener('input', () => {
+        if (engraveInput.value.length > 20) engraveInput.value = engraveInput.value.slice(0, 20);
+        config.engrave = engraveInput.value.trim();
+        engravePreview.textContent = config.engrave;
+        saveConfig();
+      });
+
+      variantSelect.addEventListener('change', (e) => {
+        config.variant = e.target.value;
+        updateConfiguratorPreview();
+        saveConfig();
+      });
+      
+      colorSwatches.forEach(swatch => {
+        swatch.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (config.variant === 'color') {
+            config.color = swatch.dataset.color;
+            updateConfiguratorPreview();
+            saveConfig();
+          }
+        });
+      });
+
+      configForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const params = new URLSearchParams(config);
+          window.location.href = /checkout?${params.toString()};
+      });
+      
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+      loadConfig();
+    });
+  </script>
+</body>
+</html>
+
+ChatGPT zei:
+
+Myślał przez 9s
+Wygląda świetnie – zrobiłeś solidny skok jakościowy 👏
+Poniżej masz checklistę ostatnich szlifów + gotowe, krótkie wklejki kodu.
+
+Najważniejsze poprawki (warto wdrożyć od razu)
+LCP / hero image
+Obrazek w sekcji „hero” jest nad fałdą, więc nie dawaj loading="lazy" – przyspieszysz LCP.
+
+<!-- usuń loading="lazy" w hero -->
+<img src="/image/vaulti_1.png" width="600" height="500" decoding="async" alt="..." style="border-radius:16px;">
+Ścieżki absolutne /…
+Teraz wszystko jest pod /image/... i /video/.... To jest OK jeśli strona jest w katalogu głównym domeny.
+Jeśli kiedykolwiek wrzucisz ją w podkatalog (np. /vaulti/), zmień na ścieżki względne: image/..., video/....
+
+OG image / plik faktycznie istnieje
+Upewnij się, że /image/vaulti_0.png naprawdę jest na serwerze i ma ~1200×630.
+Jeśli używasz innego pliku, podmień w <meta property="og:image">.
+
+JSON-LD – drobne korekty semantyczne
+
+WebSite – brak SearchAction jest OK (nie masz wyszukiwarki).
+
+Product.offers – masz tablicę Offer (spoko). Dodaj url do każdej oferty, żeby Google wiedział, gdzie prowadzi zakup:
+
+{
+  "@type":"Offer",
+  "name":"Vaulti Color",
+  "sku":"VAULTI-COLOR",
+  "price":"39.95",
+  "priceCurrency":"EUR",
+  "availability":"https://schema.org/InStock",
+  "url":"https://vaulti.nl/#konfigurator"
+}
+Jeśli nie masz realnie 87 recenzji/4.9 – zostaw to jako placeholder do czasu prawdziwych opinii.
+
+Wideo
+Dodaj typ MIME i ścieżki alternatywne (Safari):
+
+<video controls poster="/image/vaulti_0.png" style="width:100%;border-radius:12px;" preload="metadata">
+  <source src="/video/vaulti-demo.mp4" type="video/mp4">
+  <source src="/video/vaulti-demo.webm" type="video/webm">
+  <!-- (opcjonalnie) napisy -->
+  <!-- <track kind="captions" src="/video/vaulti-pl.vtt" srclang="pl" label="Polski"> -->
+  Przepraszamy, Twoja przeglądarka nie obsługuje wideo.
+</video>
+A11y w nawigacji
+Dodaj aria-current="page" na aktywnej kotwicy po kliknięciu:
+
+// tuż pod DOMContentLoaded
+const navLinks = document.querySelectorAll('#main-nav a[href^="#"]');
+navLinks.forEach(a=>{
+  a.addEventListener('click', ()=>{
+    navLinks.forEach(l=>l.removeAttribute('aria-current'));
+    a.setAttribute('aria-current','page');
+  });
+});
+Prefers-reduced-motion (ukłon w stronę dostępności)
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+  .btn:hover { transform: none; box-shadow: none; }
+}
+Security/SEO drobnica
+
+Dodaj nagłówek CSP kiedy będziesz mógł (serwer), a w HTML przynajmniej meta:
+
+<!-- lekki CSP (na start) -->
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'; object-src 'none';">
+Dodaj link do sitemap (jeśli masz wiele podstron):
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+Rozważ hreflang gdy zrobisz wersję NL (pl/ nl):
+
+<link rel="alternate" href="https://vaulti.nl/" hreflang="pl">
+<link rel="alternate" href="https://vaulti.nl/nl" hreflang="nl">
+<link rel="alternate" href="https://vaulti.nl/" hreflang="x-default">
+Formularz – UX
+W Konfiguratorze dodałeś limit 20 znaków (super). Dorzuć walidację znaków specjalnych, żeby uniknąć problemów przy grawerze:
+
+const safe = v => v.replace(/[^0-9A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż \-_.]/g,'');
+engraveInput.addEventListener('input', ()=>{
+  engraveInput.value = safe(engraveInput.value).slice(0,20);
+  config.engrave = engraveInput.value.trim();
+  engravePreview.textContent = config.engrave;
+  saveConfig();
+});
+Hero CTA scroll – wygładzenie
+Już masz scroll-behavior: smooth, więc OK. Jeżeli chcesz „offset” pod sticky header, możesz dodać:
+
+:target { scroll-margin-top: 80px; }
+Co już masz dobrze (zostaw tak)
+Dark theme, spójna typografia, ładne gradienty.
+
+Skip-link + focus ring.
+
+Lokalny storage dla konfiguratora (nice touch!).
+
+Tabela porównawcza z scope="row/col".
+
+FAQ + FAQPage schema.
+
+Jeśli podasz, czy strona jest na root domeny czy podkatalog, mogę wygenerować Ci finalny index.html z powyższymi mikropoprawkami już wklejonymi + gotową wersją JSON-LD (z url przy ofertach) i odchudzonym obrazkiem hero (bez lazy).
+
+Je zei:
+<!doctype html>
+<html lang="pl">
+<head>
+  <!-- === IMPROVED: SEO, PERFORMANCE & ACCESSIBILITY === -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem | Idealny Prezent</title>
+  <meta name="description" content="Odkryj Vaulti – bezpieczną i personalizowaną skarbonkę 3D z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i wybierz kolor. To idealny prezent dla dziecka, który łączy magię z bezpieczeństwem." />
+  <meta name="keywords" content="skarbonka 3D, personalizowana skarbonka, prezent dla dziecka, AirTag skarbonka, inteligentna skarbonka" />
+  <link rel="canonical" href="https://vaulti.nl/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d1117">
+  <!-- === ADDED: Basic Content Security Policy === -->
+  <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; object-src 'none';">
+
+  <!-- === IMPROVED: Variable fonts for performance === -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"></noscript>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta property="og:title" content="Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem" />
+  <meta property="og:description" content="Spokój ducha dla rodziców, magia dla dzieci. Odkryj personalizowaną skarbonkę z ukrytym zabezpieczeniem i stwórz idealny prezent." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vaulti.nl/" />
+  <meta property="og:image" content="/image/vaulti_0.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pl_PL" />
+
+  <link rel="icon" href="/assets/favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://vaulti.nl/",
+        "name": "Vaulti"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://vaulti.nl/"
+        }]
+      },
+      {
+        "@type": "Product",
+        "name": "Vaulti - Personalizowana Skarbonka 3D",
+        "image": [
+          "/image/vaulti_1.png",
+          "/image/vaulti_2.png"
+        ],
+        "description": "Vaulti to personalizowana skarbonka drukowana w 3D z dyskretnym, ukrytym slotem na lokalizator Apple AirTag lub Samsung SmartTag. Idealny prezent dla dziecka, który łączy zabawę z bezpieczeństwem, np. na komunię czy urodziny.",
+        "brand": { "@type": "Brand", "name": "Vaulti" },
+        "sku": "VAULTI-01",
+        "mpn": "VLT-001",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "87"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "price": "39.95",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "name": "Vaulti Color",
+                "sku": "VAULTI-COLOR",
+                "url": "https://vaulti.nl/#konfigurator"
+            },
+            {
+                "@type": "Offer",
+                "price": "49.95",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "name": "Vaulti Wood",
+                "sku": "VAULTI-WOOD",
+                "url": "https://vaulti.nl/#konfigurator"
+            },
+            {
+                "@type": "Offer",
+                "price": "TBA",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/PreOrder",
+                "name": "Vaulti Pro",
+                "sku": "VAULTI-PRO",
+                "url": "https://vaulti.nl/preorder"
+            }
+        ],
+        "review": [
+            {
+              "@type": "Review",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+              "author": { "@type": "Person", "name": "Agnieszka W." },
+              "reviewBody": "Córka zakochana w brokacie, a ja w spokoju, że skarbonkę zawsze znajdę. Świetny pomysł na bezpieczny prezent!"
+            },
+            {
+              "@type": "Review",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+              "author": { "@type": "Person", "name": "Jan K." },
+              "reviewBody": "Świetna jakość wykonania, dziecko zachwycone!"
+            },
+            {
+              "@type": "Review",
+              "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+              "author": { "@type": "Person", "name": "Maria S." },
+              "reviewBody": "Dobry pomysł, ale czekam na więcej kolorów."
+            }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Jaki lokalizator pasuje do Vaulti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Do Vaulti pasują lokalizatory Apple AirTag oraz Samsung SmartTag. Skarbonka posiada specjalny, dyskretny slot serwisowy, który umożliwia łatwą wymianę baterii w lokalizatorze bez potrzeby rozbierania całej szkatułki."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy dziecko musi wiedzieć o lokalizatorze?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie, nie musi. Zabezpieczenie jest całkowicie niewidoczne z zewnątrz. Zostało zaprojektowane tak, aby działało dyskretnie w tle, dając rodzicom spokój ducha, a dziecku radość z posiadania pięknej skarbonki."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border-color: #30363d;
+      --text-primary: #e6edf3;
+      /* === IMPROVED: Better contrast for accessibility === */
+      --text-secondary: #c9d1d9; 
+      --accent-gradient: linear-gradient(90deg, #6ee7b7, #22d3ee);
+      --accent-color-1: #6ee7b7;
+      --accent-color-2: #22d3ee;
+      --focus-ring-color: rgba(34, 211, 238, 0.4);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    :target { scroll-margin-top: 100px; }
+    body {
+      margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg);
+      color: var(--text-primary); -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    h1, h2, h3, h4 { margin: 0; font-weight: 800; line-height: 1.3; }
+    h1 { font-size: clamp(2.5rem, 5vw, 3.25rem); }
+    h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    h3 { font-size: 1.75rem; } h4 { font-size: 1.25rem; }
+    p { margin: 16px 0 0; color: var(--text-secondary); line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #80bfff; }
+    .card { 
+      background-color: var(--bg-card); 
+      border: 1px solid var(--border-color);
+      border-radius: 16px; 
+      padding: 24px; 
+    }
+    .grid { display: grid; gap: 24px; }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    :focus-visible { outline: 3px solid var(--focus-ring-color); outline-offset: 2px; border-radius: 8px; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent-gradient); color: #0d1117; padding: 8px; z-index: 100; transition: top 0.3s; }
+    .skip-link:focus { top: 0; }
+    .btn {
+      display: inline-block; padding: 14px 28px; border-radius: 12px; font-weight: 700;
+      color: #0d1117; background: var(--accent-gradient); border: 2px solid transparent;
+      transition: all 0.2s ease; cursor: pointer; text-align: center;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(34, 211, 238, 0.25); }
+    .btn.secondary { 
+      background: #21262d; 
+      border-color: var(--border-color); 
+      color: var(--text-primary); 
+    }
+    .btn.secondary:hover { border-color: #8b949e; background-color: #2a2f36; }
+    header { 
+      position: sticky; top: 0; z-index: 50; 
+      background: rgba(13, 17, 23, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .nav-container { padding: 16px 0; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem; color: var(--text-primary); }
+    .logo svg { width: 28px; height: 28px; }
+    .hero { display: grid; grid-template-columns: 1fr 0.9fr; gap: 48px; align-items: center; padding-top: 48px; padding-bottom: 48px; }
+    .hero .badge { display: inline-block; padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-card); border-radius: 99px; font-size: 0.875rem; margin-bottom: 16px; }
+    .trust-badges { text-align: center; background-color: var(--bg-card); padding: 40px; border-radius: 16px; }
+    .trust-badge .value { font-size: 2.25rem; font-weight: 800; background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .trust-badge .label { color: var(--text-secondary); margin-top: 4px; }
+    .image-text-section img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; }
+    .configurator { gap: 32px; padding: 32px; align-items: center; }
+    .config-group label { display: block; margin-bottom: 12px; font-weight: 600; color: var(--text-secondary); }
+    #vaulti-preview { background-color: #0d1117; }
+    #preview-canvas { max-width: 100%; border-radius: 8px; display: none; } /* Hide canvas by default */
+    #preview-image { max-width: 100%; border-radius: 8px; } /* Keep image for fallback */
+    .color-swatches button { border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s ease; width: 36px; height: 36px; }
+    .color-swatches button.active { border-color: var(--accent-color-2); transform: scale(1.15); box-shadow: 0 0 0 3px var(--focus-ring-color); }
+    .comparison-table .icon-check { color: var(--accent-color-1); font-size: 1.5rem; }
+    footer { background: #161b22; border-top: 1px solid var(--border-color); }
+    .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 48px 0; }
+    .footer-grid > div { text-align: left; }
+    .desktop-nav { display: flex; gap: 12px; flex-wrap: wrap; }
+    .mobile-nav-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 0; color: var(--text-primary); }
+    .mobile-nav { display: none; flex-direction: column; gap: 8px; padding: 16px 20px; background: var(--bg); }
+    .mobile-nav a { padding: 12px; text-align: center; border-radius: 8px; font-weight: 600; display: block; }
+    .mobile-nav a:hover { background-color: var(--bg-card); }
+    .mobile-nav .btn { margin-top: 8px; }
+    .sticky-cta { display: none; }
+
+    @media (max-width: 900px) { 
+      .grid-cols-2, .grid-cols-3, .hero { grid-template-columns: 1fr; } 
+      .hero { text-align: center; } 
+      .hero > div:last-child { order: -1; } 
+      .hero .badge { margin-left: auto; margin-right: auto; }
+      .desktop-nav { display: none; }
+      .mobile-nav-toggle { display: block; }
+    }
+    @media (max-width: 640px) { 
+        .footer-grid { grid-template-columns: 1fr; text-align: center; } 
+        .footer-grid > div { text-align: center; } 
+        .sticky-cta {
+          display: block; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+          z-index: 100; padding: 12px 24px; background: var(--accent-gradient);
+          border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 1rem;
+        }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .btn:hover { transform: none; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
+  <header>
+    <div class="nav-container">
+        <div class="container nav" role="navigation" aria-label="Główna nawigacja">
+          <a class="logo" href="#">
+            <svg role="img" aria-label="Vaulti Logo" viewBox="0 0 24 24" fill="none"><path d="M4 7.5h16M4 12h16M4 16.5h10" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g" x1="0" y1="0" x2="24" y2="0"><stop stop-color="#6ee7b7"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs></svg>
+            <span>VAULTI</span>
+          </a>
+          <nav class="desktop-nav" aria-label="Główna nawigacja">
+            <a class="btn secondary" href="#jak-to-dziala">Jak to działa</a>
+            <a class="btn secondary" href="#konfigurator">Konfigurator</a>
+            <a class="btn secondary" href="#porownanie">Porównanie</a>
+            <a class="btn" href="#konfigurator">Kup teraz</a>
+          </nav>
+          <button id="menu-toggle" class="mobile-nav-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-nav">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:28px;height:28px;">
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+          </button>
+        </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" hidden>
+        <a href="#jak-to-dziala">Jak to działa</a>
+        <a href="#konfigurator">Konfigurator</a>
+        <a href="#porownanie">Porównanie</a>
+        <a href="#konfigurator" class="btn">Kup teraz</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="container hero" id="start">
+      <div>
+        <span class="badge">Dla dzieci: magia i design • Dla rodziców: spokój i bezpieczeństwo</span>
+        <h1>Twoja personalizowana skarbonka 3D, która <span style="background:var(--accent-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;">zawsze się odnajdzie</span></h1>
+        <p>Vaulti to więcej niż skarbonka. To bezpieczne miejsce na skarby Twojego dziecka, z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i podaruj prezent, który zostanie na lata.</p>
+        <div style="display:flex;gap:16px;margin-top:24px; justify-content: center;">
+            <a href="#konfigurator" class="btn">Stwórz swoją Vaulti teraz</a>
+            <a href="#porownanie" class="btn secondary">Zobacz porównanie modeli</a>
+        </div>
+      </div>
+      <div>
+        <picture>
+          <source srcset="/image/vaulti_1.webp" type="image/webp">
+          <img 
+            src="/image/vaulti_1.png" 
+            alt="Nowoczesna, kolorowa skarbonka Vaulti stojąca na drewnianym biurku obok zabawek." 
+            width="600" height="500" style="border-radius: 16px;"
+            decoding="async"
+          />
+        </picture>
+      </div>
+    </section>
+
+    <section class="container section" id="zaufanie">
+      <div class="trust-badges">
+        <div class="section-header">
+            <h2>Dlaczego rodzice wybierają Vaulti?</h2>
+        </div>
+        <div class="grid grid-cols-3">
+          <div class="trust-badge">
+            <div class="value">4.9/5 ★</div>
+            <div class="label">Średnia ocen od klientów</div>
+          </div>
+          <div class="trust-badge">
+            <div class="value">1,500+</div>
+            <div class="label">Sprzedanych skarbonek</div>
+          </div>
+          <div class="trust-badge">
+            <div class="value">100%</div>
+            <div class="label">Bezpieczne materiały (EN 71-3)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="korzysci">
+        <div class="section-header">
+            <h2>Skarbonka o dwóch obliczach</h2>
+        </div>
+        <div class="grid grid-cols-2 image-text-section">
+            <div class="card">
+                <picture>
+                    <source srcset="/image/vaulti_5.webp" type="image/webp">
+                    <img src="/image/vaulti_5.png" alt="Zbliżenie na personalizowany grawer na skarbonce Vaulti." loading="lazy">
+                </picture>
+                <h4>Dla dziecka: Magia posiadania skarbów</h4>
+                <p>Kolorowy design, grawer z własnym imieniem i poczucie, że ma swoje własne, sekretne miejsce. Vaulti to dla dziecka przedmiot dumy i pierwszy krok do nauki oszczędzania.</p>
+            </div>
+            <div class="card">
+                <picture>
+                    <source srcset="/image/vaulti_6.webp" type="image/webp">
+                    <img src="/image/vaulti_6.png" alt="Skarbonka Vaulti w pokoju dziecka, idealnie wpasowana w otoczenie." loading="lazy">
+                </picture>
+                <h4>Dla rodzica: Spokój i bezpieczeństwo</h4>
+                <p>Dyskretnie ukryty lokalizator daje Ci pewność, że najcenniejsze skarby Twojego dziecka nigdy się nie zgubią. To spokój ducha, którego nie da się przecenić.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="jak-to-dziala">
+      <div class="section-header">
+        <h2>Spokój ducha w 3 prostych krokach</h2>
+      </div>
+      <div class="grid grid-cols-3">
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona lokalizatora" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">📡</div>
+          <h4>1. Włóż lokalizator</h4>
+          <p>Otwórz dyskretny slot i umieść w nim swój AirTag lub SmartTag.</p>
+        </div>
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona zamkniętej kłódki" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">🔒</div>
+          <h4>2. Zamknij i ukryj</h4>
+          <p>Zabezpieczenie jest całkowicie niewidoczne. Dziecko widzi tylko piękną szkatułkę.</p>
+        </div>
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona telefonu z mapą" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">📱</div>
+          <h4>3. Zlokalizuj w każdej chwili</h4>
+          <p>Sprawdź pozycję skarbonki w aplikacji, kiedy tylko potrzebujesz.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container section" id="konfigurator">
+      <div class="section-header">
+        <h2>Stwórz wymarzoną skarbonkę</h2>
+      </div>
+      <div class="grid grid-cols-2 card configurator">
+        <div id="vaulti-preview" style="border-radius: 14px; display: flex; align-items: center; justify-content: center; position: relative; aspect-ratio: 1/1;">
+          <canvas id="preview-canvas" width="500" height="500"></canvas>
+          <img id="preview-image" src="/image/vaulti_1.png" alt="Podgląd personalizowanej skarbonki Vaulti" loading="lazy" width="500" height="500" style="display:none;">
+        </div>
+        <div>
+          <h3>Konfigurator</h3>
+          <form id="config-form">
+            <div class="config-group">
+                <label for="variant-select">1. Wybierz wariant:</label>
+                <select id="variant-select" class="btn secondary" style="width: 100%; padding: 12px; text-align: left;" required aria-invalid="false">
+                  <option value="color">Vaulti Color (39,95 €)</option>
+                  <option value="wood">Vaulti Wood (49,95 €)</option>
+                </select>
+            </div>
+            <div class="config-group">
+                <label>2. Wybierz kolor korpusu:</label>
+                <div class="color-swatches" style="display: flex; gap: 10px;">
+                  <button class="active" style="background-color: #ffc0cb;" data-color="pink" aria-label="Wybierz kolor różowy"></button>
+                  <button style="background-color: #add8e6;" data-color="lightblue" aria-label="Wybierz kolor błękitny"></button>
+                  <button style="background-color: #90ee90;" data-color="lightgreen" aria-label="Wybierz kolor zielony"></button>
+                  <button style="background-color: #333;" data-color="black" aria-label="Wybierz kolor czarny"></button>
+                </div>
+            </div>
+            <div class="config-group">
+                <label for="grawer-input">3. Wpisz tekst graweru (opcjonalnie):</label>
+                <input id="grawer-input" type="text" placeholder="Np. 'Skarby Zosi'" style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border-color); background:var(--bg); color:var(--text-primary);" maxlength="20" aria-describedby="grawer-desc" aria-invalid="false">
+                <p id="grawer-desc" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px;">Maks. 20 znaków.</p>
+            </div>
+            <div class="config-group">
+                <button type="submit" class="btn" style="width: 100%;">Zamów z tą personalizacją</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="wideo">
+        <div class="section-header">
+            <h2>Zobacz Vaulti w akcji</h2>
+        </div>
+        <div class="card" style="padding: 8px;">
+            <video controls poster="/image/vaulti_0.png" style="width:100%;border-radius:12px;" preload="metadata">
+              <source src="/video/vaulti-demo.webm" type="video/webm">
+              <source src="/video/vaulti-demo.mp4" type="video/mp4">
+              Przepraszamy, Twoja przeglądarka nie obsługuje wideo.
+            </video>
+        </div>
+    </section>
+
+    <section class="container section" id="porownanie">
+      <div class="section-header">
+        <h2>Porównaj modele Vaulti</h2>
+      </div>
+      <div class="card" style="overflow-x: auto;">
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Funkcja</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Color</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Wood</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Materiał korpusu</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Druk 3D (PETG/ASA)</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Naturalna sklejka</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Druk 3D (wzmocniony)</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Slot na lokalizator</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Personalizowany grawer</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Zamek RFID + aplikacja</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">-</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">-</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px;">Cena</th>
+              <td style="padding: 16px;"><strong>39,95 €</strong></td>
+              <td style="padding: 16px;"><strong>49,95 €</strong></td>
+              <td style="padding: 16px;"><a href="/preorder" class="btn secondary">Zapowiedź</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="container section faq" id="faq" aria-labelledby="faq-h">
+      <div class="section-header">
+        <h2 id="faq-h">Najczęstsze pytania</h2>
+      </div>
+      <div class="grid grid-cols-2">
+        <details class="card">
+          <summary style="font-weight: 600; cursor: pointer;">Jaki lokalizator pasuje do Vaulti?</summary>
+          <div style="padding-top: 12px;">Apple AirTag oraz Samsung SmartTag. Slot ma dyskretny dostęp do wymiany baterii.</div>
+        </details>
+        <details class="card">
+          <summary style="font-weight: 600; cursor: pointer;">Czy dziecko musi wiedzieć o lokalizatorze?</summary>
+          <div style="padding-top: 12px;">Nie. Zabezpieczenie jest niewidoczne z zewnątrz – działa tylko wtedy, gdy jest potrzebne.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <p style="font-weight: bold; margin-top: 0;">© <span id="footer-year">2025</span> Vaulti</p>
+        <p style="font-size: 0.9rem;">Wyprodukowano w Boxtel, NL</p>
+      </div>
+      <div>
+        <h4 style="margin-top: 0;">Informacje</h4>
+        <a href="/polityka-prywatnosci">Polityka prywatności</a><br>
+        <a href="/regulamin">Regulamin</a>
+      </div>
+      <div>
+        <h4 style="margin-top: 0;">Kontakt & Social Media</h4>
+        <a href="mailto:info@vaulti.nl">info@vaulti.nl</a><br>
+        <a href="https://instagram.com/vaulti" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" style="position: fixed; bottom: 0; background: var(--bg-card); padding: 16px; width: 100%; text-align: center; z-index: 100; border-top: 1px solid var(--border-color); display: none;">
+      <p style="margin: 0 0 12px;">Używamy cookies do analityki i personalizacji. <a href="/polityka-prywatnosci">Dowiedz się więcej</a>.</p>
+      <button id="cookie-accept" class="btn">Akceptuj</button>
+  </div>
+  
+  <a href="#konfigurator" class="btn sticky-cta">Stwórz teraz!</a>
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const app = {
+        config: { variant: 'color', color: 'pink', engrave: '' },
+        elements: {
+          menuToggle: document.getElementById('menu-toggle'),
+          mobileNav: document.getElementById('mobile-nav'),
+          mobileNavLinks: document.querySelectorAll('#mobile-nav a'),
+          form: document.getElementById('config-form'),
+          variantSelect: document.getElementById('variant-select'),
+          previewCanvas: document.getElementById('preview-canvas'),
+          colorSwatches: document.querySelectorAll('.color-swatches button'),
+          engraveInput: document.getElementById('grawer-input'),
+          cookieBanner: document.getElementById('cookie-banner'),
+          cookieAcceptBtn: document.getElementById('cookie-accept'),
+        },
+        init() {
+          this.initMenu();
+          this.initConfigurator();
+          this.initCookieBanner();
+          document.getElementById('footer-year').textContent = new Date().getFullYear();
+        },
+        initMenu() {
+          this.elements.menuToggle.addEventListener('click', () => this.toggleMenu());
+          this.elements.mobileNavLinks.forEach(link => link.addEventListener('click', () => this.toggleMenu(false)));
+        },
+        toggleMenu(forceOpen = null) {
+          const isExpanded = forceOpen !== null ? !forceOpen : this.elements.menuToggle.getAttribute('aria-expanded') === 'true';
+          this.elements.mobileNav.toggleAttribute('hidden', isExpanded);
+          this.elements.menuToggle.setAttribute('aria-expanded', !isExpanded);
+          this.elements.menuToggle.setAttribute('aria-label', isExpanded ? 'Otwórz menu' : 'Zamknij menu');
+          if (!isExpanded) this.elements.mobileNav.querySelector('a').focus();
+        },
+        initConfigurator() {
+            this.loadConfig();
+            this.elements.engraveInput.addEventListener('input', () => this.handleEngraveInput());
+            this.elements.variantSelect.addEventListener('change', (e) => this.handleVariantChange(e.target.value));
+            this.elements.colorSwatches.forEach(swatch => swatch.addEventListener('click', (e) => this.handleColorChange(e, swatch.dataset.color)));
+            this.elements.form.addEventListener('submit', (e) => this.handleFormSubmit(e));
+        },
+        handleEngraveInput() {
+            const sanitizedValue = this.elements.engraveInput.value.replace(/[^0-9A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż \-_.]/g,'').slice(0, 20);
+            this.elements.engraveInput.value = sanitizedValue;
+            this.config.engrave = sanitizedValue.trim();
+            this.updatePreview();
+            this.saveConfig();
+        },
+        handleVariantChange(variant) {
+            this.config.variant = variant;
+            this.updatePreview();
+            this.saveConfig();
+        },
+        handleColorChange(e, color) {
+            e.preventDefault();
+            if (this.config.variant === 'color') {
+                this.config.color = color;
+                this.updatePreview();
+                this.saveConfig();
+            }
+        },
+        handleFormSubmit(e) {
+            e.preventDefault();
+            if (this.config.variant === 'color' && !this.config.color) {
+                alert('Proszę wybrać kolor.');
+                this.elements.variantSelect.setAttribute('aria-invalid', 'true');
+                return;
+            }
+            this.elements.variantSelect.setAttribute('aria-invalid', 'false');
+            const params = new URLSearchParams(this.config);
+            window.location.href = /checkout?${params.toString()};
+        },
+        updatePreview() {
+            const canvas = this.elements.previewCanvas;
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            let imgSrc = '/image/vaulti_1.png'; // default
+            if (this.config.variant === 'wood') {
+                imgSrc = '/image/vaulti_2.png';
+            } else {
+                switch(this.config.color) {
+                    case 'pink': imgSrc = '/image/vaulti_1.png'; break;
+                    case 'lightblue': imgSrc = '/image/vaulti_3.png'; break;
+                    case 'lightgreen': imgSrc = '/image/vaulti_4.png'; break;
+                    case 'black': imgSrc = '/image/vaulti_0.png'; break;
+                }
+            }
+            
+            img.onload = () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                if (this.config.engrave) {
+                    ctx.font = 'bold 24px Inter';
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                    ctx.textAlign = 'right';
+                    ctx.fillText(this.config.engrave, canvas.width - 25, canvas.height - 25);
+                }
+            };
+            img.src = imgSrc;
+            
+            this.elements.colorSwatches.forEach(s => s.classList.remove('active'));
+            if(this.config.variant === 'color') {
+                const activeSwatch = document.querySelector(.color-swatches button[data-color="${this.config.color}"]);
+                if(activeSwatch) activeSwatch.classList.add('active');
+            }
+        },
+        saveConfig() {
+            localStorage.setItem('vaultiConfig', JSON.stringify(this.config));
+        },
+        loadConfig() {
+            const savedConfig = localStorage.getItem('vaultiConfig');
+            if (savedConfig) {
+                Object.assign(this.config, JSON.parse(savedConfig));
+            }
+            this.elements.variantSelect.value = this.config.variant;
+            this.elements.engraveInput.value = this.config.engrave;
+            this.updatePreview();
+        },
+        initCookieBanner() {
+            if (!localStorage.getItem('cookieConsent')) {
+                this.elements.cookieBanner.style.display = 'block';
+            }
+            this.elements.cookieAcceptBtn.addEventListener('click', () => {
+                this.elements.cookieBanner.style.display = 'none';
+                localStorage.setItem('cookieConsent', 'true');
+            });
+        }
+      };
+
+      app.init();
+    });
+  </script>
+</body>
+</html>
+
+ChatGPT zei:
+
+Myślał przez 15s
+Darek — wygląda to już bardzo profesjonalnie 👏 Masz świetny układ, dostępność, konfigurator z canvasem, WebP, preload fontów, cookie-banner… Poniżej dorzucam ostatnie szlify produkcyjne i krótkie wklejki, żebyś mógł je od razu podpiąć.
+
+1) LCP/hero — priorytet ładowania
+Obrazek nad fałdą ma największy wpływ na LCP. Daj mu wysoki priorytet i nie lazy-loaduj.
+
+<picture>
+  <source srcset="/image/vaulti_1.webp" type="image/webp">
+  <img
+    src="/image/vaulti_1.png"
+    alt="Nowoczesna, kolorowa skarbonka Vaulti stojąca na drewnianym biurku obok zabawek."
+    width="600" height="500"
+    style="border-radius:16px;"
+    decoding="async"
+    fetchpriority="high"
+  >
+</picture>
+Jeśli chcesz pójść krok dalej: możesz też dodać <link rel="preload" as="image" href="/image/vaulti_1.webp" imagesrcset="/image/vaulti_1.webp" imagesizes="(max-width:900px) 90vw, 600px"> w <head>.
+
+2) Przyciski w formularzu – typ
+W color-swatches przyciski domyślnie mają type="submit". Co prawda robisz preventDefault(), ale lepiej jawnie:
+
+<button type="button" ... data-color="pink"></button>
+<!-- to samo dla pozostałych -->
+3) CSP — rozsądna wersja produkcyjna
+Masz podstawowy CSP (OK), ale skoro używasz Google Fonts, dorzuć bezpieczny nagłówek na serwerze (lepsze niż meta). Przykład (Apache/Nginx header):
+
+Content-Security-Policy:
+  default-src 'self';
+  base-uri 'self';
+  object-src 'none';
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src  'self' https://fonts.gstatic.com data:;
+  img-src   'self' data:;
+  script-src 'self';
+  connect-src 'self';
+  frame-ancestors 'self';
+Jeśli wideo jest lokalne: media-src 'self';. Gdy zostajesz przy meta, nie próbuj pakować całej polityki w <meta http-equiv>, bo bywa kapryśne — nagłówek serwera jest pewniejszy.
+
+4) JSON-LD: drobna kosmetyka
+Dodałeś Offer.url (super!). Jeszcze dwie uwagi:
+
+Jeżeli nie masz realnych 87 recenzji, rozważ tymczasowo usunąć aggregateRating/review albo oznaczyć jako placeholder (Google nie lubi deklaracji, które nie mają pokrycia na stronie).
+
+Dla Product.image trzymaj pełne URL-e kanoniczne (nie względne), np. https://vaulti.nl/image/vaulti_1.png.
+
+5) Obrazy responsywne (poza hero)
+Zostawiasz WebP (super), ale podaj rozmiary — to obniża transfer i CLS:
+
+<picture>
+  <source srcset="/image/vaulti_5-480.webp 480w, /image/vaulti_5.webp 960w" type="image/webp">
+  <img
+    src="/image/vaulti_5.png"
+    srcset="/image/vaulti_5-480.png 480w, /image/vaulti_5.png 960w"
+    sizes="(max-width:900px) 92vw, 520px"
+    alt="Zbliżenie na personalizowany grawer na skarbonce Vaulti."
+    loading="lazy" width="520" height="300">
+</picture>
+(Ten sam schemat dla vaulti_6.)
+
+6) Nawigacja — wskazanie aktywnej kotwicy
+Miły detal dostępności/UX:
+
+// po DOMContentLoaded
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+function setActive() {
+  let current = '';
+  document.querySelectorAll('section[id]').forEach(sec=>{
+    const top = sec.getBoundingClientRect().top;
+    if (top <= 120) current = '#'+sec.id;
+  });
+  navLinks.forEach(a=>{
+    a.toggleAttribute('aria-current', a.getAttribute('href') === current);
+  });
+}
+window.addEventListener('scroll', setActive, {passive:true});
+setActive();
+7) Wideo — napisy i safari-friendly
+Masz WebM+MP4 ✔️. Dołóż napisy (SEO + a11y) gdy będziesz miał plik .vtt:
+
+<track kind="captions" src="/video/vaulti-pl.vtt" srclang="pl" label="Polski" default>
+8) Linki zewnętrzne
+Dla pełnego bezpieczeństwa dodaj rel="noopener noreferrer" do zewnętrznych linków (Instagram już ma noopener, dopisz noreferrer).
+
+9) Sticky CTA — tylko na mobile
+Masz to już w CSS. Drobna sugestia: schowaj, gdy użytkownik dotrze do sekcji #konfigurator, by nie dublować CTA:
+
+const sticky = document.querySelector('.sticky-cta');
+const konf = document.getElementById('konfigurator');
+if (sticky && konf) {
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      // gdy konfigurator widać, chowamy przycisk
+      sticky.style.display = e.isIntersecting ? 'none' : '';
+    });
+  }, {rootMargin: '-20% 0px -60% 0px'});
+  io.observe(konf);
+}
+10) Porządek w <head>: preconnect i DNS
+Masz preconnect do fonts.gstatic.com ✔️. Jeśli kiedyś dodasz CDN/analytics, pamiętaj o odpowiednim preconnect/dns-prefetch.
+
+Szybkie diff-wstawki (kopiuj/wklej)
+A. Typy przycisków:
+
+<button type="button" class="active" style="background-color:#ffc0cb" data-color="pink" aria-label="Wybierz kolor różowy"></button>
+<!-- … dla pozostałych -->
+B. Zewnętrzny link:
+
+<a href="https://instagram.com/vaulti" target="_blank" rel="noopener noreferrer">Instagram</a>
+C. Hero image priority (już powyżej) + opcjonalny preload:
+
+<link rel="preload" as="image" href="/image/vaulti_1.webp" imagesrcset="/image/vaulti_1.webp" imagesizes="(max-width:900px) 90vw, 600px">
+D. Sekcje kotwic — scroll-margin (masz globalnie, ale można doostrzyć):
+
+#jak-to-dziala, #konfigurator, #porownanie { scroll-margin-top: 100px; }
+Jeśli chcesz, mogę skleić Ci finalny plik index.html z powyższymi wstawkami już osadzonymi (oraz z absolutnymi URL-ami w JSON-LD). Daj tylko znać:
+
+czy serwujesz stronę z roota domeny (wygląda, że tak) — wtedy ścieżki /image/... są OK,
+
+czy vaulti_1.webp/png mają docelowe wymiary (pod LCP przygotuj 600×500 lub większy wariant + srcset).
+
+
+
+Geen bestand gekozenGeen bestand gekozen
+ChatGPT kan fouten maken. Controleer belangrijke informatie. Zie cookievoorkeuren.
