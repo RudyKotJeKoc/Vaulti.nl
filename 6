@@ -1,0 +1,1205 @@
+Overslaan en naar inhoud
+Chatgeschiedenis
+
+Je zei:
+index (20).html
+Bestand
+zaproponuj rozbudowę strony i ulepszenia. Daj prompt do gemini który wprowadzi proponowane przez ciebie zmiany.
+ChatGPT zei:
+Przejrzałem kod Twojej strony Vaulti
+index (20)
+
+. Jest już bardzo dobrze zoptymalizowana (SEO, schema.org, dostępność, szybkie ładowanie). Mogę zaproponować rozbudowę w trzech kierunkach:
+
+🔧 Propozycje ulepszeń i rozbudowy
+1. Sekcja społecznego dowodu słuszności
+Dodaj karuzelę opinii klientów (ze zdjęciami, gwiazdkami, krótkimi cytatami).
+
+Zwiększy to wiarygodność i czas spędzony na stronie.
+
+2. Interaktywne FAQ
+Obecne <details> są proste. Można dodać animowane akordeony z ikonami i bardziej rozbudowanymi odpowiedziami (np. wideo z prezentacją odpowiedzi).
+
+FAQ można rozdzielić na kategorie: Produkt, Dostawa, Gwarancja.
+
+3. Blog / Centrum wiedzy
+Podstrona z artykułami edukacyjnymi: „Dlaczego dzieci powinny mieć własną skarbonkę”, „Jak uczyć oszczędzania w praktyce”.
+
+Pozwoli to budować SEO i organiczny ruch.
+
+4. Rozbudowa konfiguratora
+Dodaj podgląd 3D (WebGL/Three.js) zamiast statycznego canvasa.
+
+Umożliw opcję zapisu konfiguracji i podzielenia się linkiem w social media.
+
+5. Sekcja „Vaulti w mediach”
+Jeżeli produkt był gdziekolwiek wspomniany, warto pokazać logotypy portali, które o nim pisały.
+
+Alternatywnie można dodać sekcję „Polecane przez rodziców”.
+
+6. Obsługa międzynarodowa
+Przygotuj stronę pod wielojęzyczność (pl/nl/en).
+
+To zwiększy wiarygodność i dostępność.
+
+7. Rozszerzony footer
+Dodaj dane firmy, linki do regulaminów, polityki zwrotów, FAQ, ikony social media (FB, TikTok, YouTube).
+
+Dodaj „Szybki kontakt” – mini formularz.
+
+📌 Prompt do Gemini
+Możesz użyć tego promptu, aby Gemini wprowadził sugerowane zmiany w kodzie:
+
+You are a senior front-end developer. I will give you an HTML file of a product page (Vaulti – personalized 3D piggy bank). Please improve and expand it with the following changes:
+
+1. Add a carousel of customer reviews with avatars and star ratings (accessible, keyboard-friendly).
+2. Upgrade the FAQ section from simple <details> tags to animated accordion components with icons.
+3. Add a new "Blog/Knowledge" section with 3 example article cards (title, image, excerpt, read more button).
+4. Extend the configurator: allow users to view a simple interactive 3D preview (using Three.js or similar) instead of static canvas, but keep fallback image preview for older browsers.
+5. Add a "Vaulti in the Media" section with placeholder logos of press/media.
+6. Extend footer with: company data, quick contact form (name/email/message), and more social icons.
+7. Ensure responsive design remains clean, modern, and consistent with the current dark theme.
+8. Keep existing SEO meta tags, structured data, accessibility, and performance optimizations.
+
+Take the provided HTML as input and output a new, complete HTML file with all changes applied.
+Chcesz, żebym od razu przygotował zmodyfikowaną wersję pliku z tymi sekcjami (HTML + CSS + minimalny JS), czy wolisz najpierw zostawić to tylko w formie promptu dla Gemini?
+
+
+Bronnen
+Je zei:
+<!doctype html>
+<html lang="pl">
+<head>
+  <!-- === SEO, PERFORMANCE & ACCESSIBILITY (EXISTING & PRESERVED) === -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem | Idealny Prezent</title>
+  <meta name="description" content="Odkryj Vaulti – bezpieczną i personalizowaną skarbonkę 3D z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i wybierz kolor. To idealny prezent dla dziecka, który łączy magię z bezpieczeństwem." />
+  <meta name="keywords" content="skarbonka 3D, personalizowana skarbonka, prezent dla dziecka, AirTag skarbonka, inteligentna skarbonka" />
+  <link rel="canonical" href="https://vaulti.nl/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d1117">
+  <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; object-src 'none'; script-src 'self' https://cdnjs.cloudflare.com;">
+
+  <!-- === Preload critical assets === -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="image" href="/image/vaulti_1.png" imagesrcset="/image/vaulti_1.png" imagesizes="(max-width:900px) 90vw, 600px">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"></noscript>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta property="og:title" content="Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem" />
+  <meta property="og:description" content="Spokój ducha dla rodziców, magia dla dzieci. Odkryj personalizowaną skarbonkę z ukrytym zabezpieczeniem i stwórz idealny prezent." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vaulti.nl/" />
+  <meta property="og:image" content="/image/vaulti_0.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pl_PL" />
+
+  <link rel="icon" href="/assets/favicon.svg">
+
+  <!-- === Structured Data (EXISTING & PRESERVED) === -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite", "url": "https://vaulti.nl/", "name": "Vaulti"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://vaulti.nl/"}]
+      },
+      {
+        "@type": "Product",
+        "name": "Vaulti - Personalizowana Skarbonka 3D",
+        "image": ["/image/vaulti_1.png","/image/vaulti_2.png"],
+        "description": "Vaulti to personalizowana skarbonka drukowana w 3D z dyskretnym, ukrytym slotem na lokalizator Apple AirTag lub Samsung SmartTag. Idealny prezent dla dziecka, który łączy zabawę z bezpieczeństwem, np. na komunię czy urodziny.",
+        "brand": { "@type": "Brand", "name": "Vaulti" },
+        "sku": "VAULTI-01", "mpn": "VLT-001",
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "124" },
+        "offers": [
+            {"@type": "Offer", "price": "39.95", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "name": "Vaulti Color", "sku": "VAULTI-COLOR", "url": "https://vaulti.nl/#konfigurator"},
+            {"@type": "Offer", "price": "49.95", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "name": "Vaulti Wood", "sku": "VAULTI-WOOD", "url": "https://vaulti.nl/#konfigurator"},
+            {"@type": "Offer", "price": "TBA", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder", "name": "Vaulti Pro", "sku": "VAULTI-PRO", "url": "https://vaulti.nl/preorder"}
+        ],
+        "review": [
+            {"@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Agnieszka W." }, "reviewBody": "Córka zakochana w brokacie, a ja w spokoju, że skarbonkę zawsze znajdę. Świetny pomysł na bezpieczny prezent!"},
+            {"@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Marek Z." }, "reviewBody": "Genialna jakość i interaktywny podgląd 3D na stronie to mistrzostwo! Syn nie mógł się doczekać, aż zobaczy swój grawer na żywo."},
+            {"@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" }, "author": { "@type": "Person", "name": "Jan K." }, "reviewBody": "Świetna jakość wykonania, dziecko zachwycone!"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Jaki lokalizator pasuje do Vaulti?", "acceptedAnswer": {"@type": "Answer", "text": "Do Vaulti pasują lokalizatory Apple AirTag oraz Samsung SmartTag. Skarbonka posiada specjalny, dyskretny slot serwisowy, który umożliwia łatwą wymianę baterii w lokalizatorze bez potrzeby rozbierania całej szkatułki."}},
+          {"@type": "Question", "name": "Czy dziecko musi wiedzieć o lokalizatorze?", "acceptedAnswer": {"@type": "Answer", "text": "Nie, nie musi. Zabezpieczenie jest całkowicie niewidoczne z zewnątrz. Zostało zaprojektowane tak, aby działało dyskretnie w tle, dając rodzicom spokój ducha, a dziecku radość z posiadania pięknej skarbonki."}},
+          {"@type": "Question", "name": "Czy mogę zobaczyć projekt przed zakupem?", "acceptedAnswer": {"@type": "Answer", "text": "Tak! Nasz nowy konfigurator 3D pozwala na interaktywny podgląd skarbonki z wybranym kolorem i personalizowanym grawerem w czasie rzeczywistym."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0d1117; --bg-card: #161b22; --border-color: #30363d;
+      --text-primary: #e6edf3; --text-secondary: #c9d1d9; 
+      --accent-gradient: linear-gradient(90deg, #6ee7b7, #22d3ee);
+      --accent-color-1: #6ee7b7; --accent-color-2: #22d3ee;
+      --focus-ring-color: rgba(34, 211, 238, 0.4); --star-color: #facc15;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    :target { scroll-margin-top: 100px; }
+    body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    h1, h2, h3, h4 { margin: 0; font-weight: 800; line-height: 1.3; }
+    h1 { font-size: clamp(2.5rem, 5vw, 3.25rem); }
+    h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    h3 { font-size: 1.75rem; } h4 { font-size: 1.25rem; }
+    p { margin: 16px 0 0; color: var(--text-secondary); line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #80bfff; }
+    .card { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; }
+    .grid { display: grid; gap: 24px; }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    :focus-visible { outline: 3px solid var(--focus-ring-color); outline-offset: 2px; border-radius: 8px; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent-gradient); color: #0d1117; padding: 8px; z-index: 100; transition: top 0.3s; }
+    .skip-link:focus { top: 0; }
+    .btn { display: inline-block; padding: 14px 28px; border-radius: 12px; font-weight: 700; color: #0d1117; background: var(--accent-gradient); border: 2px solid transparent; transition: all 0.2s ease; cursor: pointer; text-align: center; }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(34, 211, 238, 0.25); }
+    .btn.secondary { background: #21262d; border-color: var(--border-color); color: var(--text-primary); }
+    .btn.secondary:hover { border-color: #8b949e; background-color: #2a2f36; }
+    header { position: sticky; top: 0; z-index: 50; background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); }
+    .nav-container { padding: 16px 0; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem; color: var(--text-primary); }
+    .logo svg { width: 28px; height: 28px; }
+    .hero { display: grid; grid-template-columns: 1fr 0.9fr; gap: 48px; align-items: center; padding-top: 48px; padding-bottom: 48px; }
+    .hero .badge { display: inline-block; padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-card); border-radius: 99px; font-size: 0.875rem; margin-bottom: 16px; }
+    .trust-badges { text-align: center; background-color: var(--bg-card); padding: 40px; border-radius: 16px; }
+    .trust-badge .value { font-size: 2.25rem; font-weight: 800; background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .trust-badge .label { color: var(--text-secondary); margin-top: 4px; }
+    .image-text-section img, .image-text-section picture { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; display: block; }
+    .configurator { gap: 32px; padding: 32px; align-items: center; }
+    .config-group label { display: block; margin-bottom: 12px; font-weight: 600; color: var(--text-secondary); }
+    #vaulti-preview { background-color: #0d1117; border-radius: 14px; position: relative; aspect-ratio: 1/1; cursor: grab; }
+    #vaulti-preview:active { cursor: grabbing; }
+    #preview-canvas, #three-container { width: 100% !important; height: 100% !important; border-radius: 8px; }
+    #three-container canvas { display: block; }
+    .color-swatches button { border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s ease; width: 36px; height: 36px; }
+    .color-swatches button.active { border-color: var(--accent-color-2); transform: scale(1.15); box-shadow: 0 0 0 3px var(--focus-ring-color); }
+    .comparison-table .icon-check { color: var(--accent-color-1); font-size: 1.5rem; }
+    footer { background: #161b22; border-top: 1px solid var(--border-color); }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 48px; padding: 48px 0; }
+    .desktop-nav { display: flex; gap: 12px; flex-wrap: wrap; }
+    .mobile-nav-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 0; color: var(--text-primary); }
+    .mobile-nav { display: none; flex-direction: column; gap: 8px; padding: 16px 20px; background: var(--bg); }
+    .mobile-nav a { padding: 12px; text-align: center; border-radius: 8px; font-weight: 600; display: block; }
+    .mobile-nav a:hover { background-color: var(--bg-card); }
+    .mobile-nav .btn { margin-top: 8px; }
+    .sticky-cta { display: none; }
+    /* NEW: Review Carousel Styles */
+    .review-carousel-wrapper { position: relative; }
+    .review-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; }
+    .review-carousel::-webkit-scrollbar { display: none; }
+    .review-slide { flex: 0 0 100%; scroll-snap-align: start; padding: 0 10px; }
+    @media (min-width: 640px) { .review-slide { flex: 0 0 50%; } }
+    @media (min-width: 900px) { .review-slide { flex: 0 0 33.33%; } }
+    .review-card { display: flex; flex-direction: column; height: 100%; }
+    .review-card .stars { color: var(--star-color); margin-bottom: 12px; letter-spacing: 2px; }
+    .review-card-footer { margin-top: auto; padding-top: 16px; display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-color); }
+    .review-card-footer img { width: 40px; height: 40px; border-radius: 50%; }
+    .carousel-nav { display: flex; justify-content: center; gap: 16px; margin-top: 32px; }
+    .carousel-nav button { background: #21262d; border: 1px solid var(--border-color); color: var(--text-primary); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; transition: background-color 0.2s; }
+    .carousel-nav button:hover { background-color: #2a2f36; }
+    /* NEW: Accordion Styles */
+    .accordion-item { border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; }
+    .accordion-item + .accordion-item { margin-top: 16px; }
+    .accordion-header { width: 100%; background: none; border: none; padding: 20px; text-align: left; font-size: 1.1rem; font-weight: 600; color: var(--text-primary); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .accordion-header:hover { background-color: rgba(255, 255, 255, 0.05); }
+    .accordion-icon { transition: transform 0.3s ease; }
+    .accordion-header[aria-expanded="true"] .accordion-icon { transform: rotate(45deg); }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; }
+    .accordion-content-inner { padding: 0 20px 20px; color: var(--text-secondary); }
+    /* NEW: Blog & Media Section Styles */
+    .blog-card { display: flex; flex-direction: column; }
+    .blog-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px 12px 0 0; }
+    .blog-card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+    .blog-card p { margin-top: 8px; flex-grow: 1; }
+    .blog-card .btn { margin-top: 24px; align-self: flex-start; }
+    .media-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 48px; }
+    .media-logos svg { height: 36px; fill: var(--text-secondary); transition: all 0.2s; filter: grayscale(1); opacity: 0.7; }
+    .media-logos svg:hover { fill: var(--text-primary); filter: grayscale(0); opacity: 1; }
+    /* NEW: Footer Form & Socials */
+    .footer-form label { display: block; margin-bottom: 8px; font-size: 0.9rem; }
+    .footer-form input, .footer-form textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg); color: var(--text-primary); margin-bottom: 12px; }
+    .social-icons { display: flex; gap: 16px; margin-top: 16px; }
+    .social-icons a { color: var(--text-secondary); }
+    .social-icons a:hover { color: var(--text-primary); }
+    .social-icons svg { width: 24px; height: 24px; }
+    @media (max-width: 900px) { 
+      .grid-cols-2, .grid-cols-3, .grid-cols-4, .hero { grid-template-columns: 1fr; } 
+      .hero { text-align: center; } 
+      .hero > div:last-child { order: -1; } 
+      .hero .badge { margin-left: auto; margin-right: auto; }
+      .desktop-nav { display: none; }
+      .mobile-nav-toggle { display: block; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) { 
+        .footer-grid { text-align: center; } 
+        .footer-grid > div { align-items: center; display: flex; flex-direction: column;}
+        .social-icons { justify-content: center; }
+        .sticky-cta { display: block; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 100; padding: 12px 24px; background: var(--accent-gradient); border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 1rem; transition: opacity 0.3s, visibility 0.3s; }
+        .sticky-cta.hidden { opacity: 0; visibility: hidden; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .btn:hover { transform: none; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
+  <header>
+    <div class="nav-container">
+        <div class="container nav" role="navigation" aria-label="Główna nawigacja">
+          <a class="logo" href="#">
+            <svg role="img" aria-label="Vaulti Logo" viewBox="0 0 24 24" fill="none"><path d="M4 7.5h16M4 12h16M4 16.5h10" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g" x1="0" y1="0" x2="24" y2="0"><stop stop-color="#6ee7b7"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs></svg>
+            <span>VAULTI</span>
+          </a>
+          <nav class="desktop-nav" aria-label="Główna nawigacja">
+            <a class="btn secondary" href="#jak-to-dziala">Jak to działa</a>
+            <a class="btn secondary" href="#opinie">Opinie</a>
+            <a class="btn secondary" href="#konfigurator">Konfigurator</a>
+            <a class="btn" href="#konfigurator">Kup teraz</a>
+          </nav>
+          <button id="menu-toggle" class="mobile-nav-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-nav">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:28px;height:28px;"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" hidden>
+        <a href="#jak-to-dziala">Jak to działa</a>
+        <a href="#opinie">Opinie</a>
+        <a href="#konfigurator">Konfigurator</a>
+        <a href="#porownanie">Porównanie</a>
+        <a href="#konfigurator" class="btn">Kup teraz</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="container hero" id="start">
+      <div>
+        <span class="badge">Dla dzieci: magia i design • Dla rodziców: spokój i bezpieczeństwo</span>
+        <h1>Twoja personalizowana skarbonka 3D, która <span style="background:var(--accent-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;">zawsze się odnajdzie</span></h1>
+        <p>Vaulti to więcej niż skarbonka. To bezpieczne miejsce na skarby Twojego dziecka, z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i podaruj prezent, który zostanie na lata.</p>
+        <div style="display:flex;gap:16px;margin-top:24px; justify-content: center; flex-wrap: wrap;">
+            <a href="#konfigurator" class="btn">Stwórz swoją Vaulti teraz</a>
+            <a href="#porownanie" class="btn secondary">Zobacz porównanie modeli</a>
+        </div>
+      </div>
+      <div>
+        <picture>
+          <source srcset="/image/vaulti_1.png" type="image/png">
+          <img 
+            src="/image/vaulti_1.png" 
+            alt="Nowoczesna, personalizowana skarbonka Vaulti w kolorze różowym." 
+            width="600" height="500" style="border-radius: 16px;" 
+            decoding="async"
+            fetchpriority="high"
+          />
+        </picture>
+      </div>
+    </section>
+
+    <section class="container section" id="zaufanie">
+      <div class="trust-badges">
+        <div class="section-header">
+            <h2>Dlaczego rodzice wybierają Vaulti?</h2>
+        </div>
+        <div class="grid grid-cols-3">
+          <div class="trust-badge"><div class="value">4.9/5 ★</div><div class="label">Średnia ocen od klientów</div></div>
+          <div class="trust-badge"><div class="value">1,500+</div><div class="label">Sprzedanych skarbonek</div></div>
+          <div class="trust-badge"><div class="value">100%</div><div class="label">Bezpieczne materiały (EN 71-3)</div></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container section" id="korzysci">
+        <div class="section-header">
+            <h2>Skarbonka o dwóch obliczach</h2>
+        </div>
+        <div class="grid grid-cols-2 image-text-section">
+            <div class="card">
+                <picture>
+                    <source srcset="/image/vaulti_5.png" type="image/png">
+                    <img src="/image/vaulti_5.png" alt="Zbliżenie na personalizowany grawer na skarbonce Vaulti." loading="lazy" decoding="async" width="520" height="300">
+                </picture>
+                <h4>Dla dziecka: Magia posiadania skarbów</h4>
+                <p>Kolorowy design, grawer z własnym imieniem i poczucie, że ma swoje własne, sekretne miejsce. Vaulti to dla dziecka przedmiot dumy i pierwszy krok do nauki oszczędzania.</p>
+            </div>
+            <div class="card">
+                <picture>
+                    <source srcset="/image/vaulti_6.png" type="image/png">
+                    <img src="/image/vaulti_6.png" alt="Skarbonka Vaulti w pokoju dziecka, z ikoną tarczy symbolizującą bezpieczeństwo." loading="lazy" decoding="async" width="520" height="300">
+                </picture>
+                <h4>Dla rodzica: Spokój i bezpieczeństwo</h4>
+                <p>Dyskretnie ukryty lokalizator daje Ci pewność, że najcenniejsze skarby Twojego dziecka nigdy się nie zgubią. To spokój ducha, którego nie da się przecenić.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="opinie" aria-labelledby="opinie-h">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="opinie-h">Zaufali nam rodzice i dzieci</h2>
+            </div>
+            <div class="review-carousel-wrapper">
+                <div class="review-carousel" id="review-carousel" role="region" aria-roledescription="carousel" aria-label="Opinie klientów">
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button id="prev-review" aria-label="Poprzednia opinia">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+                </button>
+                <button id="next-review" aria-label="Następna opinia">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="jak-to-dziala">
+      <div class="section-header">
+        <h2>Spokój ducha w 3 prostych krokach</h2>
+      </div>
+      <div class="grid grid-cols-3">
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona lokalizatora" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">📡</div>
+          <h4>1. Włóż lokalizator</h4>
+          <p>Otwórz dyskretny slot i umieść w nim swój AirTag lub SmartTag.</p>
+        </div>
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona zamkniętej kłódki" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">🔒</div>
+          <h4>2. Zamknij i ukryj</h4>
+          <p>Zabezpieczenie jest całkowicie niewidoczne. Dziecko widzi tylko piękną szkatułkę.</p>
+        </div>
+        <div class="item card" style="text-align: center;">
+          <div role="img" aria-label="Ikona telefonu z mapą" style="font-size: 2.5rem; margin-bottom: 1rem;" aria-hidden="true">📱</div>
+          <h4>3. Zlokalizuj w każdej chwili</h4>
+          <p>Sprawdź pozycję skarbonki w aplikacji, kiedy tylko potrzebujesz.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container section" id="konfigurator">
+      <div class="section-header">
+        <h2>Stwórz wymarzoną skarbonkę</h2>
+        <p>Zobacz swój projekt na żywo w interaktywnym podglądzie 3D!</p>
+      </div>
+      <div class="grid grid-cols-2 card configurator">
+        <div id="vaulti-preview" role="img" aria-label="Interaktywny podgląd 3D skarbonki Vaulti">
+          <div id="three-container"></div>
+          <canvas id="preview-canvas" width="500" height="500" style="display: none;"></canvas>
+        </div>
+        <div>
+          <h3>Konfigurator</h3>
+          <form id="config-form">
+            <div class="config-group">
+                <label for="variant-select">1. Wybierz wariant:</label>
+                <select id="variant-select" class="btn secondary" style="width: 100%; padding: 12px; text-align: left;" required aria-invalid="false">
+                  <option value="color">Vaulti Color (39,95 €)</option>
+                  <option value="wood">Vaulti Wood (49,95 €)</option>
+                </select>
+            </div>
+            <div class="config-group">
+                <label>2. Wybierz kolor korpusu:</label>
+                <div class="color-swatches" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                  <button type="button" class="active" style="background-color: #ffc0cb;" data-color="#ffc0cb" aria-label="Wybierz kolor różowy"></button>
+                  <button type="button" style="background-color: #add8e6;" data-color="#add8e6" aria-label="Wybierz kolor błękitny"></button>
+                  <button type="button" style="background-color: #90ee90;" data-color="#90ee90" aria-label="Wybierz kolor zielony"></button>
+                  <button type="button" style="background-color: #333;" data-color="#333333" aria-label="Wybierz kolor czarny"></button>
+                </div>
+            </div>
+            <div class="config-group">
+                <label for="grawer-input">3. Wpisz tekst graweru (opcjonalnie):</label>
+                <input id="grawer-input" type="text" placeholder="Np. 'Skarby Zosi'" style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border-color); background:var(--bg); color:var(--text-primary);" maxlength="20" aria-describedby="grawer-desc" aria-invalid="false">
+                <p id="grawer-desc" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px;">Maks. 20 znaków.</p>
+            </div>
+            <div class="config-group">
+                <button type="submit" class="btn" style="width: 100%;">Zamów z tą personalizacją</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="wideo">
+        <div class="section-header">
+            <h2>Zobacz Vaulti w akcji</h2>
+        </div>
+        <div class="card" style="padding: 8px;">
+            <video controls poster="/image/vaulti_0.png" style="width:100%;border-radius:12px;" preload="metadata">
+              <source src="/video/vaulti-demo.webm" type="video/webm">
+              <source src="/video/vaulti-demo.mp4" type="video/mp4">
+              <track kind="captions" src="/video/vaulti-pl.vtt" srclang="pl" label="Polski" default>
+              Przepraszamy, Twoja przeglądarka nie obsługuje wideo.
+            </video>
+        </div>
+    </section>
+
+    <section class="container section" id="porownanie">
+      <div class="section-header">
+        <h2>Porównaj modele Vaulti</h2>
+      </div>
+      <div class="card" style="overflow-x: auto;">
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Funkcja</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Color</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Wood</th>
+              <th scope="col" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Vaulti Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Materiał korpusu</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Druk 3D (PETG/ASA)</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Naturalna sklejka</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);">Druk 3D (wzmocniony)</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Podgląd 3D</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px; border-bottom: 1px solid var(--border-color);">Personalizowany grawer</th>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+              <td style="padding: 16px; border-bottom: 1px solid var(--border-color);"><span class="icon-check" aria-hidden="true">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <th scope="row" style="padding: 16px;">Cena</th>
+              <td style="padding: 16px;"><strong>39,95 €</strong></td>
+              <td style="padding: 16px;"><strong>49,95 €</strong></td>
+              <td style="padding: 16px;"><a href="/preorder" class="btn secondary">Zapowiedź</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="blog" aria-labelledby="blog-h">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="blog-h">Nasza Baza Wiedzy</h2>
+                <p>Porady, inspiracje i ciekawostki ze świata oszczędzania i technologii.</p>
+            </div>
+            <div class="grid grid-cols-3">
+                <article class="card blog-card">
+                    <img src="/image/vaulti_2.png" alt="Dziecko wrzucające monetę do skarbonki." loading="lazy">
+                    <div class="blog-card-content">
+                        <h4>Jak nauczyć dziecko oszczędzania? 5 kreatywnych metod</h4>
+                        <p>Odkryj sprawdzone sposoby, aby wprowadzić swoje dziecko w świat finansów w sposób, który jest zarówno zabawny, jak i edukacyjny.</p>
+                        <a href="#" class="btn secondary">Czytaj więcej</a>
+                    </div>
+                </article>
+                <article class="card blog-card">
+                    <img src="/image/vaulti_3.png" alt="Lokalizator AirTag obok smartfona z mapą." loading="lazy">
+                    <div class="blog-card-content">
+                        <h4>AirTag vs SmartTag: Który lokalizator wybrać do Vaulti?</h4>
+                        <p>Porównujemy dwa najpopularniejsze lokalizatory na rynku, aby pomóc Ci zdecydować, który z nich będzie najlepszy do zabezpieczenia skarbów Twojego dziecka.</p>
+                        <a href="#" class="btn secondary">Czytaj więcej</a>
+                    </div>
+                </article>
+                <article class="card blog-card">
+                    <img src="/image/vaulti_4.png" alt="Ozdobne pudełko prezentowe." loading="lazy">
+                    <div class="blog-card-content">
+                        <h4>Idealny prezent na komunię: Dlaczego Vaulti to strzał w dziesiątkę</h4>
+                        <p>Szukasz prezentu, który jest jednocześnie nowoczesny, praktyczny i ma wartość sentymentalną? Zobacz, dlaczego Vaulti jest idealnym wyborem.</p>
+                        <a href="#" class="btn secondary">Czytaj więcej</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="media">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mówią o nas w mediach</h2>
+            </div>
+            <div class="media-logos" aria-label="Partnerzy medialni">
+                <svg viewBox="0 0 100 30" role="img" aria-label="TechBrand Logo"><text x="50" y="20" font-size="12" font-weight="bold" text-anchor="middle">TechBrand</text></svg>
+                <svg viewBox="0 0 100 30" role="img" aria-label="Parenting Weekly Logo"><text x="50" y="20" font-size="10" font-weight="bold" text-anchor="middle">Parenting Weekly</text></svg>
+                <svg viewBox="0 0 100 30" role="img" aria-label="Gadget Mag Logo"><text x="50" y="20" font-size="14" font-style="italic" text-anchor="middle">GadgetMag</text></svg>
+                <svg viewBox="0 0 100 30" role="img" aria-label="Future Today Logo"><text x="50" y="20" font-size="12" font-weight="bold" text-anchor="middle">Future Today</text></svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="faq" aria-labelledby="faq-h">
+      <div class="section-header">
+        <h2 id="faq-h">Najczęstsze pytania</h2>
+      </div>
+      <div class="accordion-container">
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4 style="margin-top: 0;">O Vaulti</h4>
+                <p style="font-size: 0.9rem; margin-top: 8px;">Vaulti B.V.<br>KVK: 12345678<br>BTW: NL123456789B01<br>Boxtel, The Netherlands</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.32 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 12 2.04Z" /></svg></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.37 4.37 0 0 1 21 10.2v3.36a4.37 4.37 0 0 1-4.37 4.37H8.37A4.37 4.37 0 0 1 4 13.56V10.2a4.37 4.37 0 0 1 4.37-4.37h4.86v-.04a2.53 2.53 0 0 1 2.53-2.53A2.5 2.5 0 0 1 19 5.75v.07h2.14v-.07a4.63 4.63 0 0 0-4.78-4.65A4.66 4.66 0 0 0 11.7 5.78v4.44H7.23a2.23 2.23 0 0 0-2.23 2.23v3.36a2.23 2.23 0 0 0 2.23 2.23h8.26a2.23 2.23 0 0 0 2.23-2.23V10.2a2.23 2.23 0 0 0-2.23-2.23h-2.14V5.82Z"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-top: 0;">Informacje</h4>
+                <a href="/polityka-prywatnosci">Polityka prywatności</a><br>
+                <a href="/regulamin">Regulamin</a><br>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div>
+                <h4 style="margin-top: 0;">Szybki kontakt</h4>
+                <form class="footer-form" id="contact-form">
+                    <label for="footer-name" class="sr-only">Imię</label>
+                    <input type="text" id="footer-name" placeholder="Imię" required>
+                    <label for="footer-email" class="sr-only">Email</label>
+                    <input type="email" id="footer-email" placeholder="Email" required>
+                    <label for="footer-message" class="sr-only">Wiadomość</label>
+                    <textarea id="footer-message" rows="3" placeholder="Twoja wiadomość..." required></textarea>
+                    <button type="submit" class="btn secondary" style="width: 100%;">Wyślij</button>
+                </form>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 0.9rem; padding: 24px 0; border-top: 1px solid var(--border-color); margin-top: 24px;">© <span id="footer-year">2025</span> Vaulti. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" style="position: fixed; bottom: 0; background: var(--bg-card); padding: 16px; width: 100%; text-align: center; z-index: 100; border-top: 1px solid var(--border-color); display: none;">
+      <p style="margin: 0 0 12px;">Używamy cookies do analityki i personalizacji. <a href="/polityka-prywatnosci">Dowiedz się więcej</a>.</p>
+      <button id="cookie-accept" class="btn">Akceptuj</button>
+  </div>
+  
+  <a href="#konfigurator" class="btn sticky-cta">Stwórz teraz!</a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
+      const app = {
+        config: { variant: 'color', color: '#ffc0cb', engrave: '' },
+        elements: {
+          menuToggle: document.getElementById('menu-toggle'),
+          mobileNav: document.getElementById('mobile-nav'),
+          mobileNavLinks: document.querySelectorAll('#mobile-nav a'),
+          desktopNavLinks: document.querySelectorAll('.desktop-nav a[href^="#"]'),
+          form: document.getElementById('config-form'),
+          variantSelect: document.getElementById('variant-select'),
+          previewCanvas: document.getElementById('preview-canvas'),
+          colorSwatches: document.querySelectorAll('.color-swatches button'),
+          engraveInput: document.getElementById('grawer-input'),
+          cookieBanner: document.getElementById('cookie-banner'),
+          cookieAcceptBtn: document.getElementById('cookie-accept'),
+          stickyCTA: document.querySelector('.sticky-cta'),
+          configuratorSection: document.getElementById('konfigurator'),
+          contactForm: document.getElementById('contact-form'),
+          threeContainer: document.getElementById('three-container'),
+          reviewCarousel: document.getElementById('review-carousel'),
+          prevReviewBtn: document.getElementById('prev-review'),
+          nextReviewBtn: document.getElementById('next-review'),
+          accordionContainer: document.querySelector('.accordion-container'),
+        },
+        three: {
+            isInitialized: false, scene: null, camera: null, renderer: null, controls: null,
+            piggyBank: null, textCanvas: null, textContext: null, textTexture: null, textMaterial: null
+        },
+        reviews: [
+            { name: "Agnieszka W.", avatar: "https://placehold.co/40x40/6ee7b7/0d1117?text=A", stars: 5, text: "Córka zakochana w skarbonce, a ja w spokoju, że zawsze ją znajdę. Świetny pomysł na bezpieczny prezent!" },
+            { name: "Marek Z.", avatar: "https://placehold.co/40x40/22d3ee/0d1117?text=M", stars: 5, text: "Genialna jakość i interaktywny podgląd 3D na stronie to mistrzostwo! Syn nie mógł się doczekać, aż zobaczy swój grawer na żywo." },
+            { name: "Janina K.", avatar: "https://placehold.co/40x40/e6edf3/0d1117?text=J", stars: 5, text: "Świetna jakość wykonania, dziecko zachwycone! Personalizacja grawerem to strzał w dziesiątkę. Polecam każdemu." },
+            { name: "Piotr S.", avatar: "https://placehold.co/40x40/c9d1d9/0d1117?text=P", stars: 4, text: "Dobry pomysł, ale czekam na więcej kolorów. Mimo to, produkt jest solidny, a funkcja lokalizacji działa bez zarzutu." },
+        ],
+        faqItems: [
+            { q: "Jaki lokalizator pasuje do Vaulti?", a: "Do Vaulti pasują lokalizatory Apple AirTag oraz Samsung SmartTag. Skarbonka posiada specjalny, dyskretny slot serwisowy, który umożliwia łatwą wymianę baterii w lokalizatorze bez potrzeby rozbierania całej szkatułki." },
+            { q: "Czy dziecko musi wiedzieć o lokalizatorze?", a: "Nie, nie musi. Zabezpieczenie jest całkowicie niewidoczne z zewnątrz. Zostało zaprojektowane tak, aby działało dyskretnie w tle, dając rodzicom spokój ducha, a dziecku radość z posiadania pięknej skarbonki." },
+            { q: "Czy mogę zobaczyć projekt przed zakupem?", a: "Tak! Nasz nowy konfigurator 3D pozwala na interaktywny podgląd skarbonki z wybranym kolorem i personalizowanym grawerem w czasie rzeczywistym." },
+            { q: "Z jakiego materiału wykonana jest Vaulti Color?", a: "Model Color jest drukowany w 3D z bezpiecznego, certyfikowanego i wytrzymałego materiału PETG, który jest odporny na uderzenia i bezpieczny dla dzieci (zgodny z normą EN 71-3)." }
+        ],
+        currentReviewIndex: 0,
+        webGLAvailable: false,
+
+        init() {
+          this.webGLAvailable = this.checkWebGL();
+          this.initMenu();
+          this.initReviews();
+          this.initAccordion();
+          this.initConfigurator();
+          this.initCookieBanner();
+          this.initStickyCTA();
+          this.initScrollSpy();
+          this.initContactForm();
+          document.getElementById('footer-year').textContent = new Date().getFullYear();
+        },
+        checkWebGL() {
+            try {
+                const canvas = document.createElement('canvas');
+                return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+            } catch (e) {
+                return false;
+            }
+        },
+        initMenu() {
+            this.elements.menuToggle.addEventListener('click', () => this.toggleMenu());
+            this.elements.mobileNavLinks.forEach(link => link.addEventListener('click', () => this.toggleMenu(false)));
+        },
+        toggleMenu(forceOpen = null) {
+          const isExpanded = forceOpen !== null ? !forceOpen : this.elements.menuToggle.getAttribute('aria-expanded') === 'true';
+          this.elements.mobileNav.toggleAttribute('hidden', isExpanded);
+          this.elements.menuToggle.setAttribute('aria-expanded', !isExpanded);
+          this.elements.menuToggle.setAttribute('aria-label', isExpanded ? 'Otwórz menu' : 'Zamknij menu');
+          if (!isExpanded) this.elements.mobileNav.querySelector('a').focus();
+        },
+        initReviews() {
+            const carousel = this.elements.reviewCarousel;
+            if (!carousel) return;
+            this.reviews.forEach(review => {
+                const stars = '★'.repeat(review.stars) + '☆'.repeat(5 - review.stars);
+                carousel.innerHTML += 
+                    <div class="review-slide" role="group" aria-roledescription="slide">
+                        <div class="card review-card">
+                            <div>
+                                <div class="stars" aria-label="Ocena: ${review.stars} na 5 gwiazdek">${stars}</div>
+                                <p>"${review.text}"</p>
+                            </div>
+                            <div class="review-card-footer">
+                                <img src="${review.avatar}" alt="Awatar klienta" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ff0000/ffffff?text=X';">
+                                <span>${review.name}</span>
+                            </div>
+                        </div>
+                    </div>
+                ;
+            });
+            this.elements.prevReviewBtn.addEventListener('click', () => this.scrollReviews(-1));
+            this.elements.nextReviewBtn.addEventListener('click', () => this.scrollReviews(1));
+            carousel.addEventListener('keydown', (e) => {
+                if(e.key === 'ArrowRight') { e.preventDefault(); this.scrollReviews(1); }
+                if(e.key === 'ArrowLeft') { e.preventDefault(); this.scrollReviews(-1); }
+            });
+        },
+        scrollReviews(direction) {
+            const carousel = this.elements.reviewCarousel;
+            const scrollAmount = carousel.querySelector('.review-slide').offsetWidth;
+            carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        },
+        initAccordion() {
+            const container = this.elements.accordionContainer;
+            if (!container) return;
+            this.faqItems.forEach((item, index) => {
+                container.innerHTML += 
+                    <div class="accordion-item">
+                        <h3>
+                            <button class="accordion-header" aria-expanded="false" aria-controls="accordion-content-${index}" id="accordion-header-${index}">
+                                <span>${item.q}</span>
+                                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                        </h3>
+                        <div class="accordion-content" id="accordion-content-${index}" role="region" aria-labelledby="accordion-header-${index}">
+                            <div class="accordion-content-inner">${item.a}</div>
+                        </div>
+                    </div>
+                ;
+            });
+            container.addEventListener('click', (e) => {
+                const header = e.target.closest('.accordion-header');
+                if (!header) return;
+                const content = header.nextElementSibling;
+                const isExpanded = header.getAttribute('aria-expanded') === 'true';
+
+                const allContents = container.querySelectorAll('.accordion-content');
+                const allHeaders = container.querySelectorAll('.accordion-header');
+
+                allHeaders.forEach(h => {
+                    if (h !== header) h.setAttribute('aria-expanded', 'false');
+                });
+                allContents.forEach(c => {
+                    if (c !== content) c.style.maxHeight = '0px';
+                });
+
+                header.setAttribute('aria-expanded', !isExpanded);
+                if (!isExpanded) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = '0px';
+                }
+            });
+        },
+        initConfigurator() {
+            this.loadConfig();
+            this.elements.engraveInput.addEventListener('input', () => this.handleEngraveInput());
+            this.elements.variantSelect.addEventListener('change', (e) => this.handleVariantChange(e.target.value));
+            this.elements.colorSwatches.forEach(swatch => swatch.addEventListener('click', (e) => this.handleColorChange(e, swatch.dataset.color)));
+            this.elements.form.addEventListener('submit', (e) => this.handleFormSubmit(e));
+        },
+        handleEngraveInput() {
+            const sanitizedValue = this.elements.engraveInput.value.replace(/[^0-9A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż \-_.]/g,'').slice(0, 20);
+            this.elements.engraveInput.value = sanitizedValue;
+            this.config.engrave = sanitizedValue.trim();
+            this.updatePreview(); this.saveConfig();
+        },
+        handleVariantChange(variant) {
+            this.config.variant = variant;
+            this.updatePreview(); this.saveConfig();
+        },
+        handleColorChange(e, color) {
+            e.preventDefault();
+            this.config.color = color;
+            this.updatePreview(); this.saveConfig();
+        },
+        handleFormSubmit(e) { e.preventDefault(); window.location.href = /checkout?${new URLSearchParams(this.config)}; },
+        updatePreview() {
+            if (this.webGLAvailable) {
+                if (!this.three.isInitialized) this.initThreeScene();
+                this.update3DModel();
+            } else {
+                this.elements.threeContainer.style.display = 'none';
+                this.elements.previewCanvas.style.display = 'block';
+                this.update2DCanvas();
+            }
+            this.elements.colorSwatches.forEach(s => {
+                s.classList.remove('active');
+                s.disabled = this.config.variant === 'wood';
+            });
+            if(this.config.variant === 'color') {
+                const activeSwatch = document.querySelector(.color-swatches button[data-color="${this.config.color}"]);
+                if(activeSwatch) activeSwatch.classList.add('active');
+            }
+        },
+        initThreeScene() {
+            const t = this.three;
+            t.scene = new THREE.Scene();
+            t.camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
+            t.camera.position.z = 5;
+            t.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            t.renderer.setSize(this.elements.threeContainer.clientWidth, this.elements.threeContainer.clientHeight);
+            this.elements.threeContainer.appendChild(t.renderer.domElement);
+            t.controls = new THREE.OrbitControls(t.camera, t.renderer.domElement);
+            t.controls.enablePan = false; t.controls.enableZoom = false; t.controls.minPolarAngle = Math.PI / 4; t.controls.maxPolarAngle = 3 * Math.PI / 4;
+            
+            t.scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+            const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            dirLight.position.set(5, 5, 5);
+            t.scene.add(dirLight);
+
+            const geometry = new THREE.BoxGeometry(2, 2.5, 2);
+            const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+            t.piggyBank = new THREE.Mesh(geometry, [material, material, material, material, material, material]);
+            t.scene.add(t.piggyBank);
+            
+            t.textCanvas = document.createElement('canvas');
+            t.textCanvas.width = 256; t.textCanvas.height = 256;
+            t.textContext = t.textCanvas.getContext('2d');
+            t.textTexture = new THREE.CanvasTexture(t.textCanvas);
+            t.textMaterial = new THREE.MeshStandardMaterial({ map: t.textTexture, transparent: true });
+
+            const animate = () => {
+                requestAnimationFrame(animate);
+                t.controls.update();
+                t.renderer.render(t.scene, t.camera);
+            };
+            animate();
+
+            window.addEventListener('resize', () => {
+                t.camera.aspect = 1;
+                t.camera.updateProjectionMatrix();
+                t.renderer.setSize(this.elements.threeContainer.clientWidth, this.elements.threeContainer.clientHeight);
+            }, false);
+            t.isInitialized = true;
+        },
+        update3DModel() {
+            const t = this.three;
+            const isWood = this.config.variant === 'wood';
+            const mainMaterial = t.piggyBank.material[0];
+            mainMaterial.color.set(isWood ? 0x8B4513 : this.config.color);
+            mainMaterial.roughness = isWood ? 0.8 : 0.4;
+            mainMaterial.metalness = 0.1;
+
+            if (this.config.engrave) {
+                const ctx = t.textContext;
+                ctx.clearRect(0, 0, 256, 256);
+                ctx.fillStyle = isWood ? '#4d2a10' : 'rgba(255, 255, 255, 0.7)';
+                ctx.font = 'bold 32px Inter';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(this.config.engrave, 128, 128);
+                t.textTexture.needsUpdate = true;
+                t.piggyBank.material[4] = t.textMaterial;
+            } else {
+                t.piggyBank.material[4] = mainMaterial;
+            }
+            t.piggyBank.material.needsUpdate = true;
+        },
+        update2DCanvas() { /* Fallback rendering in future */ },
+        saveConfig() { localStorage.setItem('vaultiConfig', JSON.stringify(this.config)); },
+        loadConfig() {
+            const savedConfig = localStorage.getItem('vaultiConfig');
+            if (savedConfig) Object.assign(this.config, JSON.parse(savedConfig));
+            this.elements.variantSelect.value = this.config.variant;
+            this.elements.engraveInput.value = this.config.engrave;
+            this.updatePreview();
+        },
+        initCookieBanner() {
+            if (!localStorage.getItem('cookieConsent')) this.elements.cookieBanner.style.display = 'block';
+            this.elements.cookieAcceptBtn.addEventListener('click', () => {
+                this.elements.cookieBanner.style.display = 'none';
+                localStorage.setItem('cookieConsent', 'true');
+            });
+        },
+        initStickyCTA() {
+            if (!this.elements.stickyCTA || !this.elements.configuratorSection) return;
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => this.elements.stickyCTA.classList.toggle('hidden', entry.isIntersecting));
+            }, { rootMargin: '-20% 0px -60% 0px' });
+            observer.observe(this.elements.configuratorSection);
+        },
+        initScrollSpy() { 
+            const allNavLinks = [...this.elements.desktopNavLinks, ...this.elements.mobileNavLinks];
+            const setActive = () => {
+                let current = '';
+                document.querySelectorAll('section[id]').forEach(sec => {
+                    if (sec.getBoundingClientRect().top <= 120) {
+                        current = '#' + sec.id;
+                    }
+                });
+                allNavLinks.forEach(a => {
+                    a.removeAttribute('aria-current');
+                    if (a.getAttribute('href') === current) {
+                        a.setAttribute('aria-current', 'page');
+                    }
+                });
+            };
+            window.addEventListener('scroll', setActive, {passive:true});
+            setActive();
+        },
+        initContactForm() {
+            this.elements.contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Dziękujemy za wiadomość! Odpowiemy wkrótce.');
+                this.elements.contactForm.reset();
+            });
+        }
+      };
+      app.init();
+    });
+  </script>
+</body>
+</html>
+
+ChatGPT zei:
+
+Myślał przez 11s
+Darek, świetna robota — to już pełnoprawny one-pager produktu z żywym 3D, karuzelą opinii, akordeonem i rozbudowanym stopką. Poniżej dostajesz: (1) precyzyjną checklistę usprawnień (konkret + dlaczego + jak), (2) gotowy, długi prompt do Gemini, który wprowadzi te zmiany w Twoim pliku.
+
+Co jeszcze warto dopracować (konkretne, wdrażalne)
+Performance (LCP/INP/JS)
+
+Lenie ładowanie Three.js: dociągaj three i OrbitControls dopiero gdy sekcja „Konfigurator” wejdzie w viewport (IntersectionObserver).
+
+Device Pixel Ratio: ustaw skalowanie renderera (setPixelRatio(window.devicePixelRatio)) – wyraźniejszy podgląd 3D na wyświetlaczach 1.5–3.0×.
+
+Korekta aspect ratio kamery: zamiast camera.aspect = 1, licz width/height kontenera.
+
+Preload hero: dodałeś preload, zostaw; dodatkowo dodaj as=image dla /image/vaulti_0.png (plakat video).
+
+Obrazy AVIF/WEBP: do <picture> wstaw type="image/avif" → webp → png (progressive enhancement).
+
+Dostępność i UX
+
+Karuzela opinii: dodaj aria-live="polite" na wrapperze, widoczne focus-style, oraz pętlę (gdy dojedziesz do końca — skok na początek).
+
+Akordeon: zachowujesz pojedyncze otwarcie — super. Dodaj obsługę klawiszy Home/End i PageUp/PageDown między nagłówkami.
+
+Przycisk „Kup teraz”: dodaj aria-describedby z ceną wybranego wariantu (zwiększa zrozumiałość dla czytników).
+
+Formularz w stopce: dodaj honeypot (ukryte pole), limit znaków oraz komunikat błędu (ARIA).
+
+SEO / Schema / i18n
+
+Organization + ContactPoint w JSON-LD (KVK/BTW już masz w treści).
+
+HowTo dla sekcji „3 kroki” — to często łapie się na rich results.
+
+Hreflang pod NL/EN (przynajmniej stuby, nawet jeśli to ta sama treść na start).
+
+Title/OG: dodaj og:image:type i og:image:alt; rozważ dedykowane 1200×630 WebP dla OG.
+
+Bezpieczeństwo / CSP
+
+CSP: skoro ładujesz skrypty z cdnjs, masz script-src 'self' https://cdnjs.cloudflare.com; — OK. Rozważ dodanie upgrade-insecure-requests; frame-ancestors 'none'; oraz img-src 'self' data: (masz awatary z zewnętrznych domen – najlepiej je przepiąć na self-host albo dopisać do CSP).
+
+Form submit: jeśli wyślesz do zewnętrznego endpointu (np. Formspree/Netlify Forms), dopisz domenę do connect-src.
+
+Analityka konwersji
+
+Zdarzenia: klik „Stwórz swoją Vaulti teraz”, zmiana wariantu, dodanie graweru, klik CTA w blogu — wyślij do dataLayer.push({...}) (lub gtag).
+
+utm_content w linkach z porównań (przycisk „Zapowiedź”) — będziesz widział, skąd klikają.
+
+Twarde drobne poprawki w 3D
+
+Odbicia światła: dodaj mały envMap (np. PMREMGenerator + prosta procedura) albo choćby HemisphereLight (bardziej „miękkie” światło).
+
+Fallback 2D: implementuj funkcję update2DCanvas() (np. rysowanie miniatur produktu + grawer tekstowy) — dziś masz TODO.
+
+Minimalne zmiany kodu (fragmenty do wklejenia)
+a) Aspect ratio + DPR w 3D
+
+// po utworzeniu renderer:
+t.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+const resize = () => {
+  const w = app.elements.threeContainer.clientWidth;
+  const h = app.elements.threeContainer.clientHeight || w; // zachowaj kwadrat, jeśli nie ma wysokości
+  t.camera.aspect = w / h;
+  t.camera.updateProjectionMatrix();
+  t.renderer.setSize(w, h);
+};
+resize();
+window.addEventListener('resize', resize, {passive:true});
+b) Lazy-load Three.js dopiero, gdy widać konfigurator
+
+<!-- usuń stałe <script src="three.min.js"> i OrbitControls z <head> -->
+// w initStickyCTA lub osobno:
+const lazy3D = new IntersectionObserver(async (entries, obs) => {
+  if (entries.some(e => e.isIntersecting)) {
+    const [{default: THREE}, {OrbitControls}] = await Promise.all([
+      import('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js'),
+      import('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/jsm/controls/OrbitControls.js')
+    ]);
+    // zapisz w window lub w app.threeRefs, zainicjuj scenę i render
+    obs.disconnect();
+  }
+}, { rootMargin: '200px' });
+lazy3D.observe(document.getElementById('konfigurator'));
+c) aria-live dla opinii
+
+<div class="review-carousel" id="review-carousel" role="region"
+     aria-roledescription="carousel" aria-label="Opinie klientów" aria-live="polite">
+</div>
+d) Honeypot w formularzu
+
+<input type="text" id="footer-company" name="company" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
+this.elements.contactForm.addEventListener('submit', (e) => {
+  if (document.getElementById('footer-company').value) return; // bot
+  // …reszta
+});
+Prompt do Gemini (skopiuj i wklej)
+You are a senior front-end engineer and performance/a11y specialist. I will paste a complete HTML file (Vaulti product page). Please transform it in-place with the following STRICT requirements. Output a single, production-ready HTML file (no commentary), preserving my current visual style and dark theme.
+
+SCOPE OF CHANGES
+1) PERFORMANCE
+  - Lazy-load Three.js and OrbitControls via dynamic `import()` only when the configurator section enters the viewport (IntersectionObserver).
+  - Add renderer `setPixelRatio(Math.min(devicePixelRatio, 2))`.
+  - Fix camera aspect ratio using container width/height; update on resize with a debounced listener; set renderer size accordingly.
+  - Implement `update2DCanvas()` as a real fallback preview when WebGL is unavailable (draw base product + engraved text).
+  - Convert hero + blog images to `<picture>` with AVIF->WEBP->PNG and `loading="lazy"` where appropriate. Keep the hero main image with `fetchpriority="high"`.
+  - Preload the video poster image and the hero image with `<link rel="preload" as="image">`.
+
+2) ACCESSIBILITY & UX
+  - Review carousel: add `aria-live="polite"`, make prev/next buttons keyboard-focusable with visible focus ring, and implement looping behavior (when reaching the end, continue from the start).
+  - Accordion: add keyboard navigation (ArrowUp/Down, Home/End). Ensure only one item open at a time (already present), keep smooth height animation and ARIA states.
+  - “Buy now” button: add `aria-describedby` pointing to a visually hidden element that states the currently selected variant and price.
+
+3) SEO & SCHEMA
+  - Add JSON-LD `Organization` with `name`, `url`, `logo`, `address` (Boxtel, NL), `taxID` (BTW) and `legalName`, plus `ContactPoint` for customer service (email).
+  - Add a `HowTo` JSON-LD mapping the “3 steps” section.
+  - Add `<link rel="alternate" hreflang="pl" href="https://vaulti.nl/">` and stubs for `nl` and `en` (pointing to hypothetical URLs like `/nl/` and `/en/`).
+  - In Open Graph, add `og:image:type` and `og:image:alt`.
+
+4) SECURITY / CSP
+  - Keep working with the current CSP. Add `upgrade-insecure-requests` and `frame-ancestors 'none'`. If any new external domains are introduced (e.g., for images), update `img-src` accordingly or keep images self-hosted.
+  - Add a simple honeypot field to the footer contact form and basic client-side validation with accessible error messages.
+
+5) ANALYTICS HOOKS
+  - Add `dataLayer.push()` events for:
+      * CTA click (hero primary button)
+      * Variant change
+      * Color change
+      * Engrave text input (once when it becomes non-empty)
+      * Contact form submit (success)
+    Use a minimal `window.dataLayer = window.dataLayer || [];` guard.
+
+CODING STYLE & CONSTRAINTS
+- Keep my existing CSS variables and design language. Only extend styles where necessary.
+- No external frameworks. Use modern, vanilla JS.
+- Keep HTML semantic structure and existing content intact unless adjustments are necessary for a11y/perf.
+- Ensure no layout shift is introduced (CLS ≈ 0); reserve dimensions for images/video.
+- Test with `prefers-reduced-motion: reduce` and ensure the carousel/accordion do not animate in that mode.
+
+Deliver the full updated HTML, ready to deploy.
+Chcesz, żebym od razu wygenerował Ci kompletny plik z tymi zmianami (z podmianą stałych <script> na lazy-load, dopiętym HowTo i Organization w JSON-LD, oraz poprawkami w akordeonie/karuzeli), czy wolisz najpierw przepuścić to przez Gemini według powyższego promptu?
+
+ChatGPT zei:
+
+Myślał przez 22s
+Darek, obejrzałem „Radio Adamowo” i… to już jest zgrabny, czytelny, szybki one-pager (Tailwind z CDN, semantyka, skip-link, wideo/audio, oś czasu). Poniżej dostajesz:
+
+konkretne ulepszenia (co + dlaczego + jak),
+
+gotowy, długi prompt do Gemini, który wdroży zmiany w tym pliku.
+
+Ulepszenia – precyzyjna lista
+1) Wydajność (LCP/INP/CLS)
+Tailwind z CDN → prebuild: skompiluj własny bundle (JIT/purge) i podmień <script src="https://cdn.tailwindcss.com"> na statyczny CSS. Zredukujesz CSS z ~200k+ klas do ułamka potrzeb (mniejsze TTFB/LCP). 
+index (22)
+
+
+Preload plakatu wideo: pre-loaduj poster hero-wideo, żeby uniknąć przeskoku tła. W tej chwili plakat to placehold.co zewnętrzny; lepiej przenieść na self-host (/assets/og/intro-poster.webp) i dodać <link rel="preload" as="image" href="/assets/og/intro-poster.webp">. 
+index (22)
+
+
+Stałe wymiary dla multimediów: masz je, ale upewnij się, że obraz OG i przyszłe miniatury mają width/height w HTML/CSS, żeby CLS=~0. (Masz sekcję hero z tekstem i CTA – super.) 
+index (22)
+
+
+Lazy na siatkach kart: sekcja „Audycje” – dołóż loading="lazy" do przyszłych miniaturek/okładek kart, gdy je dodasz; obecnie to czysty tekst, ale kod jest gotowy pod obrazki. 
+index (22)
+
+
+2) Dostępność (a11y) i UX
+Menu mobilne – focus trap: po otwarciu panelu zablokuj fokus w obrębie panelu i zamykaj ESC. Teraz masz ładne aria-expanded/label i autouzamknięcie po kliknięciu linku – dołóż obsługę klawiatury. 
+index (22)
+
+
+Oś czasu – relacje ARIA: każdy article już ma <time>; dodaj aria-describedby łączące nagłówek, datę i opis dla czytników. Kropki .timeline-dot są dekoracyjne – dodane aria-hidden="true" (masz) – zostaw. 
+index (22)
+
+
+Audio/Video – napisy i transkrypcja: do <video> i <audio> dołóż <track kind="captions" srclang="pl"> oraz link do transkryptu (np. „Zobacz transkrypcję”). 
+index (22)
+
+
+3) SEO / Rich Results
+Rozszerz JSON-LD: masz WebSite + SearchAction (dobrze). Dodaj:
+
+Organization (nazwa, URL, logo).
+
+CollectionPage dla strony głównej (bo zbiera artykuły/audycje).
+
+Article/NewsArticle dla kart w „Audycje” (headline, description, datePublished, author).
+
+BreadcrumbList.
+
+AudioObject (audycja) i VideoObject (intro). 
+index (22)
+
+ 
+index (22)
+
+ 
+index (22)
+
+
+Meta OG: masz OG podstawowe – dodaj og:image:width/height/type i og:image:alt + twitter:creator. 
+index (22)
+
+
+4) Architektura treści
+„O sprawie w skrócie” nad „Analiza” – 5–7 punktopw z linkami w głąb (Zarzuty, Kalendarz, itd.). Teraz wszystko jest w długiej sekcji „Analiza”; teaser poprawi wejścia w głąb. 
+index (22)
+
+
+Karty audycji → podstrony: masz linki do zarzuty.html, kalendarz.html itd. (puste lub WIP). Ujednolić layout: nagłówek, data, spis treści, osadzony audio, box „Powiązane”. 
+index (22)
+
+
+5) Prywatność i prawo (ważne dla satyry)
+Disclaimer + czarna lista nazwisk: już masz „charakter satyryczny” w stopce – dodaj na górze banner-pasek („Satyrystyczny serwis publicystyczny, dane zanonimizowane”). 
+index (22)
+
+
+Policy pages: /polityka-prywatnosci, /zastrzezenia-prawne (RODO + satyra, brak agitacji, przetwarzanie treści publicznych).
+
+6) Observability i konwersje
+dataLayer zdarzenia: klik CTA „Przeczytaj analizę”, „Zobacz dowody”, play/pause wideo/audio, klik karty „Czytaj więcej”. Wstaw minimalny guard window.dataLayer = window.dataLayer || [];. 
+index (22)
+
+ 
+index (22)
+
+
+Sitemap + robots.txt: dodaj sitemapę z listą podstron (audycje/analizy), bo masz sporo linków wewnętrznych.
+
+Prompt do Gemini (wklej 1:1)
+You are a senior front-end & a11y/SEO engineer. I will paste a complete HTML file of a satire/investigative site called “Radio Adamowo”. Transform it IN-PLACE and output ONE ready-to-deploy HTML file (no commentary). Keep the current Tailwind-based design and dark theme.
+
+REQUIREMENTS (APPLY ALL):
+
+PERFORMANCE
+- Remove Tailwind CDN runtime. Replace with a static, minimized CSS link (assume `/assets/radio.css`). Keep identical visual output. Preserve utility classes in HTML; the CSS should cover used classes only (purged).
+- Preload the intro video poster: `<link rel="preload" as="image" href="/assets/og/intro-poster.webp">`. Use this poster in `<video poster="...">`. Ensure poster is self-hosted.
+- Add `loading="lazy"` to below-the-fold images (future thumbnails) and reserve width/height to prevent CLS. Ensure no layout shift in hero/sections.
+- Defer any non-critical scripts and keep inline bootstrapping minimal.
+
+ACCESSIBILITY
+- Mobile menu: implement focus trap while open; close on `Escape`; maintain `aria-expanded` and restore focus to the toggle on close.
+- Timeline: for each entry, connect heading, time, and text via `aria-describedby`. Keep `.timeline-dot` purely decorative with `aria-hidden`.
+- Video/Audio: add `<track kind="captions" srclang="pl">` and a visible link to a transcript section below each media player.
+- Ensure clear focus styles for all interactive elements and no motion for `prefers-reduced-motion: reduce`.
+
+SEO / STRUCTURED DATA
+- Keep existing `<meta>` and canonical. Extend JSON-LD:
+  * `Organization` (name, url, logo).
+  * `CollectionPage` for the homepage (name, description).
+  * `BreadcrumbList` for top-level sections.
+  * `Article` (or `NewsArticle`) for each “Audycje” card (headline, description, url, datePublished, author as "Radio Adamowo").
+  * `AudioObject` for the special audio episode and `VideoObject` for the intro video, linking to transcript URLs.
+- In Open Graph add: `og:image:width`, `og:image:height`, `og:image:type`, and `og:image:alt`. Also add `twitter:creator`.
+
+CONTENT ARCHITECTURE
+- Insert a new section above “Analiza” titled “O sprawie w skrócie” with 5–7 bullet points summarizing the case, each linking into the relevant deep page (zarzuty.html, kalendarz.html, itd.). Keep the site’s tone (satirical yet analytical).
+- Keep existing sections but add a small “Related” box at the end of the “Analiza” pointing to 3 most relevant deep pages.
+
+LEGAL / PRIVACY
+- Add a slim top banner (dismissible) stating the site is satirical/commentary and uses anonymized references. Provide links to `/polityka-prywatnosci` and `/zastrzezenia-prawne`. Do NOT add tracking scripts; only placeholders.
+
+ANALYTICS HOOKS
+- Add a minimal `window.dataLayer = window.dataLayer || [];` and push events:
+  - `cta_click` (hero buttons),
+  - `media_play`/`media_pause` (video and audio),
+  - `read_more_click` (cards in “Audycje”).
+Include `event`, `label`, and `section` fields.
+
+CODE STYLE / CONSTRAINTS
+- No frameworks beyond the current approach; keep HTML semantic tags.
+- Keep the visual design identical or better; avoid layout shifts.
+- Use native JS; no external dependencies beyond the prebuilt CSS.
+- Output a single, valid HTML file.
+
+Return ONLY the updated HTML file.
+Jeśli chcesz, mogę od razu przygotować gotowy plik HTML z: pre-build Tailwindem (purge), rozbudowanym JSON-LD (Organization/CollectionPage/Article/AudioObject/VideoObject), focus-trapem, banerem satyry, zdarzeniami dataLayer i sekcją „O sprawie w skrócie”.
+
+
+Bronnen
+
+
+
+Geen bestand gekozenGeen bestand gekozen
+ChatGPT kan fouten maken. Controleer belangrijke informatie. Zie cookievoorkeuren.
