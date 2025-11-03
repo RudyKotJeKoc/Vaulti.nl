@@ -1,598 +1,1729 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vaulti – personalizowana skarbonka 3D z lokalizatorem. Spokój ducha dla rodziców, magia dla dzieci.">
-    <meta name="theme-color" content="#0d1117">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://vaulti.nl/" />
-    
-    <!-- OpenGraph -->
-    <meta property="og:site_name" content="Vaulti" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem" />
-    <meta property="og:description" content="Spokój ducha dla rodziców. Magia dla dzieci." />
-    <meta property="og:url" content="https://vaulti.nl/" />
-    <meta property="og:image" content="https://vaulti.nl/image/vaulti-og-1200x630.png" />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vaulti – Skarbonka 3D z Lokalizatorem" />
-    <meta name="twitter:description" content="Odkryj, jak Vaulti łączy bezpieczeństwo z magią dla Twojego dziecka." />
-    <meta name="twitter:image" content="https://vaulti.nl/image/vaulti-og-1200x630.png" />
-    
-    <!-- CSP -->
-    <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
-    
-    <title data-i18n="meta.title">Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem</title>
-    
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="/" class="logo-link">
-                        <span class="logo-text">Vaulti</span>
-                    </a>
-                </div>
-                
-                <nav class="nav" aria-label="Główna nawigacja">
-                    <ul class="nav-list">
-                        <li><a href="#jak-to-dziala" data-i18n="nav.how">Jak to działa</a></li>
-                        <li><a href="#modele" data-i18n="nav.models">Modele</a></li>
-                        <li><a href="#opinie" data-i18n="nav.reviews">Opinie</a></li>
-                        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="header-actions">
-                    <button id="lang-toggle" class="lang-toggle" aria-label="Przełącznik języka">
-                        <span id="current-lang">PL</span>
-                        <span class="lang-dropdown" style="display:none;">
-                            <a href="#" data-lang="pl">PL</a>
-                            <a href="#" data-lang="nl">NL</a>
-                            <a href="#" data-lang="en">EN</a>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!-- === SEO & PERFORMANCE === -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <main>
-        <!-- ==================== HERO ==================== -->
-        <section class="hero" id="hero">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <h1 class="hero-title" data-i18n="hero.title">
-                            Spokój ducha dla rodziców.<br>Magia dla dzieci.
-                        </h1>
-                        
-                        <p class="hero-subtitle" data-i18n="hero.subtitle">
-                            Dyskretnie ukryty lokalizator daje pewność, że najcenniejsze skarby Twojego dziecka nigdy się nie zgubią.
-                        </p>
-                        
-                        <div class="hero-cta-group">
-                            <a href="#konfigurator" class="btn btn-primary" data-i18n="cta.create">
-                                Stwórz swoją Vaulti teraz
-                            </a>
-                            <a href="#video" class="btn btn-secondary" data-i18n="cta.video">
-                                Obejrzyj film
-                            </a>
-                            <a href="#modele" class="btn btn-secondary" data-i18n="cta.compare">
-                                Porównaj modele
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-image">
-                        <picture>
-                            <source srcset="./image/vaulti-hero.webp" type="image/webp">
-                            <img src="./image/vaulti-hero.png" 
-                                 alt="Nowoczesna skarbonka Vaulti w różnych kolorach"
-                                 width="500" height="500"
-                                 loading="eager" decoding="async" fetchpriority="high">
-                        </picture>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <title>Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem | Idealny Prezent dla Dziecka</title>
+  <meta name="description" content="Odkryj Vaulti – bezpieczną i personalizowaną skarbonkę 3D z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i wybierz kolor. Idealny prezent łączący magię z bezpieczeństwem." />
+  <meta name="keywords" content="skarbonka 3D, personalizowana skarbonka, prezent dla dziecka, AirTag skarbonka, inteligentna skarbonka, grawer laserowy" />
+  <link rel="canonical" href="https://vaulti.nl/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d1117">
 
-        <!-- ==================== TRUST BADGES ==================== -->
-        <section class="trust-section">
-            <div class="container">
-                <div class="trust-badges">
-                    <div class="trust-badge">
-                        <div class="trust-value">4.9★</div>
-                        <div class="trust-label" data-i18n="trust.rating">Ocena od 87 klientów</div>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="trust-value">1,500+</div>
-                        <div class="trust-label" data-i18n="trust.sold">Dzieci posiadające Vaulti</div>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="trust-value">30 dni</div>
-                        <div class="trust-label" data-i18n="trust.returns">Gwarancja zwrotu</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- === OpenGraph & Social Media === -->
+  <meta property="og:site_name" content="Vaulti" />
+  <meta property="og:title" content="Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem" />
+  <meta property="og:description" content="Spokój ducha dla rodziców, magia dla dzieci. Odkryj personalizowaną skarbonkę z ukrytym zabezpieczeniem." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vaulti.nl/" />
+  <meta property="og:image" content="https://vaulti.nl/image/vaulti-og-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pl_PL" id="og-locale" />
 
-        <!-- ==================== JAK TO DZIAŁA ==================== -->
-        <section class="how-works" id="jak-to-dziala">
-            <div class="container">
-                <h2 class="section-title" data-i18n="how.title">Spokój ducha w 3 prostych krokach</h2>
-                
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3 class="step-title" data-i18n="how.step1.title">Zaprojektuj</h3>
-                        <p class="step-description" data-i18n="how.step1.desc">
-                            Wybierz model, kolor i dodaj grawer imienia Twojego dziecka.
-                        </p>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3 class="step-title" data-i18n="how.step2.title">Dodaj AirTag</h3>
-                        <p class="step-description" data-i18n="how.step2.desc">
-                            Włóż Apple AirTag lub Samsung SmartTag do dyskretnego schowka.
-                        </p>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3 class="step-title" data-i18n="how.step3.title">Spokój!</h3>
-                        <p class="step-description" data-i18n="how.step3.desc">
-                            Śledzenie skarbow Twojego dziecka w aplikacji Find My / SmartThings.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- === Twitter Card === -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vaulti – Skarbonka 3D z Lokalizatorem" />
+  <meta name="twitter:description" content="Idealny prezent łączący magię i bezpieczeństwo dla Twojego dziecka." />
+  <meta name="twitter:image" content="https://vaulti.nl/image/vaulti-og-1200x630.png" />
 
-        <!-- ==================== KONFIGURATOR 3D ==================== -->
-        <section class="configurator" id="konfigurator">
-            <div class="container">
-                <h2 class="section-title" data-i18n="config.title">Stwórz swoją Vaulti</h2>
-                
-                <div class="configurator-grid">
-                    <div class="configurator-preview">
-                        <canvas id="preview-canvas" width="500" height="500" 
-                                aria-label="Podgląd personalizowanej skarbnoki"></canvas>
-                    </div>
-                    
-                    <div class="configurator-controls">
-                        <!-- Wybór wariantu -->
-                        <div class="control-group">
-                            <label for="variant" class="control-label" data-i18n="config.variant">Model</label>
-                            <select id="variant" class="control-input">
-                                <option value="color" data-i18n="config.variant_color">Vaulti Color (39,95 €)</option>
-                                <option value="wood" data-i18n="config.variant_wood">Vaulti Wood (49,95 €)</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Wybór koloru -->
-                        <div class="control-group">
-                            <label class="control-label" data-i18n="config.color">Kolor</label>
-                            <div class="color-swatches">
-                                <button class="swatch" data-color="pink" 
-                                        style="background-color:#ffc0cb;" 
-                                        title="Różowy" aria-label="Różowy">
-                                </button>
-                                <button class="swatch" data-color="blue" 
-                                        style="background-color:#add8e6;" 
-                                        title="Niebieski" aria-label="Niebieski">
-                                </button>
-                                <button class="swatch" data-color="green" 
-                                        style="background-color:#98fb98;" 
-                                        title="Zielony" aria-label="Zielony">
-                                </button>
-                                <button class="swatch" data-color="purple" 
-                                        style="background-color:#dda0dd;" 
-                                        title="Fioletowy" aria-label="Fioletowy">
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Grawer -->
-                        <div class="control-group">
-                            <label for="engrave" class="control-label" data-i18n="config.engrave">Grawer (imię)</label>
-                            <input id="engrave" type="text" class="control-input" 
-                                   placeholder="np. Anna" maxlength="20"
-                                   data-i18n-placeholder="config.engrave_placeholder">
-                        </div>
-                        
-                        <!-- Cena -->
-                        <div class="price-display">
-                            <span class="price-label" data-i18n="config.price">Cena:</span>
-                            <span class="price-value" id="price">39,95 €</span>
-                        </div>
-                        
-                        <!-- CTA Buttons -->
-                        <div class="configurator-actions">
-                            <button id="share-config" class="btn btn-secondary" 
-                                    data-i18n="config.share">
-                                Udostępnij konfigurację
-                            </button>
-                            <button id="buy-config" class="btn btn-primary" 
-                                    data-i18n="cta.buy">
-                                Dodaj do koszyka
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- === Preload Critical Assets === -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
 
-        <!-- ==================== MODELE ==================== -->
-        <section class="models" id="modele">
-            <div class="container">
-                <h2 class="section-title" data-i18n="models.title">Porównanie modeli</h2>
-                
-                <div class="models-comparison">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="models.feature">Funkcja</th>
-                                <th data-i18n="models.color">Color</th>
-                                <th data-i18n="models.wood">Wood</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="models.material">Materiał</td>
-                                <td>PETG/ASA</td>
-                                <td>Sklejka + TPU</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="models.colors">Dostępne kolory</td>
-                                <td>4 kolory</td>
-                                <td>Naturalna</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="models.slot">Slot na AirTag</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="models.engrave">Grawer imienia</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="models.price">Cena</td>
-                                <td><strong>39,95 €</strong></td>
-                                <td><strong>49,95 €</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+  <link rel="icon" href="/assets/favicon.svg">
 
-        <!-- ==================== WIDEO ==================== -->
-        <section class="video-section" id="video">
-            <div class="container">
-                <h2 class="section-title" data-i18n="video.title">Poznaj Vaulti w akcji</h2>
-                
-                <div class="video-container">
-                    <video controls width="100%" height="auto" 
-                           poster="./image/vaulti-video-poster.jpg">
-                        <source src="./video/vaulti-demo.webm" type="video/webm">
-                        <source src="./video/vaulti-demo.mp4" type="video/mp4">
-                        <p data-i18n="video.fallback">Twoja przeglądarka nie obsługuje HTML5 video.</p>
-                    </video>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== OPINIE ==================== -->
-        <section class="reviews" id="opinie">
-            <div class="container">
-                <h2 class="section-title" data-i18n="reviews.title">Co mówią rodzice?</h2>
-                
-                <div class="reviews-carousel">
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="./image/avatar-1.jpg" alt="Maria" class="review-avatar" width="48" height="48">
-                            <div class="review-meta">
-                                <h4 class="review-name">Maria</h4>
-                                <div class="review-rating">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="review-text">
-                            "Moja córka nie rodziła się bez Vaulti. Świetny design i naprawdę spokój, że jej biżutka jest bezpieczna!"
-                        </p>
-                    </div>
-                    
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="./image/avatar-2.jpg" alt="Jan" class="review-avatar" width="48" height="48">
-                            <div class="review-meta">
-                                <h4 class="review-name">Jan</h4>
-                                <div class="review-rating">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="review-text">
-                            "AirTag w schowku? Genialny pomysł! Już trzeci raz znaleźliśmy skarby za pomocą Find My."
-                        </p>
-                    </div>
-                    
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="./image/avatar-3.jpg" alt="Anna" class="review-avatar" width="48" height="48">
-                            <div class="review-meta">
-                                <h4 class="review-name">Anna</h4>
-                                <div class="review-rating">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="review-text">
-                            "Personalizacja grawerem to była wisienka na torcie. Synowi się spodobało bardziej niż spodziewaliśmy!"
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== GWARANCJA ==================== -->
-        <section class="guarantee">
-            <div class="container">
-                <h2 class="section-title" data-i18n="guarantee.title">Gwarancja satysfakcji</h2>
-                
-                <div class="guarantee-cards">
-                    <div class="guarantee-card">
-                        <div class="guarantee-icon">🔄</div>
-                        <h3 class="guarantee-heading" data-i18n="guarantee.returns_title">30 dni zwrotu</h3>
-                        <p class="guarantee-text" data-i18n="guarantee.returns_desc">
-                            Zwrot bez pytań, jeśli Vaulti Ci się nie podoba.
-                        </p>
-                    </div>
-                    
-                    <div class="guarantee-card">
-                        <div class="guarantee-icon">🔧</div>
-                        <h3 class="guarantee-heading" data-i18n="guarantee.replace_title">Darmowa wymiana</h3>
-                        <p class="guarantee-text" data-i18n="guarantee.replace_desc">
-                            W razie uszkodzenia wymienimy bezpłatnie.
-                        </p>
-                    </div>
-                    
-                    <div class="guarantee-card">
-                        <div class="guarantee-icon">⭐</div>
-                        <h3 class="guarantee-heading" data-i18n="guarantee.warranty_title">12 miesięcy</h3>
-                        <p class="guarantee-text" data-i18n="guarantee.warranty_desc">
-                            Pełna gwarancja producenta na wszystkie wady.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== FAQ ==================== -->
-        <section class="faq" id="faq">
-            <div class="container">
-                <h2 class="section-title" data-i18n="faq.title">Często zadawane pytania</h2>
-                
-                <div class="faq-items">
-                    <!-- FAQ Item 1 -->
-                    <details class="faq-item" open>
-                        <summary class="faq-question" data-i18n="faq.q1">
-                            Jaki lokalizator pasuje do Vaulti?
-                        </summary>
-                        <div class="faq-answer" data-i18n="faq.a1">
-                            <p>Vaulti jest kompatybilna z Apple AirTag i Samsung SmartTag. Slot ma wymiary optymalne dla obu urządzeń.</p>
-                        </div>
-                    </details>
-                    
-                    <!-- FAQ Item 2 -->
-                    <details class="faq-item">
-                        <summary class="faq-question" data-i18n="faq.q2">
-                            Czy dziecko musi wiedzieć o lokalizatorze?
-                        </summary>
-                        <div class="faq-answer" data-i18n="faq.a2">
-                            <p>Nie, schowek na AirTag jest całkowicie ukryty i niedostępny dla dziecka. To Twoja prywatna poduszka bezpieczeństwa.</p>
-                        </div>
-                    </details>
-                    
-                    <!-- FAQ Item 3 -->
-                    <details class="faq-item">
-                        <summary class="faq-question" data-i18n="faq.q3">
-                            Z jakich materiałów jest wykonana Vaulti?
-                        </summary>
-                        <div class="faq-answer" data-i18n="faq.a3">
-                            <p><strong>Color:</strong> PETG/ASA (trwałe, kolorowe). <strong>Wood:</strong> Naturalna sklejka + TPU (ekologiczne).</p>
-                        </div>
-                    </details>
-                    
-                    <!-- FAQ Item 4 -->
-                    <details class="faq-item">
-                        <summary class="faq-question" data-i18n="faq.q4">
-                            Jakie są wymiary Vaulti?
-                        </summary>
-                        <div class="faq-answer" data-i18n="faq.a4">
-                            <p>18 × 12 × 12 cm (H × W × D). Idealna do schowania na półce lub w szufladzie.</p>
-                        </div>
-                    </details>
-                    
-                    <!-- FAQ Item 5 -->
-                    <details class="faq-item">
-                        <summary class="faq-question" data-i18n="faq.q5">
-                            Jak długo trwa dostawa?
-                        </summary>
-                        <div class="faq-answer" data-i18n="faq.a5">
-                            <p>Standardowo 2-4 dni robocze w UE. Możliwa przesyłka ekspresowa (+2€).</p>
-                        </div>
-                    </details>
-                    
-                    <!-- FAQ Item 6 -->
-                    <details class="faq-item">
-                        <summary class="faq-question" data-i18n="faq.q6">
-                            Czy mogę zwrócić Vaulti?
-                        </summary>
-                        <div class="faq-answer" data-i18n="faq.a6">
-                            <p>Tak! Masz 30 dni na bezwarunkowy zwrot. Koszt zwrotu pokrywamy my.</p>
-                        </div>
-                    </details>
-                    
-                    <!-- FAQ Item 7 -->
-                    <details class="faq-item">
-                        <summary class="faq-question" data-i18n="faq.q7">
-                            Czy skarbonka ma gwarancję?
-                        </summary>
-                        <div class="faq-answer" data-i18n="faq.a7">
-                            <p>Tak, 12 miesięcy gwarancji producenta na wszystkie wady. W razie problemów wymieniamy bezpłatnie.</p>
-                        </div>
-                    </details>
-                    
-                    <!-- FAQ Item 8 -->
-                    <details class="faq-item">
-                        <summary class="faq-question" data-i18n="faq.q8">
-                            Czy istnieje możliwość personalizacji?
-                        </summary>
-                        <div class="faq-answer" data-i18n="faq.a8">
-                            <p>Oczywiście! Grawer laserowy imienia (do 20 znaków) jest darmowy i wliczony w cenę.</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== NEWSLETTER ==================== -->
-        <section class="newsletter">
-            <div class="container">
-                <h2 class="section-title" data-i18n="newsletter.title">Bądź na bieżąco</h2>
-                <p class="newsletter-subtitle" data-i18n="newsletter.subtitle">
-                    Subskrybuj naszą gazetę i otrzymaj -10% rabatu na pierwszą zamówienie.
-                </p>
-                
-                <form class="newsletter-form" id="newsletter-form">
-                    <input type="email" class="newsletter-input" 
-                           placeholder="twój@email.com" 
-                           required
-                           data-i18n-placeholder="newsletter.placeholder">
-                    <button type="submit" class="btn btn-primary" data-i18n="newsletter.submit">
-                        Zapisz się
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Sticky CTA (mobile + desktop) -->
-    <div class="sticky-cta" id="sticky-cta">
-        <a href="#konfigurator" class="btn btn-primary" data-i18n="cta.quick">Stwórz teraz!</a>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4 class="footer-title">Vaulti</h4>
-                    <p class="footer-text" data-i18n="footer.tagline">
-                        Personalizowana skarbonka 3D z lokalizatorem.
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title" data-i18n="footer.links">Linki</h4>
-                    <ul class="footer-links">
-                        <li><a href="#jak-to-dziala" data-i18n="nav.how">Jak to działa</a></li>
-                        <li><a href="#modele" data-i18n="nav.models">Modele</a></li>
-                        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title" data-i18n="footer.contact">Kontakt</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:info@vaulti.nl">info@vaulti.nl</a></li>
-                        <li><a href="tel:+31612345678">+31 6 12 34 56 78</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title" data-i18n="footer.follow">Śledź nas</h4>
-                    <div class="social-links">
-                        <a href="https://instagram.com/vaulti" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a href="https://facebook.com/vaulti" target="_blank" rel="noopener noreferrer">Facebook</a>
-                        <a href="https://tiktok.com/@vaulti" target="_blank" rel="noopener noreferrer">TikTok</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    &copy; 2025 Vaulti. <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Product",
-                "name": "Vaulti - Personalizowana Skarbonka 3D",
-                "description": "Personalizowana skarbonka 3D z dyskretnym lokalizatorem Apple AirTag lub Samsung SmartTag.",
-                "brand": {
-                    "@type": "Brand",
-                    "name": "Vaulti"
-                },
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "87",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                },
-                "offers": [
-                    {
-                        "@type": "Offer",
-                        "name": "Vaulti Color",
-                        "price": "39.95",
-                        "priceCurrency": "EUR",
-                        "availability": "https://schema.org/InStock"
-                    },
-                    {
-                        "@type": "Offer",
-                        "name": "Vaulti Wood",
-                        "price": "49.95",
-                        "priceCurrency": "EUR",
-                        "availability": "https://schema.org/InStock"
-                    }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Jaki lokalizator pasuje do Vaulti?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Vaulti jest kompatybilna z Apple AirTag i Samsung SmartTag. Slot ma wymiary optymalne dla obu urządzeń."
-                        }
-                    }
-                ]
-            }
+  <!-- === Structured Data === -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://vaulti.nl/",
+        "name": "Vaulti",
+        "description": "Personalizowana skarbonka 3D z ukrytym lokalizatorem"
+      },
+      {
+        "@type": "Product",
+        "name": "Vaulti - Personalizowana Skarbonka 3D",
+        "image": ["https://vaulti.nl/image/vaulti_1.png", "https://vaulti.nl/image/vaulti_2.png"],
+        "description": "Vaulti to personalizowana skarbonka drukowana w 3D z dyskretnym, ukrytym slotem na lokalizator Apple AirTag lub Samsung SmartTag. Idealny prezent dla dziecka, który łączy zabawę z bezpieczeństwem.",
+        "brand": { "@type": "Brand", "name": "Vaulti" },
+        "sku": "VAULTI-01",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "87",
+          "bestRating": "5"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Vaulti Color",
+            "price": "39.95",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://vaulti.nl/#konfigurator"
+          },
+          {
+            "@type": "Offer",
+            "name": "Vaulti Wood",
+            "price": "49.95",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://vaulti.nl/#konfigurator"
+          }
         ]
-    }
-    </script>
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Jaki lokalizator pasuje do Vaulti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Do Vaulti pasują lokalizatory Apple AirTag oraz Samsung SmartTag. Skarbonka posiada specjalny, dyskretny slot serwisowy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę zwrócić Vaulti?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak, masz 30 dni na zwrot bez podania przyczyny. Koszt zwrotu pokrywamy my."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
-    <!-- Scripts -->
-    <script src="./js/i18n.js"></script>
-    <script src="./js/config.js"></script>
-    <script src="./js/app.js"></script>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --bg-elevated: #1c2128;
+      --border-color: #30363d;
+      --text-primary: #e6edf3;
+      --text-secondary: #aab2c2;
+      --text-muted: #8b949e;
+      --accent-gradient: linear-gradient(90deg, #6ee7b7, #22d3ee);
+      --accent-color-1: #6ee7b7;
+      --accent-color-2: #22d3ee;
+      --focus-ring: 0 0 0 3px rgba(34, 211, 238, 0.3);
+      --star-color: #facc15;
+      --transition: all 0.3s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* === UTILITIES === */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 48px;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: var(--transition);
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #0d1117;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(34, 211, 238, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border-color: var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-color-2);
+      background: var(--bg-elevated);
+    }
+
+    /* === HEADER === */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 17, 23, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .logo svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    .nav-menu a:hover {
+      color: var(--text-primary);
+      background: var(--bg-card);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .lang-selector {
+      position: relative;
+    }
+
+    .lang-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px;
+      display: none;
+      min-width: 100px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .lang-dropdown.active {
+      display: block;
+    }
+
+    .lang-dropdown button {
+      width: 100%;
+      padding: 8px 12px;
+      border: none;
+      background: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      border-radius: 4px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .lang-dropdown button:hover {
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* === HERO === */
+    .hero {
+      padding: 80px 0;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 99px;
+      font-size: 0.875rem;
+      margin-bottom: 24px;
+      color: var(--text-secondary);
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero-gradient {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    /* === TRUST BADGES === */
+    .trust-section {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 48px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 48px;
+      text-align: center;
+    }
+
+    .trust-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .trust-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    /* === HOW IT WORKS === */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .step-card:hover {
+      border-color: var(--accent-color-2);
+      transform: translateY(-5px);
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-gradient);
+      border-radius: 50%;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #0d1117;
+    }
+
+    .step-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .step-description {
+      color: var(--text-secondary);
+    }
+
+    /* === CONFIGURATOR === */
+    .configurator {
+      background: var(--bg-card);
+    }
+
+    .config-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .config-preview {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+    }
+
+    #preview-canvas {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .config-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .control-label {
+      font-weight: 600;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .control-input {
+      padding: 12px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+
+    .control-input:focus {
+      outline: none;
+      border-color: var(--accent-color-2);
+      box-shadow: var(--focus-ring);
+    }
+
+    .color-swatches {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .swatch {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 3px solid var(--border-color);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .swatch:hover,
+    .swatch.active {
+      border-color: var(--accent-color-2);
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
+    }
+
+    .price-display {
+      background: var(--bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price-value {
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* === COMPARISON TABLE === */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .comparison-table th {
+      background: var(--bg-elevated);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .comparison-table td {
+      color: var(--text-secondary);
+    }
+
+    .comparison-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table .check {
+      color: var(--accent-color-1);
+      font-size: 1.25rem;
+    }
+
+    /* === REVIEWS === */
+    .reviews-carousel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      transition: var(--transition);
+    }
+
+    .review-card:hover {
+      border-color: var(--accent-color-2);
+      transform: translateY(-5px);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .review-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .review-name {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .review-rating {
+      color: var(--star-color);
+      font-size: 1.1rem;
+    }
+
+    .review-text {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* === GUARANTEE === */
+    .guarantee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .guarantee-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .guarantee-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+
+    .guarantee-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .guarantee-text {
+      color: var(--text-secondary);
+    }
+
+    /* === FAQ === */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      background: var(--bg-elevated);
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--accent-color-2);
+      transition: var(--transition);
+    }
+
+    .faq-item[open] .faq-question::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 24px 20px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* === NEWSLETTER === */
+    .newsletter {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .newsletter-form {
+      max-width: 500px;
+      margin: 32px auto 0;
+      display: flex;
+      gap: 12px;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 14px 20px;
+      background: var(--bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+
+    .newsletter-input:focus {
+      outline: none;
+      border-color: var(--accent-color-2);
+      box-shadow: var(--focus-ring);
+    }
+
+    /* === STICKY CTA === */
+    .sticky-cta {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 90;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: var(--transition);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .sticky-cta.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--bg-elevated);
+      border-top: 1px solid var(--border-color);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      color: var(--accent-color-2);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .hero-grid,
+      .config-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        order: -1;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .sticky-cta {
+        left: 24px;
+        right: 24px;
+      }
+
+      .sticky-cta .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--accent-gradient);color:#0d1117;padding:8px 16px;z-index:999;">
+    Przejdź do treści
+  </a>
+
+  <!-- === HEADER === -->
+  <header>
+    <div class="container">
+      <nav class="nav-container" aria-label="Główna nawigacja">
+        <a href="/" class="logo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7.5h16M4 12h16M4 16.5h10" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="24" y2="0">
+                <stop stop-color="#6ee7b7"/>
+                <stop offset="1" stop-color="#22d3ee"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>VAULTI</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="#jak-to-dziala" data-i18n="nav.how">Jak to działa</a></li>
+          <li><a href="#konfigurator" data-i18n="nav.configurator">Konfigurator</a></li>
+          <li><a href="#modele" data-i18n="nav.models">Modele</a></li>
+          <li><a href="#opinie" data-i18n="nav.reviews">Opinie</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <div class="lang-selector">
+            <button class="lang-btn" id="lang-btn" aria-label="Wybierz język">
+              <span id="current-lang">PL</span>
+              <span>▼</span>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown">
+              <button data-lang="pl">🇵🇱 Polski</button>
+              <button data-lang="nl">🇳🇱 Nederlands</button>
+              <button data-lang="en">🇬🇧 English</button>
+            </div>
+          </div>
+
+          <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12h18M3 6h18M3 18h18"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === MAIN CONTENT === -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="hero-badge" data-i18n="hero.badge">
+              Dla dzieci: magia i design • Dla rodziców: spokój i bezpieczeństwo
+            </span>
+
+            <h1 class="hero-title">
+              <span data-i18n="hero.title1">Personalizowana skarbonka 3D,</span><br>
+              <span class="hero-gradient" data-i18n="hero.title2">która zawsze się odnajdzie</span>
+            </h1>
+
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+              Vaulti to więcej niż skarbonka. To bezpieczne miejsce na skarby Twojego dziecka,
+              z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i podaruj prezent,
+              który zostanie na lata.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#konfigurator" class="btn btn-primary" data-i18n="cta.create">
+                Stwórz swoją Vaulti teraz
+              </a>
+              <a href="#jak-to-dziala" class="btn btn-secondary" data-i18n="cta.learn">
+                Zobacz jak to działa
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <picture>
+              <source srcset="https://placehold.co/600x600/161b22/6ee7b7?text=Vaulti+3D" type="image/png">
+              <img
+                src="https://placehold.co/600x600/161b22/6ee7b7?text=Vaulti+3D"
+                alt="Personalizowana skarbonka Vaulti w różnych kolorach"
+                width="600"
+                height="600"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-grid">
+          <div>
+            <div class="trust-value">4.9★</div>
+            <div class="trust-label" data-i18n="trust.rating">Średnia ocen od 87 klientów</div>
+          </div>
+          <div>
+            <div class="trust-value">1,500+</div>
+            <div class="trust-label" data-i18n="trust.sold">Sprzedanych skarbonek</div>
+          </div>
+          <div>
+            <div class="trust-value">30 dni</div>
+            <div class="trust-label" data-i18n="trust.returns">Gwarancja zwrotu pieniędzy</div>
+          </div>
+          <div>
+            <div class="trust-value">EN 71-3</div>
+            <div class="trust-label" data-i18n="trust.safe">Bezpieczne materiały</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="jak-to-dziala">
+      <div class="container">
+        <h2 class="section-title" data-i18n="how.title">Spokój ducha w 3 prostych krokach</h2>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title" data-i18n="how.step1.title">Zaprojektuj swoją Vaulti</h3>
+            <p class="step-description" data-i18n="how.step1.desc">
+              Wybierz model (Color lub Wood), ulubiony kolor i dodaj grawer z imieniem dziecka.
+              Zobacz podgląd w czasie rzeczywistym.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title" data-i18n="how.step2.title">Umieść lokalizator</h3>
+            <p class="step-description" data-i18n="how.step2.desc">
+              Włóż Apple AirTag lub Samsung SmartTag do dyskretnego, ukrytego schowka.
+              Zabezpieczenie niewidoczne dla dziecka.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title" data-i18n="how.step3.title">Zyskaj spokój ducha</h3>
+            <p class="step-description" data-i18n="how.step3.desc">
+              Śledzenie lokalizacji skarbnoki w aplikacji Find My (iPhone) lub SmartThings (Samsung).
+              Zawsze wiesz, gdzie są skarby dziecka.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIGURATOR -->
+    <section class="section configurator" id="konfigurator">
+      <div class="container">
+        <h2 class="section-title" data-i18n="config.title">Stwórz wymarzoną skarbonkę</h2>
+        <p style="text-align:center;color:var(--text-secondary);margin-bottom:48px;font-size:1.1rem;" data-i18n="config.subtitle">
+          Zobacz swój projekt na żywo w interaktywnym podglądzie
+        </p>
+
+        <div class="config-grid">
+          <div class="config-preview">
+            <canvas id="preview-canvas" width="500" height="500" aria-label="Podgląd personalizowanej skarbonki"></canvas>
+          </div>
+
+          <div class="config-controls">
+            <div class="control-group">
+              <label for="variant-select" class="control-label" data-i18n="config.variant">
+                1. Wybierz wariant:
+              </label>
+              <select id="variant-select" class="control-input">
+                <option value="color" data-i18n="config.variant.color">Vaulti Color (39,95 €)</option>
+                <option value="wood" data-i18n="config.variant.wood">Vaulti Wood (49,95 €)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" data-i18n="config.color">
+                2. Wybierz kolor:
+              </label>
+              <div class="color-swatches">
+                <button class="swatch active" data-color="#ffc0cb" style="background-color:#ffc0cb;"
+                        aria-label="Różowy" title="Różowy"></button>
+                <button class="swatch" data-color="#add8e6" style="background-color:#add8e6;"
+                        aria-label="Niebieski" title="Niebieski"></button>
+                <button class="swatch" data-color="#90ee90" style="background-color:#90ee90;"
+                        aria-label="Zielony" title="Zielony"></button>
+                <button class="swatch" data-color="#dda0dd" style="background-color:#dda0dd;"
+                        aria-label="Fioletowy" title="Fioletowy"></button>
+                <button class="swatch" data-color="#ffd700" style="background-color:#ffd700;"
+                        aria-label="Złoty" title="Złoty"></button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="engrave-input" class="control-label" data-i18n="config.engrave">
+                3. Wpisz tekst graweru (opcjonalnie):
+              </label>
+              <input
+                id="engrave-input"
+                type="text"
+                class="control-input"
+                placeholder="Np. 'Skarby Zosi'"
+                maxlength="20"
+                data-i18n-placeholder="config.engrave.placeholder"
+              />
+              <small style="color:var(--text-muted);font-size:0.85rem;" data-i18n="config.engrave.hint">
+                Maksymalnie 20 znaków
+              </small>
+            </div>
+
+            <div class="price-display">
+              <span class="control-label" data-i18n="config.price">Cena:</span>
+              <span class="price-value" id="price-value">39,95 €</span>
+            </div>
+
+            <div style="display:flex;gap:12px;flex-direction:column;">
+              <button class="btn btn-primary" id="order-btn" data-i18n="cta.order">
+                Zamów z tą personalizacją
+              </button>
+              <button class="btn btn-secondary" id="share-btn" data-i18n="config.share">
+                📤 Udostępnij konfigurację
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="section" id="modele">
+      <div class="container">
+        <h2 class="section-title" data-i18n="models.title">Porównaj modele Vaulti</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th data-i18n="models.feature">Funkcja</th>
+              <th data-i18n="models.color">Vaulti Color</th>
+              <th data-i18n="models.wood">Vaulti Wood</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong data-i18n="models.material">Materiał korpusu</strong></td>
+              <td>Druk 3D (PETG/ASA)</td>
+              <td>Naturalna sklejka + TPU</td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="models.colors">Dostępne kolory</strong></td>
+              <td>5 kolorów</td>
+              <td>Naturalne drewno</td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="models.tracker">Slot na lokalizator</strong></td>
+              <td><span class="check">✓</span> AirTag / SmartTag</td>
+              <td><span class="check">✓</span> AirTag / SmartTag</td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="models.engrave">Personalizowany grawer</strong></td>
+              <td><span class="check">✓</span> Grawer laserowy</td>
+              <td><span class="check">✓</span> Grawer laserowy</td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="models.preview">Podgląd 3D</strong></td>
+              <td><span class="check">✓</span> Tak</td>
+              <td><span class="check">✓</span> Tak</td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="models.shipping">Czas wysyłki</strong></td>
+              <td>2-4 dni</td>
+              <td>3-5 dni</td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="models.price">Cena</strong></td>
+              <td><strong style="font-size:1.25rem;color:var(--accent-color-1);">39,95 €</strong></td>
+              <td><strong style="font-size:1.25rem;color:var(--accent-color-1);">49,95 €</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="opinie">
+      <div class="container">
+        <h2 class="section-title" data-i18n="reviews.title">Co mówią rodzice i dzieci?</h2>
+
+        <div class="reviews-carousel">
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/150?img=1" alt="Agnieszka" class="review-avatar" width="48" height="48" loading="lazy"/>
+              <div>
+                <h4 class="review-name">Agnieszka W.</h4>
+                <div class="review-rating">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-text">
+              "Córka zakochana w brokacie, a ja w spokoju, że skarbonkę zawsze znajdę.
+              Świetny pomysł na bezpieczny prezent na komunię!"
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/150?img=12" alt="Marek" class="review-avatar" width="48" height="48" loading="lazy"/>
+              <div>
+                <h4 class="review-name">Marek Z.</h4>
+                <div class="review-rating">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-text">
+              "Genialna jakość i interaktywny podgląd 3D na stronie to mistrzostwo!
+              Syn nie mógł się doczekać, aż zobaczy swój grawer na żywo."
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://i.pravatar.cc/150?img=5" alt="Katarzyna" class="review-avatar" width="48" height="48" loading="lazy"/>
+              <div>
+                <h4 class="review-name">Katarzyna M.</h4>
+                <div class="review-rating">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-text">
+              "AirTag w ukrytym schowku? Genialne! Już dwa razy uratowaliśmy skarbonkę
+              dzięki Find My. Warto każdej złotówki."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="guarantee.title">Gwarancja satysfakcji</h2>
+
+        <div class="guarantee-grid">
+          <div class="guarantee-card">
+            <div class="guarantee-icon">🔄</div>
+            <h3 class="guarantee-title" data-i18n="guarantee.returns.title">30 dni zwrotu</h3>
+            <p class="guarantee-text" data-i18n="guarantee.returns.desc">
+              Zwrot bez pytań, jeśli Vaulti Ci się nie podoba. Koszt zwrotu pokrywamy my.
+            </p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="guarantee-icon">🔧</div>
+            <h3 class="guarantee-title" data-i18n="guarantee.warranty.title">12 miesięcy gwarancji</h3>
+            <p class="guarantee-text" data-i18n="guarantee.warranty.desc">
+              Pełna gwarancja producenta Vaulti B.V. na wszystkie wady materiałowe.
+            </p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="guarantee-icon">⚡</div>
+            <h3 class="guarantee-title" data-i18n="guarantee.shipping.title">Szybka wysyłka</h3>
+            <p class="guarantee-text" data-i18n="guarantee.shipping.desc">
+              Standardowo 2-4 dni robocze w całej UE. Express dostępny za +2 €.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title" data-i18n="faq.title">Najczęściej zadawane pytania</h2>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question" data-i18n="faq.q1">
+              Jaki lokalizator pasuje do Vaulti?
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a1">
+                Do Vaulti pasują lokalizatory Apple AirTag oraz Samsung SmartTag. Skarbonka posiada
+                specjalny, dyskretny slot serwisowy, który umożliwia łatwą wymianę baterii w lokalizatorze
+                bez potrzeby rozbierania całej szkatułki.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faq.q2">
+              Czy dziecko musi wiedzieć o lokalizatorze?
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a2">
+                Nie, nie musi. Zabezpieczenie jest całkowicie niewidoczne z zewnątrz. Zostało zaprojektowane
+                tak, aby działało dyskretnie w tle, dając rodzicom spokój ducha, a dziecku radość z posiadania
+                pięknej skarbonki.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faq.q3">
+              Jak długo trwa dostawa Vaulti?
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a3">
+                Standardowo 2-4 dni robocze w całej UE. Możliwa przesyłka ekspresowa (1-2 dni) za dodatkowe 2 €.
+                Wysyłka w ciągu 24h od zamówienia.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faq.q4">
+              Czy mogę zwrócić Vaulti?
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a4">
+                Tak! Masz 30 dni na bezwarunkowy zwrot. Koszt zwrotu pokrywamy my. Wystarczy skontaktować
+                się z naszym zespołem obsługi klienta.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faq.q5">
+              Czy skarbonka ma gwarancję?
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a5">
+                Tak, 12 miesięcy gwarancji producenta Vaulti B.V. na wszystkie wady materiałowe i produkcyjne.
+                W razie problemów wymieniamy bezpłatnie.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faq.q6">
+              Z jakich materiałów jest wykonana Vaulti?
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a6">
+                <strong>Vaulti Color:</strong> Korpus z PETG/ASA (trwałe, kolorowe), narożniki TPU
+                (amortyzacja upadków). <strong>Vaulti Wood:</strong> Naturalna sklejka + elementy TPU.
+                Wszystkie materiały zgodne z normą EN 71-3 (bezpieczne dla dzieci).
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faq.q7">
+              Czy mogę personalizować grawer?
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a7">
+                Oczywiście! Grawer laserowy imienia (do 20 znaków) jest darmowy i wliczony w cenę.
+                Możesz dodać imię dziecka, inicjały lub krótki napis w naszym konfiguratorze.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-i18n="faq.q8">
+              Jakie są wymiary Vaulti?
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a8">
+                18 × 12 × 12 cm (wysokość × szerokość × głębokość). Idealna do schowania na półce,
+                w szufladzie lub pod łóżkiem. Kompaktowa, ale pojemna.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter">
+      <div class="container" style="text-align:center;">
+        <h2 class="section-title" data-i18n="newsletter.title">Bądź na bieżąco</h2>
+        <p style="color:var(--text-secondary);font-size:1.1rem;margin-bottom:32px;" data-i18n="newsletter.subtitle">
+          Zapisz się do newslettera i otrzymaj <strong style="color:var(--accent-color-1);">-10% rabatu</strong>
+          na pierwsze zamówienie
+        </p>
+
+        <form class="newsletter-form" id="newsletter-form">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="twoj@email.com"
+            required
+            data-i18n-placeholder="newsletter.placeholder"
+            aria-label="Email address"
+          />
+          <button type="submit" class="btn btn-primary" data-i18n="newsletter.submit">
+            Zapisz się
+          </button>
+        </form>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;" data-i18n="newsletter.privacy">
+          Szanujemy Twoją prywatność. Brak spamu, tylko najlepsze oferty.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#konfigurator" class="btn btn-primary" data-i18n="cta.sticky">
+      🚀 Stwórz swoją Vaulti
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 class="footer-title">Vaulti</h4>
+          <p style="color:var(--text-secondary);line-height:1.7;" data-i18n="footer.about">
+            Personalizowana skarbonka 3D z ukrytym lokalizatorem. Spokój ducha dla rodziców,
+            magia dla dzieci. Produkowane lokalnie w Boxtel, Holandia.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.links">Szybkie linki</h4>
+          <ul class="footer-links">
+            <li><a href="#jak-to-dziala" data-i18n="nav.how">Jak to działa</a></li>
+            <li><a href="#konfigurator" data-i18n="nav.configurator">Konfigurator</a></li>
+            <li><a href="#modele" data-i18n="nav.models">Modele</a></li>
+            <li><a href="#opinie" data-i18n="nav.reviews">Opinie</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.legal">Informacje</h4>
+          <ul class="footer-links">
+            <li><a href="/privacy" data-i18n="footer.privacy">Polityka prywatności</a></li>
+            <li><a href="/terms" data-i18n="footer.terms">Regulamin</a></li>
+            <li><a href="/shipping" data-i18n="footer.shipping">Dostawa i zwroty</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer.contact">Kontakt</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@vaulti.nl">info@vaulti.nl</a></li>
+            <li><a href="tel:+31612345678">+31 6 12 34 56 78</a></li>
+          </ul>
+          <div class="social-links" style="margin-top:20px;">
+            <a href="https://instagram.com/vaulti" target="_blank" rel="noopener" aria-label="Instagram">
+              Instagram
+            </a>
+            <a href="https://facebook.com/vaulti" target="_blank" rel="noopener" aria-label="Facebook">
+              Facebook
+            </a>
+            <a href="https://tiktok.com/@vaulti" target="_blank" rel="noopener" aria-label="TikTok">
+              TikTok
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Vaulti B.V. Boxtel, Nederland. Wszystkie prawa zastrzeżone.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // === I18N System ===
+    const TRANSLATIONS = {
+      pl: {
+        'nav.how': 'Jak to działa',
+        'nav.configurator': 'Konfigurator',
+        'nav.models': 'Modele',
+        'nav.reviews': 'Opinie',
+        'nav.faq': 'FAQ',
+        'hero.badge': 'Dla dzieci: magia i design • Dla rodziców: spokój i bezpieczeństwo',
+        'hero.title1': 'Personalizowana skarbonka 3D,',
+        'hero.title2': 'która zawsze się odnajdzie',
+        'hero.subtitle': 'Vaulti to więcej niż skarbonka. To bezpieczne miejsce na skarby Twojego dziecka, z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i podaruj prezent, który zostanie na lata.',
+        'cta.create': 'Stwórz swoją Vaulti teraz',
+        'cta.learn': 'Zobacz jak to działa',
+        'trust.rating': 'Średnia ocen od 87 klientów',
+        'trust.sold': 'Sprzedanych skarbonek',
+        'trust.returns': 'Gwarancja zwrotu pieniędzy',
+        'trust.safe': 'Bezpieczne materiały',
+        // Add more translations...
+      },
+      nl: {
+        'nav.how': 'Hoe het werkt',
+        'nav.configurator': 'Configurator',
+        'nav.models': 'Modellen',
+        'nav.reviews': 'Reviews',
+        'nav.faq': 'FAQ',
+        'hero.badge': 'Voor kinderen: magie en design • Voor ouders: rust en veiligheid',
+        'hero.title1': 'Gepersonaliseerd 3D spaarpot,',
+        'hero.title2': 'die altijd terugkomt',
+        'hero.subtitle': 'Vaulti is meer dan een spaarpot. Het is een veilige plek voor de schatten van je kind, met een verborgen slot voor AirTag/SmartTag. Ontwerp een unieke gravure en geef een cadeau dat jaren meegaat.',
+        'cta.create': 'Creëer je Vaulti nu',
+        'cta.learn': 'Zie hoe het werkt',
+        // Add more translations...
+      },
+      en: {
+        'nav.how': 'How it works',
+        'nav.configurator': 'Configurator',
+        'nav.models': 'Models',
+        'nav.reviews': 'Reviews',
+        'nav.faq': 'FAQ',
+        'hero.badge': 'For children: magic and design • For parents: peace and security',
+        'hero.title1': 'Personalized 3D piggy bank,',
+        'hero.title2': 'that always finds its way',
+        'hero.subtitle': 'Vaulti is more than a piggy bank. It\'s a safe place for your child\'s treasures, with a hidden slot for AirTag/SmartTag. Design unique engraving and give a gift that lasts for years.',
+        'cta.create': 'Create your Vaulti now',
+        'cta.learn': 'See how it works',
+        // Add more translations...
+      }
+    };
+
+    // Get browser language
+    const getBrowserLang = () => {
+      const stored = localStorage.getItem('vaulti-lang');
+      if (stored) return stored;
+
+      const browserLang = navigator.language.slice(0, 2);
+      return ['pl', 'nl', 'en'].includes(browserLang) ? browserLang : 'en';
+    };
+
+    let currentLang = getBrowserLang();
+
+    // Apply translations
+    const applyTranslations = (lang) => {
+      const translations = TRANSLATIONS[lang] || TRANSLATIONS.en;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[key]) {
+          el.textContent = translations[key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[key]) {
+          el.placeholder = translations[key];
+        }
+      });
+
+      // Update HTML lang
+      document.documentElement.lang = lang;
+
+      // Update OG locale
+      const localeMap = { pl: 'pl_PL', nl: 'nl_NL', en: 'en_US' };
+      const ogLocale = document.getElementById('og-locale');
+      if (ogLocale) {
+        ogLocale.content = localeMap[lang];
+      }
+
+      // Update current lang display
+      document.getElementById('current-lang').textContent = lang.toUpperCase();
+
+      localStorage.setItem('vaulti-lang', lang);
+    };
+
+    // Language selector
+    const langBtn = document.getElementById('lang-btn');
+    const langDropdown = document.getElementById('lang-dropdown');
+
+    langBtn.addEventListener('click', () => {
+      langDropdown.classList.toggle('active');
+    });
+
+    langDropdown.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const lang = e.target.getAttribute('data-lang');
+        currentLang = lang;
+        applyTranslations(lang);
+        langDropdown.classList.remove('active');
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('active');
+      }
+    });
+
+    // Initialize translations
+    applyTranslations(currentLang);
+
+    // === CONFIGURATOR ===
+    const canvas = document.getElementById('preview-canvas');
+    const ctx = canvas.getContext('2d');
+    const variantSelect = document.getElementById('variant-select');
+    const engraveInput = document.getElementById('engrave-input');
+    const priceValue = document.getElementById('price-value');
+    const swatches = document.querySelectorAll('.swatch');
+
+    let config = {
+      variant: 'color',
+      color: '#ffc0cb',
+      engrave: ''
+    };
+
+    // Draw preview
+    const drawPreview = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Background
+      ctx.fillStyle = config.color;
+      ctx.fillRect(100, 100, 300, 300);
+
+      // 3D effect
+      ctx.fillStyle = 'rgba(0,0,0,0.2)';
+      ctx.fillRect(400, 150, 50, 300);
+      ctx.fillRect(100, 400, 350, 50);
+
+      // Engrave text
+      if (config.engrave) {
+        ctx.fillStyle = 'rgba(0,0,0,0.4)';
+        ctx.font = 'bold 32px Inter';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(config.engrave, 250, 250);
+      }
+
+      // Variant label
+      ctx.fillStyle = '#e6edf3';
+      ctx.font = '16px Inter';
+      ctx.textAlign = 'center';
+      ctx.fillText(config.variant === 'color' ? 'Vaulti Color' : 'Vaulti Wood', 250, 450);
+    };
+
+    // Update config
+    variantSelect.addEventListener('change', (e) => {
+      config.variant = e.target.value;
+      priceValue.textContent = config.variant === 'color' ? '39,95 €' : '49,95 €';
+      drawPreview();
+    });
+
+    engraveInput.addEventListener('input', (e) => {
+      config.engrave = e.target.value;
+      drawPreview();
+    });
+
+    swatches.forEach(swatch => {
+      swatch.addEventListener('click', (e) => {
+        swatches.forEach(s => s.classList.remove('active'));
+        e.target.classList.add('active');
+        config.color = e.target.getAttribute('data-color');
+        drawPreview();
+      });
+    });
+
+    // Share config
+    document.getElementById('share-btn').addEventListener('click', () => {
+      const url = `${window.location.origin}/?variant=${config.variant}&color=${encodeURIComponent(config.color)}&engrave=${encodeURIComponent(config.engrave)}`;
+      navigator.clipboard.writeText(url).then(() => {
+        alert(currentLang === 'pl' ? 'Link skopiowany!' : currentLang === 'nl' ? 'Link gekopieerd!' : 'Link copied!');
+      });
+    });
+
+    // Order button
+    document.getElementById('order-btn').addEventListener('click', () => {
+      alert(currentLang === 'pl' ? 'Funkcja zamówienia wkrótce!' : currentLang === 'nl' ? 'Bestel functie komt binnenkort!' : 'Order function coming soon!');
+    });
+
+    // Initial draw
+    drawPreview();
+
+    // Load from URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('variant')) {
+      config.variant = urlParams.get('variant');
+      variantSelect.value = config.variant;
+      priceValue.textContent = config.variant === 'color' ? '39,95 €' : '49,95 €';
+    }
+    if (urlParams.has('color')) {
+      config.color = urlParams.get('color');
+      swatches.forEach(s => {
+        if (s.getAttribute('data-color') === config.color) {
+          swatches.forEach(sw => sw.classList.remove('active'));
+          s.classList.add('active');
+        }
+      });
+    }
+    if (urlParams.has('engrave')) {
+      config.engrave = decodeURIComponent(urlParams.get('engrave'));
+      engraveInput.value = config.engrave;
+    }
+
+    // === STICKY CTA ===
+    const stickyCta = document.getElementById('sticky-cta');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 600) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+
+      lastScroll = currentScroll;
+    });
+
+    // === NEWSLETTER FORM ===
+    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      alert(currentLang === 'pl' ? `Dziękujemy! ${email} został dodany.` : currentLang === 'nl' ? `Bedankt! ${email} is toegevoegd.` : `Thank you! ${email} has been added.`);
+      e.target.reset();
+    });
+
+    // === SMOOTH SCROLL ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
