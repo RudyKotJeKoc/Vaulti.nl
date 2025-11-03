@@ -1,0 +1,52 @@
+{
+  "name": "vaulti-nl",
+  "version": "1.0.0",
+  "description": "Vaulti – Personalizowana skarbonka 3D z lokalizatorem",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "dev:node": "http-server -p 8000 -c-1",
+    "build": "npm run minify:css && npm run minify:js",
+    "minify:css": "cssnano styles.css -o dist/styles.min.css",
+    "minify:js": "uglify-js js/*.js -o dist/app.min.js",
+    "optimize:images": "imagemin image/* --out-dir=dist/image",
+    "test": "echo \"No tests configured\"",
+    "lint": "eslint js/ --fix"
+  },
+  "keywords": [
+    "piggy-bank",
+    "3d-printing",
+    "locator",
+    "airtag",
+    "personalization",
+    "kids",
+    "gifts",
+    "vaulti"
+  ],
+  "author": "Dariusz Durlej",
+  "license": "Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaulti/vaulti-nl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vaulti/vaulti-nl/issues",
+    "email": "info@vaulti.nl"
+  },
+  "homepage": "https://vaulti.nl",
+  "devDependencies": {
+    "cssnano": "^5.1.15",
+    "http-server": "^14.1.1",
+    "imagemin-cli": "^7.0.0",
+    "uglify-js": "^3.17.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ]
+}
