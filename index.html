@@ -29,6 +29,12 @@
   <meta name="twitter:description" content="Idealny prezent łączący magię i bezpieczeństwo dla Twojego dziecka." />
   <meta name="twitter:image" content="https://vaulti.nl/image/vaulti-og-1200x630.png" />
 
+  <!-- === Hreflang Tags for International SEO === -->
+  <link rel="alternate" hreflang="pl" href="https://vaulti.nl/?lang=pl" />
+  <link rel="alternate" hreflang="nl" href="https://vaulti.nl/?lang=nl" />
+  <link rel="alternate" hreflang="en" href="https://vaulti.nl/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://vaulti.nl/" />
+
   <!-- === Preload Critical Assets === -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1378,16 +1384,18 @@
           <input
             type="email"
             class="newsletter-input"
+            id="newsletter-email"
             placeholder="twoj@email.com"
             required
             data-i18n-placeholder="newsletter.placeholder"
             aria-label="Email address"
           />
-          <button type="submit" class="btn btn-primary" data-i18n="newsletter.submit">
+          <button type="submit" class="btn btn-primary" id="newsletter-btn" data-i18n="newsletter.submit">
             Zapisz się
           </button>
         </form>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;" data-i18n="newsletter.privacy">
+        <p id="newsletter-message" style="text-align:center;margin-top:16px;font-size:0.95rem;font-weight:600;min-height:24px;"></p>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;" data-i18n="newsletter.privacy">
           Szanujemy Twoją prywatność. Brak spamu, tylko najlepsze oferty.
         </p>
       </div>
@@ -1441,14 +1449,14 @@
             <li><a href="tel:+31612345678">+31 6 12 34 56 78</a></li>
           </ul>
           <div class="social-links" style="margin-top:20px;">
-            <a href="https://instagram.com/vaulti" target="_blank" rel="noopener" aria-label="Instagram">
-              Instagram
+            <a href="https://instagram.com/vaulti" target="_blank" rel="noopener noreferrer" aria-label="Vaulti Instagram">
+              <span aria-hidden="true">📸</span> Instagram
             </a>
-            <a href="https://facebook.com/vaulti" target="_blank" rel="noopener" aria-label="Facebook">
-              Facebook
+            <a href="https://facebook.com/vaulti" target="_blank" rel="noopener noreferrer" aria-label="Vaulti Facebook">
+              <span aria-hidden="true">👍</span> Facebook
             </a>
-            <a href="https://tiktok.com/@vaulti" target="_blank" rel="noopener" aria-label="TikTok">
-              TikTok
+            <a href="https://tiktok.com/@vaulti" target="_blank" rel="noopener noreferrer" aria-label="Vaulti TikTok">
+              <span aria-hidden="true">🎵</span> TikTok
             </a>
           </div>
         </div>
@@ -1467,6 +1475,14 @@
     // === I18N System ===
     const TRANSLATIONS = {
       pl: {
+        // SEO Meta Tags
+        'seo.title': 'Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem | Idealny Prezent dla Dziecka',
+        'seo.description': 'Odkryj Vaulti – bezpieczną i personalizowaną skarbonkę 3D z ukrytym slotem na AirTag/SmartTag. Zaprojektuj unikalny grawer i wybierz kolor. Idealny prezent łączący magię z bezpieczeństwem.',
+        'seo.og.title': 'Vaulti – Personalizowana Skarbonka 3D z Lokalizatorem',
+        'seo.og.description': 'Spokój ducha dla rodziców, magia dla dzieci. Odkryj personalizowaną skarbonkę z ukrytym zabezpieczeniem.',
+        'seo.twitter.title': 'Vaulti – Skarbonka 3D z Lokalizatorem',
+        'seo.twitter.description': 'Idealny prezent łączący magię i bezpieczeństwo dla Twojego dziecka.',
+
         // Navigation
         'nav.how': 'Jak to działa',
         'nav.configurator': 'Konfigurator',
@@ -1563,6 +1579,9 @@
         'newsletter.subtitle': 'Zapisz się do newslettera i otrzymaj -10% rabatu na pierwsze zamówienie',
         'newsletter.placeholder': 'twoj@email.com',
         'newsletter.submit': 'Zapisz się',
+        'newsletter.submitting': 'Wysyłam...',
+        'newsletter.success': '✓ Dziękujemy! Sprawdź swoją skrzynkę email.',
+        'newsletter.error': '✗ Wystąpił błąd. Spróbuj ponownie.',
         'newsletter.privacy': 'Szanujemy Twoją prywatność. Brak spamu, tylko najlepsze oferty.',
 
         // Footer
@@ -1575,6 +1594,14 @@
         'footer.shipping': 'Dostawa i zwroty'
       },
       nl: {
+        // SEO Meta Tags
+        'seo.title': 'Vaulti – Gepersonaliseerde 3D Spaarpot met Tracker | Perfect Cadeau voor Kinderen',
+        'seo.description': 'Ontdek Vaulti – de veilige en gepersonaliseerde 3D spaarpot met verborgen slot voor AirTag/SmartTag. Ontwerp unieke gravure en kies je kleur. Perfect cadeau dat magie combineert met veiligheid.',
+        'seo.og.title': 'Vaulti – Gepersonaliseerde 3D Spaarpot met Tracker',
+        'seo.og.description': 'Gemoedsrust voor ouders, magie voor kinderen. Ontdek de gepersonaliseerde spaarpot met verborgen beveiliging.',
+        'seo.twitter.title': 'Vaulti – 3D Spaarpot met Tracker',
+        'seo.twitter.description': 'Perfect cadeau dat magie en veiligheid combineert voor je kind.',
+
         // Navigation
         'nav.how': 'Hoe het werkt',
         'nav.configurator': 'Configurator',
@@ -1671,6 +1698,9 @@
         'newsletter.subtitle': 'Meld je aan voor onze nieuwsbrief en ontvang -10% korting op je eerste bestelling',
         'newsletter.placeholder': 'jouw@email.com',
         'newsletter.submit': 'Aanmelden',
+        'newsletter.submitting': 'Verzenden...',
+        'newsletter.success': '✓ Bedankt! Controleer je inbox.',
+        'newsletter.error': '✗ Er is een fout opgetreden. Probeer opnieuw.',
         'newsletter.privacy': 'We respecteren je privacy. Geen spam, alleen de beste aanbiedingen.',
 
         // Footer
@@ -1683,6 +1713,14 @@
         'footer.shipping': 'Verzending en retour'
       },
       en: {
+        // SEO Meta Tags
+        'seo.title': 'Vaulti – Personalized 3D Piggy Bank with Tracker | Perfect Gift for Children',
+        'seo.description': 'Discover Vaulti – the secure personalized 3D piggy bank with hidden slot for AirTag/SmartTag. Design unique engraving and choose your color. Perfect gift combining magic with security.',
+        'seo.og.title': 'Vaulti – Personalized 3D Piggy Bank with Tracker',
+        'seo.og.description': 'Peace of mind for parents, magic for children. Discover the personalized piggy bank with hidden security.',
+        'seo.twitter.title': 'Vaulti – 3D Piggy Bank with Tracker',
+        'seo.twitter.description': 'Perfect gift combining magic and security for your child.',
+
         // Navigation
         'nav.how': 'How it works',
         'nav.configurator': 'Configurator',
@@ -1779,6 +1817,9 @@
         'newsletter.subtitle': 'Subscribe to our newsletter and receive -10% discount on your first order',
         'newsletter.placeholder': 'your@email.com',
         'newsletter.submit': 'Subscribe',
+        'newsletter.submitting': 'Sending...',
+        'newsletter.success': '✓ Thank you! Check your inbox.',
+        'newsletter.error': '✗ An error occurred. Please try again.',
         'newsletter.privacy': 'We respect your privacy. No spam, only the best offers.',
 
         // Footer
@@ -1824,6 +1865,36 @@
       // Update HTML lang
       document.documentElement.lang = lang;
 
+      // Update SEO Meta Tags
+      if (translations['seo.title']) {
+        document.title = translations['seo.title'];
+      }
+
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription && translations['seo.description']) {
+        metaDescription.content = translations['seo.description'];
+      }
+
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle && translations['seo.og.title']) {
+        ogTitle.content = translations['seo.og.title'];
+      }
+
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription && translations['seo.og.description']) {
+        ogDescription.content = translations['seo.og.description'];
+      }
+
+      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twitterTitle && translations['seo.twitter.title']) {
+        twitterTitle.content = translations['seo.twitter.title'];
+      }
+
+      const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+      if (twitterDescription && translations['seo.twitter.description']) {
+        twitterDescription.content = translations['seo.twitter.description'];
+      }
+
       // Update OG locale
       const localeMap = { pl: 'pl_PL', nl: 'nl_NL', en: 'en_US' };
       const ogLocale = document.getElementById('og-locale');
@@ -1833,6 +1904,12 @@
 
       // Update current lang display
       document.getElementById('current-lang').textContent = lang.toUpperCase();
+
+      // Update newsletter button if not disabled
+      const newsletterBtn = document.getElementById('newsletter-btn');
+      if (newsletterBtn && !newsletterBtn.disabled && translations['newsletter.submit']) {
+        newsletterBtn.textContent = translations['newsletter.submit'];
+      }
 
       localStorage.setItem('vaulti-lang', lang);
     };
@@ -1872,31 +1949,103 @@
     const priceValue = document.getElementById('price-value');
     const swatches = document.querySelectorAll('.swatch');
 
-    let config = {
-      variant: 'color',
-      color: '#ffc0cb',
-      engrave: ''
+    // Load config from localStorage or use defaults
+    const loadConfig = () => {
+      const saved = localStorage.getItem('vaulti-config');
+      if (saved) {
+        try {
+          return JSON.parse(saved);
+        } catch (e) {
+          return { variant: 'color', color: '#ffc0cb', engrave: '' };
+        }
+      }
+      return { variant: 'color', color: '#ffc0cb', engrave: '' };
     };
+
+    // Save config to localStorage
+    const saveConfig = () => {
+      localStorage.setItem('vaulti-config', JSON.stringify(config));
+    };
+
+    let config = loadConfig();
 
     // Draw preview
     const drawPreview = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Background
-      ctx.fillStyle = config.color;
-      ctx.fillRect(100, 100, 300, 300);
+      // Draw shadow beneath the piggy bank
+      ctx.fillStyle = 'rgba(0,0,0,0.15)';
+      ctx.beginPath();
+      ctx.ellipse(250, 420, 120, 20, 0, 0, 2 * Math.PI);
+      ctx.fill();
 
-      // 3D effect
-      ctx.fillStyle = 'rgba(0,0,0,0.2)';
-      ctx.fillRect(400, 150, 50, 300);
-      ctx.fillRect(100, 400, 350, 50);
+      // Main body with gradient for 3D effect
+      if (config.variant === 'wood') {
+        // Wood texture simulation
+        const woodGradient = ctx.createLinearGradient(100, 100, 400, 400);
+        woodGradient.addColorStop(0, '#D2691E');
+        woodGradient.addColorStop(0.3, '#CD853F');
+        woodGradient.addColorStop(0.6, '#DEB887');
+        woodGradient.addColorStop(1, '#F5DEB3');
+        ctx.fillStyle = woodGradient;
+      } else {
+        // Color variant with gradient
+        const bodyGradient = ctx.createLinearGradient(100, 100, 400, 400);
+        const color = config.color;
+        bodyGradient.addColorStop(0, color);
+        bodyGradient.addColorStop(0.5, lightenColor(color, 20));
+        bodyGradient.addColorStop(1, darkenColor(color, 20));
+        ctx.fillStyle = bodyGradient;
+      }
 
-      // Engrave text
+      // Draw rounded rectangle for main body
+      roundRect(ctx, 100, 100, 300, 300, 20);
+      ctx.fill();
+
+      // Add highlight for glossy effect
+      const highlightGradient = ctx.createLinearGradient(100, 100, 200, 200);
+      highlightGradient.addColorStop(0, 'rgba(255,255,255,0.4)');
+      highlightGradient.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.fillStyle = highlightGradient;
+      roundRect(ctx, 120, 120, 150, 150, 15);
+      ctx.fill();
+
+      // Right side (3D depth)
+      ctx.fillStyle = 'rgba(0,0,0,0.3)';
+      ctx.beginPath();
+      ctx.moveTo(400, 120);
+      ctx.lineTo(450, 150);
+      ctx.lineTo(450, 430);
+      ctx.lineTo(400, 400);
+      ctx.closePath();
+      ctx.fill();
+
+      // Bottom side (3D depth)
+      ctx.fillStyle = 'rgba(0,0,0,0.25)';
+      ctx.beginPath();
+      ctx.moveTo(120, 400);
+      ctx.lineTo(150, 440);
+      ctx.lineTo(430, 440);
+      ctx.lineTo(400, 400);
+      ctx.closePath();
+      ctx.fill();
+
+      // Coin slot on top
+      ctx.fillStyle = 'rgba(0,0,0,0.8)';
+      roundRect(ctx, 200, 80, 100, 15, 3);
+      ctx.fill();
+
+      // Engrave text with realistic effect
       if (config.engrave) {
-        ctx.fillStyle = 'rgba(0,0,0,0.4)';
+        // Shadow for engraving
+        ctx.fillStyle = 'rgba(0,0,0,0.5)';
         ctx.font = 'bold 32px Inter';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
+        ctx.fillText(config.engrave, 252, 252);
+
+        // Main engraved text
+        ctx.fillStyle = 'rgba(255,255,255,0.8)';
         ctx.fillText(config.engrave, 250, 250);
       }
 
@@ -1904,18 +2053,57 @@
       ctx.fillStyle = '#e6edf3';
       ctx.font = '16px Inter';
       ctx.textAlign = 'center';
-      ctx.fillText(config.variant === 'color' ? 'Vaulti Color' : 'Vaulti Wood', 250, 450);
+      ctx.fillText(config.variant === 'color' ? 'Vaulti Color' : 'Vaulti Wood', 250, 460);
     };
+
+    // Helper functions for color manipulation
+    function lightenColor(color, percent) {
+      const num = parseInt(color.replace("#",""), 16);
+      const amt = Math.round(2.55 * percent);
+      const R = (num >> 16) + amt;
+      const G = (num >> 8 & 0x00FF) + amt;
+      const B = (num & 0x0000FF) + amt;
+      return "#" + (0x1000000 + (R<255?R<1?0:R:255)*0x10000 +
+        (G<255?G<1?0:G:255)*0x100 + (B<255?B<1?0:B:255))
+        .toString(16).slice(1);
+    }
+
+    function darkenColor(color, percent) {
+      const num = parseInt(color.replace("#",""), 16);
+      const amt = Math.round(2.55 * percent);
+      const R = (num >> 16) - amt;
+      const G = (num >> 8 & 0x00FF) - amt;
+      const B = (num & 0x0000FF) - amt;
+      return "#" + (0x1000000 + (R>0?R:0)*0x10000 +
+        (G>0?G:0)*0x100 + (B>0?B:0))
+        .toString(16).slice(1);
+    }
+
+    function roundRect(ctx, x, y, width, height, radius) {
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.lineTo(x + width - radius, y);
+      ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+      ctx.lineTo(x + width, y + height - radius);
+      ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+      ctx.lineTo(x + radius, y + height);
+      ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+      ctx.lineTo(x, y + radius);
+      ctx.quadraticCurveTo(x, y, x + radius, y);
+      ctx.closePath();
+    }
 
     // Update config
     variantSelect.addEventListener('change', (e) => {
       config.variant = e.target.value;
       priceValue.textContent = config.variant === 'color' ? '39,95 €' : '49,95 €';
+      saveConfig();
       drawPreview();
     });
 
     engraveInput.addEventListener('input', (e) => {
       config.engrave = e.target.value;
+      saveConfig();
       drawPreview();
     });
 
@@ -1924,6 +2112,7 @@
         swatches.forEach(s => s.classList.remove('active'));
         e.target.classList.add('active');
         config.color = e.target.getAttribute('data-color');
+        saveConfig();
         drawPreview();
       });
     });
@@ -1941,29 +2130,33 @@
       alert(currentLang === 'pl' ? 'Funkcja zamówienia wkrótce!' : currentLang === 'nl' ? 'Bestel functie komt binnenkort!' : 'Order function coming soon!');
     });
 
-    // Initial draw
-    drawPreview();
-
-    // Load from URL params
+    // Load from URL params (overrides localStorage)
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('variant')) {
       config.variant = urlParams.get('variant');
-      variantSelect.value = config.variant;
-      priceValue.textContent = config.variant === 'color' ? '39,95 €' : '49,95 €';
     }
     if (urlParams.has('color')) {
       config.color = urlParams.get('color');
-      swatches.forEach(s => {
-        if (s.getAttribute('data-color') === config.color) {
-          swatches.forEach(sw => sw.classList.remove('active'));
-          s.classList.add('active');
-        }
-      });
     }
     if (urlParams.has('engrave')) {
       config.engrave = decodeURIComponent(urlParams.get('engrave'));
-      engraveInput.value = config.engrave;
     }
+
+    // Apply loaded config to UI
+    variantSelect.value = config.variant;
+    priceValue.textContent = config.variant === 'color' ? '39,95 €' : '49,95 €';
+    engraveInput.value = config.engrave;
+
+    // Set active color swatch
+    swatches.forEach(s => {
+      if (s.getAttribute('data-color') === config.color) {
+        swatches.forEach(sw => sw.classList.remove('active'));
+        s.classList.add('active');
+      }
+    });
+
+    // Initial draw
+    drawPreview();
 
     // === STICKY CTA ===
     const stickyCta = document.getElementById('sticky-cta');
@@ -1982,11 +2175,46 @@
     });
 
     // === NEWSLETTER FORM ===
-    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterBtn = document.getElementById('newsletter-btn');
+    const newsletterMessage = document.getElementById('newsletter-message');
+    const newsletterEmail = document.getElementById('newsletter-email');
+
+    newsletterForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const email = e.target.querySelector('input[type="email"]').value;
-      alert(currentLang === 'pl' ? `Dziękujemy! ${email} został dodany.` : currentLang === 'nl' ? `Bedankt! ${email} is toegevoegd.` : `Thank you! ${email} has been added.`);
-      e.target.reset();
+
+      const translations = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      const email = newsletterEmail.value;
+
+      // Set loading state
+      newsletterBtn.disabled = true;
+      newsletterBtn.textContent = translations['newsletter.submitting'];
+      newsletterMessage.textContent = '';
+
+      // Simulate API call (replace with actual API endpoint)
+      try {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Success
+        newsletterMessage.textContent = translations['newsletter.success'];
+        newsletterMessage.style.color = 'var(--accent-color-1)';
+        newsletterForm.reset();
+
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          newsletterBtn.disabled = false;
+          newsletterBtn.textContent = translations['newsletter.submit'];
+          newsletterMessage.textContent = '';
+        }, 3000);
+      } catch (error) {
+        // Error
+        newsletterMessage.textContent = translations['newsletter.error'];
+        newsletterMessage.style.color = 'var(--color-error)';
+
+        // Reset button
+        newsletterBtn.disabled = false;
+        newsletterBtn.textContent = translations['newsletter.submit'];
+      }
     });
 
     // === SMOOTH SCROLL ===
